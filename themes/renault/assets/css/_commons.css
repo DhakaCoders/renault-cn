@@ -14,15 +14,20 @@ a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
 	outline: 0;
 }
+a:hover{
+	color: #F3BA4B;
+}
 
 body {
-    background: #f8f8f8;
-    color: #000000;
+    background: #fff;
+    color: #232531;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 22px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
 }
 p{
-	line-height: 1.2;
+	line-height: 28px;
 	margin-bottom: 15px;
 }
 /*-- app gap use pattern --*/
@@ -91,7 +96,7 @@ Containers
 
 }
 .container{
-	max-width: 1200px;
+	max-width: 1370px;
 	width: 100%;
 }
 .container-md{
@@ -277,4 +282,37 @@ form .dropdown-menu li a{
 }
 .dropdown-menu.show{
 	width: 100%;
+}
+
+/*reset-list*/
+
+
+ul.dropdown-menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.dropdown-menu li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0!important;
+}
+ul.dropdown-menu li:before{
+	content: none!important;
+}
+
+.fl-select .bootstrap-select .dropdown-toggle .filter-option-inner{
+	padding-left: 10px;
+}
+
+.fl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: auto!important;
+    min-width: 249px!important;
+
+}
+
+.fl-select .bootstrap-select>.dropdown-toggle{
+	padding-right: 30px;
 }
