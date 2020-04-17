@@ -1,0 +1,178 @@
+/*
+-----------------
+ Footer Css
+-----------------
+*/
+.ftr-top{
+  background: #232531;
+  padding: 60px 0 100px;
+}
+.ftr-col-main .ftr-col:not(:last-child){
+  padding-right: 15px;
+}
+.ftr-col-main .ftr-col{
+  float: left;
+}
+.ftr-col-1{
+  width: 33%;
+}
+.ftr-col-2{
+  width: 20%;
+}
+.ftr-col-3{
+  width: 23%;
+}
+.ftr-col-4{
+  width: 24%;
+}
+.ftr-logo a{
+  display: inline-block;
+  vertical-align: baseline;
+  max-width: 95px;
+  width: 100%;
+}
+.ftr-logo-dsc span,
+.ftr-logo-dsc strong{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.ftr-logo-dsc strong{
+	font-size: 20px;
+	line-height: 22px;
+	color: #fff;
+	font-weight: 700;
+	display: block;
+}
+.ftr-logo-dsc span{
+	font-size: 16px;
+	line-height: 18px;
+	color: #F3BA4B;
+	font-weight: 400;
+}
+.ftr-socail-icon{
+	padding-top: 40px;
+}
+.ftr-socail-icon ul > li{
+	float: left;
+	font-size: 22px;
+	line-height: 24px;
+	padding: 0 20px;
+}
+.ftr-socail-icon ul > li > a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #fff;
+}
+.ftr-socail-icon ul > li:first-child{
+	padding-left: 0;
+}
+.ftr-socail-icon ul > li > a:hover{
+	color: #fece00;
+}
+
+.ftr-col h6{
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 35px;
+  margin-top: 45px;
+  font-weight: 800;
+}
+.ftr-col h6 span{
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+}
+.ftr-col ul li::before {
+  content: none;
+}
+.ftr-col.ftr-col-5 h6{
+  margin-bottom: 15px;
+}
+.ftr-col.ftr-col-5 ul li{
+  position: relative;
+  margin-bottom: 23px;
+  font-weight: 400;
+  padding-left: 36px;
+}
+.ftr-col.ftr-col-5 ul li:first-child{
+  font-weight: 600;
+}
+.ftr-col-5 ul li i{
+  display: inline-block;
+  vertical-align: baseline;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ftr-col-5 ul li:nth-child(4) i{
+  top: -1px;
+}
+.ftr-col-5 ul li i svg{
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.ftr-col-5 ul li a:hover i svg{
+  fill: #F3BF00!important;
+}
+.ftr-btm{
+  padding: 65px 0 70px;
+}
+.ftr-btm-col-1{
+  width: 37.74%;
+  float: left;
+}
+.ftr-btm-col-2{
+  width: 40%;
+  float: left;
+}
+.ftr-btm-col-3{
+  width: 22.25%;
+  float: left;
+}
+.ftr-btm-col-1 span{
+  font-size: 14px;
+}
+.ftr-btm-col-2 ul li{
+  padding: 0;
+  padding-left: 19px;
+  padding-right: 22px;
+  float: left;
+  position: relative;
+}
+.ftr-btm-col-2 ul li::before{
+  content: none!important
+}
+.ftr-btm-col-2 ul li::after{
+  content: "/"!important;
+  position: absolute;
+  font-size: 16px;
+  color: #1E1E1E;
+  right: 0;
+  top: 0;
+  left: auto;
+}
+.ftr-btm-col-2 ul li:last-child::after{
+  content: none!important;
+}
+.ftr-btm-col-2 ul li:first-child{
+  padding-left: 0;
+}
+.ftr-btm-col-2 ul li:last-child{
+  padding-right: 0;
+}
+
+.ftr-btm-col-2 ul li a{
+  color: #1E1E1E;
+}
+.ftr-btm-col-3 a{
+  font-size: 14px;
+  color: #1E1E1E;
+}
+.ftr-btm-col-3 a:hover,
+.ftr-btm-col-2 ul li a:hover{
+  color: #F3BF00;
+}
