@@ -2,18 +2,22 @@
 All Transitions
 */
 a,input,img,textarea,button,svg,
-nav.main-nav > ul > li > a:before{
+nav.main-nav > ul > li > a:before,
+.img-div{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.scale{
+.scale,
+.img-div-scale:hover .img-div{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
-
+.img-div-scale{
+	overflow: hidden;
+}
 /**
 All Hovers
 */
