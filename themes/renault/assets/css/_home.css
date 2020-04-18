@@ -1,12 +1,32 @@
+.hm-about-us-section{
+	margin-bottom: 120px;
+}
 .about-us-sec-cntlr{
 	background: #232531;
 	color: #fff;
+	padding-top: 42px;
+	padding-bottom: 42px;
 }
 
+.fl-aboutUsSlider .slick-active:last-child .fl-about-us-item:after{
+	content: none;
+}
 .fl-about-us-item{
 	text-align: center;
 	color: #fff;
+	padding: 35px 80px 20px;
+	position: relative;
 }
+.fl-about-us-item:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 1px;
+	background: #FFCE00;
+}
+
 .about-us-item-icon{
 	margin-bottom: 20px;
 	display: flex;
@@ -17,4 +37,20 @@
 .about-us-item-icon img{
 	display: inline-block;
 	vertical-align: baseline;
+}
+.aui-title{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	line-height: 1;
+	font-weight: 800;
+	margin: 0 0 10px 0;
+}
+
+.fl-about-us-item p{
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 25px;
 }

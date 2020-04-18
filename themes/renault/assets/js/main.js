@@ -163,6 +163,81 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 /*Start Rannojit -->*/
 
+if( $('.hmAboutUsSecSlider').length ){
+    $('.hmAboutUsSecSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+
+if( $('.dftAboutUsSecSlider').length ){
+    $('.dftAboutUsSecSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false, 
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+
+
 
 
 

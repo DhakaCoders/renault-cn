@@ -152,54 +152,7 @@ ol li::before {
 	padding-right: 25px;
 }
 
-.dft-question-mark-slider{
-	margin: 0 -8px!important;
-	padding-bottom: 30px;
-}
-.dft-question-mark-slide-item{
-	padding: 0 8px;
-}
-.dft-question-mark-slide-item:hover .dft-question-mark-slide-item-inr{
-	background: #1E1E1E;
-	color: #fff;
-	border-color: #1E1E1E;
-}
-.dft-question-mark-slide-item:hover  .dft-question-mark-slide-item-inr span{
-	right: 40px;
-}
-.dft-question-mark-slide-item-inr{
-	border: 3px solid #F3F3F3;
-	padding: 43px 133px 35px 115px;
-	position: relative;
-		transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-}
-.dft-question-mark-slide-item-title{
-	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans', sans-serif;
-}
-.dft-question-mark-slide-item-inr strong{
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 30px;
-	display: block;
-}
-.dft-question-mark-slide-item-inr i{
-	position: absolute;
-	left: 30px;
-	top: 43px;
-}
-.dft-question-mark-slide-item-inr span{
-	position: absolute;
-	right:45px;
-	top: 58px;
-}
-.dft-question-mark-slide-item-inr span img{
-	display: inline-block;
-	vertical-align: baseline;
-}
+
 
 .dft-2grd-img-con-item{
 	position: relative;
