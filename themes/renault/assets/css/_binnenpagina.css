@@ -23,16 +23,20 @@
 	margin-bottom: 20px;
 	padding-top: 20px;
 }
+.default-page-con h1,
+.dfp-promo-module-title,h2{
+	text-transform: uppercase;
+}
 .dfp-text-module{
 	
 }
-.default-page-con ul,
-ul{
+.default-page-con ul, ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	padding-left: 25px;
 	padding-bottom: 10px;
+	padding-top: 10px;
 }
 .default-page-con ul li,
 ul li {

@@ -1,0 +1,20 @@
+.about-us-sec-cntlr{
+	background: #232531;
+	color: #fff;
+}
+
+.fl-about-us-item{
+	text-align: center;
+	color: #fff;
+}
+.about-us-item-icon{
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about-us-item-icon img{
+	display: inline-block;
+	vertical-align: baseline;
+}

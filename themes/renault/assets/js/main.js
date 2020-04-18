@@ -145,9 +145,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 }
 
+/* Start Milon   --->*/
 
 
-/*Start Rannojit -->*/
+
 
 
 
@@ -160,7 +161,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-/* Start Milon   --->*/
+/*Start Rannojit -->*/
+
+
 
 
 })(jQuery);
