@@ -166,6 +166,30 @@ img{
 }
 
 
+ul.reset-list,
+ol.reset-list,
+ul.sub-menu,
+.fl-pagi-pagi-ctlr ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.reset-list li,
+ul.sub-menu li,
+.fl-pagi-pagi-ctlr ul li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0;
+}
+.reset-list li:before,
+ul.sub-menu li:before,
+.fl-pagi-pagi-ctlr ul li:before{
+	content: none!important;
+}
+
+
+
 /**
 Selects
 */
