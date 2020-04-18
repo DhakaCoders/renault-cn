@@ -48,7 +48,17 @@
 
 
 <!-- Start Milon -->
+<symbol id="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 0C3.58854 0 0 3.58896 0 8C0 13.9019 7.38108 20.9167 7.69533 21.2127C7.78125 21.293 7.89062 21.3333 8 21.3333C8.10938 21.3333 8.21875 21.293 8.30471 21.2127C8.61892 20.9167 16 13.9019 16 8C16 3.58896 12.4115 0 8 0ZM8 12.4445C5.54946 12.4445 3.55554 10.4505 3.55554 8C3.55554 5.54946 5.5495 3.55554 8 3.55554C10.4505 3.55554 12.4445 5.5495 12.4445 8C12.4445 10.4505 10.4505 12.4445 8 12.4445Z"/>
+</symbol>
 
+<symbol id="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.1016 0H2.65586C1.22001 0 0 1.17076 0 2.60621V22.3968C0 23.8322 1.19419 25 2.63004 25L11.0897 24.9909C12.5253 24.9909 13.6999 23.8229 13.6999 22.3872L13.7122 2.60482C13.712 1.16421 12.5432 0 11.1016 0ZM5.65861 1.56254H8.10895C8.3242 1.56254 8.49953 1.73728 8.49953 1.95312C8.49953 2.16897 8.3242 2.34371 8.10895 2.34371H5.65861C5.44277 2.34371 5.26803 2.16897 5.26803 1.95312C5.26803 1.73728 5.44277 1.56254 5.65861 1.56254ZM4.18623 1.68684C4.33098 1.54228 4.59448 1.5403 4.73904 1.68684C4.81152 1.75912 4.85441 1.86059 4.85441 1.96424C4.85441 2.06591 4.81152 2.16718 4.73904 2.23966C4.66696 2.31213 4.56509 2.35483 4.46363 2.35483C4.36017 2.35483 4.26069 2.31213 4.18623 2.23966C4.11415 2.16738 4.07304 2.06591 4.07304 1.96424C4.07284 1.86059 4.11415 1.75912 4.18623 1.68684ZM6.80495 24.2258C6.1604 24.2258 5.63617 23.7012 5.63617 23.0568C5.63617 22.4123 6.1604 21.8878 6.80495 21.8878C7.4495 21.8878 7.97373 22.4123 7.97373 23.0568C7.97373 23.7012 7.44931 24.2258 6.80495 24.2258ZM12.4997 21.0934H1.36715V3.71105H12.4997V21.0934Z"/>
+</symbol>
+<symbol id="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.52066 11.274C9.35065 11.3802 9.15939 11.4227 8.98937 11.4227C8.81936 11.4227 8.6281 11.3802 8.45809 11.274L0 6.10986V12.9741C0 14.4404 1.19008 15.6305 2.65643 15.6305H15.3436C16.8099 15.6305 18 14.4404 18 12.9741V6.10986L9.52066 11.274Z"/>
+  <path d="M15.3435 2.36963H2.65639C1.40255 2.36963 0.339979 3.26219 0.0849609 4.45227L9.01058 9.89265L17.9149 4.45227C17.6599 3.26219 16.5974 2.36963 15.3435 2.36963Z"/>
+ </symbol>
 
 
 
@@ -105,15 +115,135 @@
 
 
 <footer class="footer-wrp">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-          <div class="ftr-col">
-            <div></div>
+  <div class="ftr-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="ftr-col-main clearfix">
+            <div class="ftr-col ftr-col-1">
+              <div class="ftr-logo">
+                <a href="#"><img src="assets/images/ftr-logo.png" alt=""></a>
+              </div>
+              <div class="ftr-logo-dsc">
+                <strong>Gebroeders Van Damme N.V.</strong>
+                <span>Passion for life</span>
+              </div>
+              <div class="ftr-socail-icon">
+                <ul class="ulc reset-list clearfix">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ftr-col ftr-col-2"> 
+              <h6><span>Navigatie</span></h6>
+              <ul class="ulc reset-list clearfix">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Verkoop</a></li>
+                <li><a href="#">Tweedehands </a></li>
+                <li><a href="#">Verhuur</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="ftr-col ftr-col-3">
+              <h6 class="active"><span>Contact Mekaniek</span></h6>
+              <ul class="ulc reset-list clearfix">
+                <li>
+                  <a href="#" target="_blank">
+                    <i>
+                      <svg class="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" fill="white">
+                        <use xlink:href="#ftr-map-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <span>Nieuwstraat 68 <br> 9280 Wieze <br> Oost-Vlaanderen</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:053/77.52.30">
+                    <i>
+                      <svg class="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="white">
+                        <use xlink:href="#ftr-cell-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <span>053/77.52.30</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:afspraak@renaultwieze.be">
+                    <i>
+                      <svg class="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="white">
+                        <use xlink:href="#ftr-mail-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <span>afspraak@renaultwieze.be</span>
+                  </a>
+                </li>
+              </ul>               
+            </div>
+            <div class="ftr-col ftr-col-4">
+              <h6 class="active"><span>Contact Carrosserie</span></h6>
+              <ul class="ulc reset-list clearfix">
+                <li>
+                  <a href="#" target="_blank">
+                    <i>
+                      <svg class="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" fill="white">
+                        <use xlink:href="#ftr-map-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <span>Vriezenrot 2 <br> 9200 Dendermonde <br>Oost-Vlaanderen</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:052/21.52.30">
+                    <i>
+                      <svg class="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="white">
+                        <use xlink:href="#ftr-cell-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <span>052/21.52.30</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@renaultwieze.be">
+                    <i>
+                      <svg class="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="white">
+                        <use xlink:href="#ftr-mail-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <span>info@renaultwieze.be</span>
+                  </a>
+                </li>
+              </ul>              
+            </div>
           </div>
+        </div>
       </div>
     </div>
-  </div> 
+  </div>
+  <div class="ftr-btm">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="ftr-btm-innr clearfix">
+            <div class="ftr-btm-col-1">
+              <span>&copy; 2020 Gebroeders Van Damme N.V. . All Rights Reserved.</span>
+            </div>
+            <div class="ftr-btm-col-2">
+              <ul class="ulc reset-list clearfix">
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Cookie policy </a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="ftr-btm-col-3 text-right">
+              <a href="#">webdesign by conversal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
