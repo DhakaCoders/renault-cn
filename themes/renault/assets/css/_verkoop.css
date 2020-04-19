@@ -3,8 +3,8 @@
 vrk-product-grid-sec-wrp
 --------------------
 */
-.vrk-product-grid-sec-wrp{
-	padding:75px 0;
+.vrk-product-grid-sec-wrp {
+    padding: 75px 0 40px;
 }
 .vrk-product-grid-head{
 	max-width: 950px;
@@ -95,11 +95,11 @@ ul.vrk-tabs-menu{
 	margin: 0 -15px;
 	padding-top: 85px;
 }
-.vrk-product-grid-item{
+.vrk-product-grid-item {
     width: 33.3333%;
     float: left;
     text-align: center;
-    padding: 10px 15px 10px 15px;
+    padding: 20px 15px 20px 15px;
     position: relative;
     transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -118,20 +118,23 @@ ul.vrk-tabs-menu{
     -ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-.vrk-product-grid-item:hover .vrk-product-grid-dsc span,
 .vrk-product-grid-item:hover:before{
+	opacity: 1;
+}
+.vrk-product-grid-item:hover .vrk-product-grid-dsc span{
 	opacity: 1;
 }
 .vrk-product-grid-item:hover .vrk-product-grid-dsc a{
 	color: #FFCE00;
 } 
-.vrk-product-grid-img-cntlr{
-	min-height: 180px;
-	overflow: hidden;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.vrk-product-grid-img-cntlr {
+    min-height: 180px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 .vrk-product-grid-img a{
 	display: inline-block;
@@ -167,7 +170,7 @@ ul.vrk-tabs-menu{
 	text-decoration: none;
 }
 .vrk-product-grid-dsc span{
-	display:none;
+	opacity: 0;
 	text-align: center;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
@@ -251,7 +254,7 @@ vrk-two-part-sec-wrp
 	line-height: 28px;
 	color: #fff;
 	font-weight: 300;
-	padding-top: 20px;
+	padding-top: 25px;
 }
 .vrk-two-part-rgt-dsc a{
 	display: inline-block;
@@ -269,7 +272,10 @@ vrk-two-part-sec-wrp
 .vrk-product-grid-btm-sec-wrp{
 	padding-bottom: 85px;
 }
-.vrk-product-grid-btm-sec-wrp .vrk-product-grid-inr{
-	border-bottom: 4px solid #F4F4F4;
-	padding-bottom: 85px;
+.vrk-product-grid-btm-sec-wrp .vrk-product-grid-inr {
+    border-bottom: 4px solid #F4F4F4;
+    padding-bottom: 40px;
+}
+.vrk-two-part-rgt-dsc a:hover{
+	background:#FF9839;
 }

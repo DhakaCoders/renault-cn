@@ -247,10 +247,16 @@ footer-top-sec-wrp
   background: #F3BA4B;
   border-radius: 8px;
   text-transform: uppercase;
-  padding: 20px 30px;
+  padding: 20px 30px 16px;
 }
 .footer-top-rgt-btn a:last-child{
-  padding: 20px 38px;
+  padding: 20px 38px 16px;
   background: #FF9839;
   margin-left: 12px;
+}
+.footer-top-rgt-btn a:hover{
+  background:#FF9839;
+}
+.footer-top-rgt-btn a:last-child:hover{
+  background:#F3BA4B;
 }
