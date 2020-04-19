@@ -358,15 +358,17 @@ contact-info-sec-wrp
 	width: 100%;
 	margin: 0 auto;
 }
-.offer-contact-form-block .contact-form-wrp{
-	width: 100%
+.offer-contact-form-block .contact-form-wrp {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .contact-form-wrp:before{
 	content: none;
 }
 .offer-contact-form-block .contact-form-dsc{
 	color: #232531;
-	padding-bottom: 0;
+	padding:0;
 }
 .offer-contact-form-block .contact-form-dsc-title{
 	color: #232531;
