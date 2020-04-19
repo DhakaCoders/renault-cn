@@ -46,8 +46,7 @@ rw-contact-form-sec-wrp
 	margin-top: 70px;
 	position: relative;
 }
-.contact-form-wrp:before{
-	content: "";
+span.contact-bdr{
 	position: absolute;
 	width: 221px;
 	height: 231px;
@@ -59,7 +58,7 @@ rw-contact-form-sec-wrp
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container:after,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container:before{
-	content: "";
+	content:none;
 	clear: both;
 	display: table;
 }
