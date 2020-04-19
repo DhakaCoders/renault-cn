@@ -204,3 +204,53 @@
 .ftr-btm-col-2 ul li a:hover{
   color: #F3BF00;
 }
+/*
+---------------------
+footer-top-sec-wrp
+---------------------
+*/
+.footer-top-sec-wrp{
+  padding-bottom: 65px;
+}
+.footer-top-lft{
+  float: left;
+  padding-right: 90px;
+}
+.footer-top-rgt{
+  float: right;
+}
+.footer-top-lft-dsc-title{
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 900;
+  color: #232531;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+.footer-top-lft-dsc{
+  font-size: 16px;
+  line-height: 25px;
+  color: #232531;
+  font-weight: 300;
+}
+.footer-top-lft-dsc p{
+  margin-bottom: 0;
+}
+.footer-top-rgt-btn a{
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  background: #F3BA4B;
+  border-radius: 8px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+}
+.footer-top-rgt-btn a:last-child{
+  padding: 20px 38px;
+  background: #FF9839;
+  margin-left: 12px;
+}

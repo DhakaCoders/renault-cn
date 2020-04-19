@@ -343,3 +343,31 @@ contact-info-sec-wrp
 #googlemap{
 	height: 760px;
 }
+
+/*
+--------------------------
+ offer-contact-form-block
+--------------------------
+*/
+.offer-contact-form-sec-wrp{
+	padding-top: 80px;
+	padding-bottom: 95px;
+}
+.offer-contact-form-block{
+	max-width: 950px;
+	width: 100%;
+	margin: 0 auto;
+}
+.offer-contact-form-block .contact-form-wrp{
+	width: 100%
+}
+.contact-form-wrp:before{
+	content: none;
+}
+.offer-contact-form-block .contact-form-dsc{
+	color: #232531;
+	padding-bottom: 0;
+}
+.offer-contact-form-block .contact-form-dsc-title{
+	color: #232531;
+}

@@ -164,6 +164,19 @@ if( $('.tabs').length ){
   });
 }
 
+if( $('.tabs').length ){
+  $('.tabs:first').show();
+  $('.vrk-tabs-menu li:first').addClass('active');
+
+  $('.vrk-tabs-menu li').on('click',function(){
+    index = $(this).index();
+    $('.vrk-tabs-menu li').removeClass('active');
+    $(this).addClass('active');
+    $('.tabs').hide();
+    $('.tabs').eq(index).show();
+  });
+}
+
 
 /*
 -----------------------
