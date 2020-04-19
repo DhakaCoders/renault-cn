@@ -156,7 +156,32 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 /*Start Shoriful  ---> */
 
-
+if( $('.rn-td-slider-inr').length ){
+    $('.rn-td-slider-inr').slick({
+      pauseOnHover: false,
+      dots: false,
+      infinite: true,
+      arrows: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: '.rn-td-slider-bottom',
+      prevArrow: $('.rn-td-mainslider .left-arrow'),
+      nextArrow: $('.rn-td-mainslider .right-arrow'),
+    });
+    $('.rn-td-slider-bottom').slick({
+      pauseOnHover: false,
+      dots: false,
+      infinite: true,
+      arrows: true,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.rn-td-slider-inr',
+      focusOnSelect: true,
+      centerMode: true,
+    });
+}
 
 
 
