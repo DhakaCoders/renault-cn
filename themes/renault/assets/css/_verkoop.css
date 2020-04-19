@@ -95,7 +95,7 @@ ul.vrk-tabs-menu{
 	margin: 0 -15px;
 	padding-top: 85px;
 }
-.vrk-product-grid-item {
+.vrk-product-grid-item{
     width: 33.3333%;
     float: left;
     text-align: center;
@@ -104,6 +104,9 @@ ul.vrk-tabs-menu{
     transition: all 0.5s;
     -ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
+}
+.vrk-product-grid-item:nth-child(3n+1){
+	clear: left;
 }
 .vrk-product-grid-item:before{
     content: "";
