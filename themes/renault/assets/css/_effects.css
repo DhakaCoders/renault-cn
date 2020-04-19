@@ -1,6 +1,7 @@
 /**
 All Transitions
 */
+.overons-post-grid-dsc-inr:hover .overons-post-grid-img,
 a,input,img,textarea,button,svg,
 nav.main-nav > ul > li > a:before,
 .img-div{
@@ -8,6 +9,7 @@ nav.main-nav > ul > li > a:before,
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+.overons-post-grid-dsc-inr:hover .overons-post-grid-img,
 .scale,
 .img-div-scale:hover .img-div{
 	transform: scale(1.1);
