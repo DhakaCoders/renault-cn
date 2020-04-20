@@ -272,11 +272,7 @@ vrk-two-part-sec-wrp
 	text-transform: uppercase;
 	margin-top: 15px;
 }
-.vrk-product-grid-btm-sec-wrp{
-	padding-bottom: 85px;
-}
 .vrk-product-grid-btm-sec-wrp .vrk-product-grid-inr {
-    border-bottom: 4px solid #F4F4F4;
     padding-bottom: 40px;
 }
 .vrk-two-part-rgt-dsc a:hover{

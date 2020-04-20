@@ -1,0 +1,135 @@
+---------------------------
+Footer
+----------------------------
+Desktop--->
+
+1.  i) https://prnt.sc/s2nrk9
+	footer top a ai gap tate padding dite hobe. bcoz kono page a top a border ache
+
+	ii) https://www.screencast.com/t/xQbv8kcDTj
+		has-top-bdr amon akta class diye design korte hobe, j page a border ta ache, se page a ai class ta dile jeno border top ta peye jay, r padding top ta age thakei thakbe
+
+2. https://www.screencast.com/t/Ke2b01wX32u
+	ai icon gulo sprite use koro, bcoz instagram icon ta mileni
+
+3. https://www.screencast.com/t/PLRct0Ixcrb
+	'reset-list' class ta dile 'ulc' class ta r lagbena
+
+
+4. https://prnt.sc/s2o2ka
+	padding-right diye rakho 20px, jate lege na jay
+
+
+5. https://www.screencast.com/t/xNRhlZqdFxqJ
+	ai divider ar color ta mileni, jpg thake niye bosao
+
+
+6. https://www.screencast.com/t/98lNJpt1dD
+	ata text soho logo daw, xs a r akta new logo hobe
+
+
+---------------------------
+Contact
+----------------------------
+Desktop--->
+
+1. https://www.screencast.com/t/0fCL2ckZB
+	h2 hobe, bcoz banner a h1 use hobe
+
+2. https://www.screencast.com/t/KsGrpGJslQlK
+	placeholder ar color mileni
+
+3. https://www.screencast.com/t/LC7EWGfLl0
+	incorrecte hole placeholder ar color red deao jay naki dekho, Figma ar moto
+
+4. https://www.screencast.com/t/sQUxHsdrn0
+	aikhane field ar font-size ak aktar ak ak rokom , jetar jemon setate temon font-size dite hobe
+
+5. https://www.screencast.com/t/8isL8NM6c
+	inline a img use koro, img tag tao thakbe xs ar jonno, desktop a div a r xs a img tag ta
+
+6. https://www.screencast.com/t/fHTrt1KZW
+	hover a border ta full-width hobena, left ar moto hobe, r color ta black ai thakbe
+
+7. https://www.screencast.com/t/S4rV28ULZ
+	multi place hobe
+
+
+
+---------------------------
+Offerte Formulier
+----------------------------
+Desktop--->
+
+1. https://www.screencast.com/t/xzbZxPwOO
+	2 tai active thakbena
+
+2. https://www.screencast.com/t/lJmeGL6K
+	placeholder ar color mileni
+
+3. https://www.screencast.com/t/p3sSOIj1
+	focus a akta blue border hosche
+
+4. https://www.screencast.com/t/9JKukYBJwBXg
+	ai page a ai section ta hobena
+
+
+---------------------------
+Verkoop
+----------------------------
+Desktop--->
+
+1. https://www.screencast.com/t/yy19t7ePyt
+	i)hover a border ta amon hobe, full width hobena
+	ii) hover time a color ta black ai thak
+
+2. https://www.screencast.com/t/HAuvoztE0g
+	h2 daw
+
+3. https://www.screencast.com/t/QtTsK1BstVa
+	ai div ar parent a akta div nao, r class daw 'vrk-product-grid' and ai class ta dhore ai gulo css design thakbe,
+	r 'vrk-product-grid-item' class ta dhore vitore design hobe, jate kore tomar ai grd gulo onno kothao use kora jay, ai gulo jate slider use korleo problem na hoy, amon design korte hobe, 
+	kew copy korle just vitorer ta copy korbe
+
+
+4. https://www.screencast.com/t/8cNBKrg5st
+	link hobe
+
+5. https://www.screencast.com/t/d6PWeU95nM
+	ai 3 jaygay ai 3 ta class use koro,
+	amader jodi multi equal height lage tahole aivabe use kora jay, jQuery te code kora ache ai class gulor
+
+6. https://www.screencast.com/t/rM5CKrej
+	akta img tag niye rkho, xs a jodi problem hoy tokhon img tag ta show korba, r div ar ta transparent hobe
+
+7. https://www.screencast.com/t/DzWbKcknFP
+	font-weight : 200 hobe
+
+8. https://www.screencast.com/t/aCzx0PyWd
+	h3 daw
+
+
+---------------------------
+Over Ons
+----------------------------
+Desktop--->
+
+1. https://www.screencast.com/t/Xb6mO3sf
+	ai page a bg ta full width hobe, parent section akta new class niye control koro
+
+
+2. https://www.screencast.com/t/hthXNSDojiLi
+	h3 hobe
+
+3. https://www.screencast.com/t/cyPNENwVig
+	h4 hobe
+
+4. https://www.screencast.com/t/Ue4FtO7brUYl
+	aigulo equal-height class gulo use hobe age jevabe dilam bujay
+
+5. https://www.screencast.com/t/g9IkSipYh
+	heading hobena strong tag use koro
+
+6. https://www.screencast.com/t/ohraY2he6ey
+	hover a black color daw, ai color ta ki ai site a ache?
+	
