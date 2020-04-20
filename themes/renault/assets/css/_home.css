@@ -1,3 +1,6 @@
+.main-slider-section{
+	position: relative;
+}
 .mainSlide-item-inr{
 	height: 790px;
 	position: relative;
@@ -149,6 +152,57 @@
 
 .slider-features-cntlr{
 	background: #fff;
+	height: 110px;
+	padding: 10px 50px 10px 55px;
+	display: flex;
+	align-items: center;
+}
+.sfc-title{
+	display: block;
+	color: #000;
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 1;
+	padding-bottom: 15px;
+}
+.slider-features-icon-cntlr,
+.slide-date-title-area{
+	display: flex;
+	align-items: center;
+}
+.slider-features-icon-cntlr > div:not(:last-child){
+	padding-right: 35px;
+}
+.slider-features-icon-cntlr span{
+	font-size: 14px;
+	line-height: 1;
+	color: #000;
+}
+.slider-features-icon-cntlr > div i{
+	margin-right: 5px;
+}
+.main-slider-prv-nxt{
+	position: absolute;
+	left: 61.7%;
+	bottom: 28px;
+	z-index: 20;
+}
+.msprev{
+	margin-right: 40px;
+}
+.main-slider-prv-nxt span{
+	cursor: pointer;
+}
+.hm-cat-boxes-sec-cntlr ul{
+	margin: 0 -12px;
+}
+.hm-cat-boxes-sec-cntlr ul li{
+	float: left;
+	width: 50%;
+	padding: 0 12px 24px;
+}
+.hm-cat-boxes-section{
+	padding: 120px 0 120px;
 }
 
 

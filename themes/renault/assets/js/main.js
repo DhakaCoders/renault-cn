@@ -337,6 +337,19 @@ if( $('.dftAboutUsSecSlider').length ){
 }
 
 
+if( $('.mainSlider').length ){
+    $('.mainSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false, 
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.msprev'),
+      nextArrow: $('.msnxt')
+    });
+}
+
 
 
 

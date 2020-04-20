@@ -427,6 +427,7 @@ Gallery design
 	color: #fff;
 	margin-bottom: 30px;
 	padding: 0 40px 0 10px;
+	position: relative;
 }
 .dft-renault-item{
 	display: flex;
