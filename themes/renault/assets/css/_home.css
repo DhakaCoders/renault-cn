@@ -173,10 +173,16 @@
 .slider-features-icon-cntlr > div:not(:last-child){
 	padding-right: 35px;
 }
-.slider-features-icon-cntlr span{
-	font-size: 14px;
-	line-height: 1;
-	color: #000;
+.slider-features-icon-cntlr > div{
+	display: flex;
+	align-items: center;
+}
+.slider-features-icon-cntlr span {
+    font-size: 14px;
+    line-height: 1;
+    color: #000;
+    padding-top: 4px;
+    padding-left: 2px;
 }
 .slider-features-icon-cntlr > div i{
 	margin-right: 5px;
@@ -292,6 +298,10 @@
 }
 
 
+.hmAboutUsSecSlider .slick-current{
+	opacity: 1;
+}
+
 
 
 
@@ -347,6 +357,7 @@
 	line-height: 1;
 	font-weight: 800;
 	margin: 0 0 10px 0;
+	color: #fff;
 }
 
 .fl-about-us-item p{
