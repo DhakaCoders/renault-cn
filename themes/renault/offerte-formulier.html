@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>verkoop</title>
+	<title>Offerte Formulier</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -126,6 +126,25 @@
   </div>
 </header>
 
+<section class="rn-breadcrumbs-sec">
+  <div class="rn-breadcrumbs-sec-bg">
+    <img src="assets/images/rn-breadcrumbs-sec-bg.jpg">
+  </div>
+  <div class="rn-breadcrumbs-sec-des">
+    <div class="rn-breadcrumbs-sec-des-inr">
+      <h2 class="rn-breadcrumbs-sec-des-inr-title">Offerte</h2>
+      <ul class="reset-list">
+        <li class="current-menu-item"><a href="#">Home</a></li>
+        <li><a href="#">Binnenpagina</a></li>
+        <li><a href="#">Binnenpagina</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rn-breadcrumbs-sec-icon">
+    <img src="assets/images/rn-breadcrumbs-sec-icon.png">
+  </div>
+</section>
+
 
 <section class="offer-contact-form-sec-wrp">
   <div class="container">
@@ -144,11 +163,11 @@
                   
                   <div class="wpforms-field">
                     <label class="wpforms-field-label">Voornaam </label>
-                    <input type="text" name="name" placeholder="Mathias" required>
+                    <input type="text" name="name" placeholder="Voornaam" required>
                   </div>
                   <div class="wpforms-field">
                     <label class="wpforms-field-label">Achternaam</label>
-                    <input type="text" name="name" placeholder="Her |" required>
+                    <input type="text" name="name" placeholder="Achternaam" required>
                   </div>
 
                   <div class="wpforms-field">
@@ -156,15 +175,46 @@
                     <input type="text" name="text" placeholder="Telefoon" required>
                   </div>
 
-                  <div class="wpforms-field wpforms-has-error">
+                  <div class="wpforms-field">
                     <label class="wpforms-field-label">E-mailadres</label>
-                    <input type="email" name="email" placeholder="mathias2conversalbe" class="form-control" required>
-                    <label class="wpforms-error">x incorrecte email</label>
+                    <input type="email" name="email" placeholder="E-mailadres" class="form-control" required>
                   </div>
 
-                  <div class="wpforms-field subjectField">
-                    <label class="wpforms-field-label">onderwerpen</label>
-                    <input type="text" name="text" placeholder="Onderwerpen" required>
+                  <div class="wpforms-field wpforms-field-select">
+                    <label class="wpforms-field-label" for="select1">Ik ben geïnteresseerd in:</label>
+                    <select id="select1" name="select1">
+                      <option value="First Choice">Selecteer hier</option>
+                      <option value="Second Choice">Selecteer hier</option>
+                      <option value="Third Choice">Selecteer hier</option>
+                    </select>
+                  </div>
+
+                  <div class="wpforms-field wpforms-field-checkbox">
+                    <label class="wpforms-field-label">Selecteer voertuig:</label>
+                    <ul class="reset-list clearfix">
+                      <li class="wpforms-selected">
+                        <label class="container active">Renault
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </li>
+                      <li class="wpforms-selected">
+                        <label class="container">Dacia
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </li>
+                    </ul>
+                    
+                  </div>
+
+                  <div class="wpforms-field wpforms-field-select">
+                    <label class="wpforms-field-label" for="select1">Type:</label>
+                    <select id="select1" name="select1">
+                      <option value="First Choice">Renault Talisman</option>
+                      <option value="Second Choice">Renault Talisman</option>
+                      <option value="Third Choice">Renault Talisman</option>
+                    </select>
                   </div>
 
                   <div class="wpforms-field wpforms-field-textarea">
@@ -173,7 +223,7 @@
                   </div>
                 </div><!-- end of .wpforms-field-container-->
                 <div class="wpforms-submit-container">
-                  <button type="submit" name="submit" class="wpforms-submit">VeRZENDEN</button>
+                  <button type="submit" name="submit" class="wpforms-submit">Offerte aanvragen</button>
                 </div>
 
               </form>
