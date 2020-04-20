@@ -3,4 +3,23 @@ Footer
 ----------------------------
 Desktop--->
 
-1. 
+1.  i) https://prnt.sc/s2nrk9
+	footer top a ai gap tate padding dite hobe. bcoz kono page a top a border ache
+
+	ii) https://www.screencast.com/t/xQbv8kcDTj
+		has-top-bdr amon akta class diye design korte hobe, j page a border ta ache, se page a ai class ta dile jeno border top ta peye jay, r padding top ta age thakei thakbe
+
+2. https://www.screencast.com/t/Ke2b01wX32u
+	ai icon gulo sprite use koro, bcoz instagram icon ta mileni
+
+3. https://www.screencast.com/t/PLRct0Ixcrb
+	'reset-list' class ta dile 'ulc' class ta r lagbena
+
+
+4. https://prnt.sc/s2o2ka
+	padding-right diye rakho 20px, jate lege na jay
+
+
+5. https://www.screencast.com/t/xNRhlZqdFxqJ
+	ai divider ar color ta mileni, jpg thake niye bosao
+
