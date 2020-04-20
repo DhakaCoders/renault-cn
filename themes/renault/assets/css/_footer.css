@@ -175,7 +175,7 @@
     position: absolute;
     font-size: 14px;
     font-weight: 300;
-    color: #232531;
+    color: #dadada;
     right: -4px;
     top: 0;
     left: auto;
@@ -211,6 +211,12 @@ footer-top-sec-wrp
 */
 .footer-top-sec-wrp{
   padding-bottom: 65px;
+}
+.footer-top-wrp{
+  padding-top: 85px;
+}
+.has-top-bdr{
+  border-top:4px solid #F4F4F4;
 }
 .footer-top-lft{
   float: left;
