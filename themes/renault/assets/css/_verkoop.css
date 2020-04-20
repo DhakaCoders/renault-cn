@@ -85,19 +85,20 @@ ul.vrk-tabs-menu{
 	opacity: 1;
 }
 .vrk-tabs-menu li a:hover:before{
-	width: 100%;
 	opacity: 1;
 }
 .vrk-tabs-menu li a:hover{
-	color: #FFCE00;
+	color: #232531;
 }
 .vrk-product-grid-inr{
 	margin: 0 -15px;
 	padding-top: 85px;
 }
-.vrk-product-grid-item{
-    width: 33.3333%;
+.vrk-product-grid{
+	width: 33.3333%;
     float: left;
+}
+.vrk-product-grid-item{
     text-align: center;
     padding: 20px 15px 20px 15px;
     position: relative;
@@ -105,7 +106,7 @@ ul.vrk-tabs-menu{
     -ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-.vrk-product-grid-item:nth-child(3n+1){
+.vrk-product-grid:nth-child(3n+1){
 	clear: left;
 }
 .vrk-product-grid-item:before{
@@ -124,10 +125,10 @@ ul.vrk-tabs-menu{
 .vrk-product-grid-item:hover:before{
 	opacity: 1;
 }
-.vrk-product-grid-item:hover .vrk-product-grid-dsc span{
+.vrk-product-grid-item:hover .vrk-product-grid-dsc > a{
 	opacity: 1;
 }
-.vrk-product-grid-item:hover .vrk-product-grid-dsc a{
+.vrk-product-grid-item:hover .vrk-product-grid-dsc-title a{
 	color: #FFCE00;
 } 
 .vrk-product-grid-img-cntlr {
@@ -172,22 +173,25 @@ ul.vrk-tabs-menu{
 	vertical-align: baseline;
 	text-decoration: none;
 }
-.vrk-product-grid-dsc span{
+.vrk-product-grid-dsc > a{
 	opacity: 0;
 	text-align: center;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
-}
-
-.vrk-product-grid-dsc span i{
 	display: inline-block;
 	vertical-align: baseline;
+	cursor: pointer;
 	border: 2px solid #CBCBCB;
 	box-sizing: border-box;
 	width: 26px;
 	height: 26px;
 	border-radius: 50px;
+}
+
+.vrk-product-grid-dsc a i{
+	display: inline-block;
+	vertical-align: baseline;
 	text-align: center;
 }
 
@@ -214,6 +218,9 @@ vrk-two-part-sec-wrp
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
 }
+.vrk-two-part-img img{
+	display: none;
+}
 .vrk-two-part-rgt{
 	float: right;
 	width: 50%;
@@ -229,7 +236,7 @@ vrk-two-part-sec-wrp
 	font-size: 36px;
 	line-height: 38px;
 	color: #fff;
-	font-weight: 300;
+	font-weight: 200;
 	margin-bottom: 3px;
 	display: block;
 }

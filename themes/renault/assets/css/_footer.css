@@ -28,22 +28,20 @@
 .ftr-logo a{
   display: inline-block;
   vertical-align: baseline;
-  max-width: 95px;
-  width: 100%;
 }
-.ftr-logo-dsc span,
-.ftr-logo-dsc strong{
+.ftr-logo a span,
+.ftr-logo a strong{
 	display: inline-block;
 	vertical-align: baseline;
 }
-.ftr-logo-dsc strong{
+.ftr-logo strong{
 	font-size: 20px;
 	line-height: 22px;
 	color: #fff;
 	font-weight: 700;
 	display: block;
 }
-.ftr-logo-dsc span{
+.ftr-logo span{
 	font-size: 16px;
 	line-height: 18px;
 	color: #F3BA4B;
