@@ -1,0 +1,87 @@
+---------------------------
+Page banner
+----------------------------
+Desktop--->
+
+
+
+1. https://www.screencast.com/t/gQrlMEkQq
+	div a img ta use koro. r img ta new kore kete bosao fete jasche keno jani
+
+2. https://www.screencast.com/t/e3NnJau98
+	page title boro hole problem hobe,
+	ai div ta static kori, r img div ta absolute, balck div ar content barle img ta boro hobe
+
+3. https://www.screencast.com/t/MBpdKVrfu
+	i) h1 use koro
+	ii) font-family aikhane keno lagteche, sobar jonno body tei to ata deoa ache
+	iii) https://www.screencast.com/t/5awgcNznA
+		ai class ta main menu te use hoy, aikhane just ai 'active' ta daw 
+
+4.  i) https://www.screencast.com/t/Q5xQag1AO
+	ai img div ta inner div ar vitore daw, r inner div k height 100% bole position relative daw
+	ii) https://www.screencast.com/t/B8ZFZmA8bqMh
+		then img tar jonno ai code ta koro
+
+
+
+---------------------------
+Tweedehands Details
+----------------------------
+Desktop--->
+
+1. https://www.screencast.com/t/6skOULFba 
+	ai img i teg niye tar vitore img tag a use koro, svg formate a use koro, sprite lagbena.
+
+2. https://www.screencast.com/t/YCjAqXn2
+	ai icon gulo sprite hobe sob, strong ar vitore i tag niye use koro
+
+3. https://prnt.sc/s2tu8w
+	padding-right 20px diye rakho , jate right ar sathe lege na jay text barle
+
+4. https://www.screencast.com/t/3zKauSYn
+	display-inline use korle tar sathe verticle align tao bolte hoy
+
+5. https://www.screencast.com/t/vlSDVCFqhxB
+	i) text ta icon ar center a nai
+	ii) hover korle ai color tari deep ta dite paro
+
+6. https://www.screencast.com/t/7NAN3C2z0DbE
+	sprite hobe
+
+7. https://www.screencast.com/t/fL9sp4K8
+	i) i niye img tag a hobe, sprite hobena, but svg formate
+	ii) r title ta h3 hobe
+
+8. https://www.screencast.com/t/2mF5LpolX
+	parent div 2 tate mHc use koro
+
+9. https://www.screencast.com/t/IjgJcMfBY
+	akta ul hobe, li width 50% diye manage korte hobe, then clear left use korte hobe
+	same vabe right ar box tao
+
+
+10. https://www.screencast.com/t/cwX9a9DQdNyl
+	ai part tuku ami home page ar slider a korechi, oita dekhe idea niye kore felo,
+	icon sprite hobe
+
+11. https://www.screencast.com/t/wMowb1TfC
+	ai partukur joto jaygay rn-td use korecho sob tule just rn rakho , ata common section , so seta vabei class name dite hobe, akhon j name ta dicho ta just ai page ar jonno manay
+
+12. https://www.screencast.com/t/4bg9ebLG
+	atate na p te daw, bcoz p ta barbe tokhon button ta upore niche hobe, porer grd ar sathe mil khabena
+
+
+13. https://www.screencast.com/t/QqIBgGqat
+	h3 daw
+
+
+14. https://www.screencast.com/t/HlGJU5rO8SEk
+	https://www.screencast.com/t/IGr97NUi0sCd
+	ata strong hobe, porer ta span
+
+
+15. https://www.screencast.com/t/GRDjRNEp
+	back button ar jquery code ta daw aikhane
+
+
