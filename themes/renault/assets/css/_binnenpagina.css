@@ -423,23 +423,27 @@ Gallery design
 }
 .dft-renault-area{
 	background: #F3BA4B;
-	min-width: 176px;
+	min-height: 176px;
 	color: #fff;
 	margin-bottom: 30px;
-	padding: 0 40px 0 10px;
+	padding: 0 0 0 10px;
+}
+.dft-renault-item-inr{
 	position: relative;
+	height: 100%;
 }
 .dft-renault-item{
-	display: flex;
-	align-items: center;
+	position: relative;
+	padding-left: 180px;
+	height: 100%;
 }
 .dft-renault-item-fea-img{
 	max-width: 180px;
 	width: 100%;
-
-}
-.dft-renault-item-fea-img img{
-	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
 }
 .dft-renault-item-des{
 	padding: 20px 50px 20px 40px;

@@ -210,6 +210,10 @@
 .hm-cat-boxes-section{
 	padding: 120px 0 120px;
 }
+.hm-cat-boxes-section .dft-renault-area{
+	background: transparent;
+	border: 2px solid #f8f8f8;
+}
 
 
 
@@ -364,4 +368,48 @@
 	margin-bottom: 0;
 	font-size: 16px;
 	line-height: 25px;
+}
+
+
+
+@media(max-width: 1499px){
+	
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	
+
+}
+
+@media(max-width: 991px){
+	
+
+	
+}
+
+@media(max-width: 767px){
+
+}
+
+@media(max-width: 575px){
+	
+
+}
+
+@media(max-width: 479px){
+
+		
+
+}
+
+@media(max-width: 359px){
+
 }
