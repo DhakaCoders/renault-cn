@@ -462,9 +462,6 @@ contact-info-sec-wrp
 	border: 2px solid #293377;
 	color: #F3BA4B;
 }
-/*.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li.wpforms-selected label{
-	color:#F3BA4B; 
-}*/
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li input[type="checkbox"]{
 	width: 0;
 	height: 0;
@@ -548,17 +545,6 @@ contact-info-sec-wrp
  Responsive css
 ------------------
 */
-@media(max-width: 1499px){
-	
-}
-
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
 
 @media(max-width: 1199px){
 	.rw-contact-form-sec-wrp {
@@ -694,8 +680,8 @@ contact-info-sec-wrp
 	}
 	.info-tabs-menu li {
 	    padding: 0 15px;
-	    font-size: 21px;
-	    line-height: 23px;
+	    font-size: 20px;
+	    line-height: 22px;
 	}
 	.info-tabs-menu li a:after {
 	    right: -17px;

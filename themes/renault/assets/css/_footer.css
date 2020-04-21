@@ -292,14 +292,6 @@ footer-top-sec-wrp
   }
 }
 
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
-
 @media(max-width: 1199px){
   .footer-top-lft {
       width: 52%;
@@ -429,6 +421,11 @@ footer-top-sec-wrp
   .ftr-col-3 ul,
   .ftr-col-2 ul{
     padding-bottom: 25px;
+  }
+  .ftr-col.ftr-col-2 > ul{
+    display: block;
+  }
+  .ftr-col ul{
     display: none;
   }
   .ftr-btm-col-3,
@@ -447,6 +444,9 @@ footer-top-sec-wrp
   }
   .ftr-btm {
       padding: 55px 0 60px;
+  }
+  .ftr-col h6{
+    margin-bottom: 32px;
   }
 
   

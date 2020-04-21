@@ -178,7 +178,7 @@ if( $('.tabs').length ){
 }
 
 // footer slide menu
-if(windowWidth > 991){
+if(windowWidth <= 991){
   $('.ftr-col h6').on('click', function(){
     $(this).toggleClass('active');
     $(this).parent().siblings().find('h6').removeClass('active');
