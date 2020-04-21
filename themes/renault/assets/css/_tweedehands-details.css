@@ -75,7 +75,7 @@
 	content: none;
 }
 
-.rn-breadcrumbs-sec-des-inr ul li.current-menu-item a:before,
+.rn-breadcrumbs-sec-des-inr ul li.active a:before,
 .rn-breadcrumbs-sec-des-inr ul li:hover a:before{
 	content: "";
 	position: absolute;
