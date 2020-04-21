@@ -423,7 +423,7 @@ Gallery design
 }
 .dft-renault-area{
 	background: #F3BA4B;
-	min-height: 176px;
+	height: 176px;
 	color: #fff;
 	margin-bottom: 30px;
 	padding: 0 0 0 10px;
@@ -444,11 +444,25 @@ Gallery design
 	top: 0;
 	bottom: 0;
 	left: 0;
+	background-size: cover!important;
+	background-position: center center!important;
+	background-repeat: no-repeat!important;
 }
 .dft-renault-item-des{
-	padding: 20px 50px 20px 40px;
+	padding: 20px 40px 20px 40px;
 	position: relative;
 	width: 100%;
+	border: 4px solid #F8F8F8;
+	border-left: 0;
+	background: #fff;
+	height: 100%;
+	color: #232531;
+	display: flex;
+	align-items: center;
+}
+.dft-renault-item-des > div{
+	width: 100%;
+	position: relative;
 }
 .dft-renault-item-des i{
 	position: absolute;
@@ -567,6 +581,10 @@ Gallery design
 .dft-question-mark-slider.slick-initialized .dft-question-mark-slide-item,
 .dft-blog-slider.slick-initialized .dft-blog-item{
 	display: block;
+}
+
+.dftAboutUsSecSlider .slick-current {
+    opacity: 1;
 }
 
 @media(max-width: 1199px){
