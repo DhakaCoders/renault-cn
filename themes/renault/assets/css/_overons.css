@@ -20,8 +20,12 @@
 	background: #F3BA4B;
 	color: #fff;
 }
-.overons-about-us-section{
-	margin-bottom: 80px;
+.overons-about-us-section {
+    margin-bottom: 80px;
+    background: #232531;
+}
+.overons-about-us-section .about-us-sec-cntlr{
+	background: transparent;
 }
 .overons-about-us-section .fl-about-us-item{
 	padding: 35px 75px 20px;
@@ -256,5 +260,52 @@ rw-blockcode-slider-sec-wrp
 }
 .rwblockcodearrows .rightArrow:hover i svg,
 .rwblockcodearrows .leftArrow:hover i svg{
-	fill: #C01718;
+	fill: #000;
+}
+
+/*
+------------------
+ Responsive css
+------------------
+*/
+@media(max-width: 1499px){
+	
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	
+
+}
+
+@media(max-width: 991px){
+	
+
+	
+}
+
+@media(max-width: 767px){
+	
+}
+
+@media(max-width: 575px){
+	
+
+}
+
+@media(max-width: 479px){
+	
+		
+
+}
+
+@media(max-width: 359px){
+
 }
