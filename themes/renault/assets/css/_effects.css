@@ -5,14 +5,18 @@ All Transitions
 a,input,img,textarea,button,svg,
 nav.main-nav > ul > li > a:before,
 .img-div,
-nav.main-nav > ul > li:not(:last-child):after{
+nav.main-nav > ul > li:not(:last-child):after,
+.dft-renault-item-des i,
+.dft-renault-item-des,
+.tweedehands-overview-filters-tabs ul li a:after{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
 .overons-post-grid-dsc-inr:hover .overons-post-grid-img,
 .scale,
-.img-div-scale:hover .img-div{
+.img-div-scale:hover .img-div,
+.dft-latest-news-bx-fea-img a:hover img{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);

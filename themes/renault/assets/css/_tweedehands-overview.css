@@ -1,0 +1,133 @@
+.tweedehands-overview-entry-hdr{
+	padding: 75px 0 20px;
+	text-align: center;
+}
+.tweedehands-overview-filters-tabs ul{
+	text-align: center;
+	padding-bottom: 40px;
+} 
+.tweedehands-overview-filters-tabs ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	text-align: center;
+	padding: 0 25px;
+	position: relative;
+}
+.tweedehands-overview-filters-tabs ul li:not(:last-child):after{
+	content: "";
+	position: absolute;
+	top: 6px;
+	right: -2.5px;
+	width: 5px;
+	height: 5px;
+	background: #ffce00;
+	border-radius: 100% 100%;
+}
+.tweedehands-overview-filters-tabs ul li a{
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #232531;
+	display: inline-block;
+	vertical-align:baseline;
+	padding: 0 0 10px 0;
+	position: relative;
+}
+.tweedehands-overview-filters-tabs ul li a:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 55%;
+	left: 50%;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	height: 3px;
+	background: #F3BA4B;
+	opacity: 0;
+}
+.tweedehands-overview-filters-tabs ul li a:hover:after,
+.tweedehands-overview-filters-tabs ul li.active a:after{
+	opacity: 1;
+}
+.to-entry-hdr-cntlr{
+	max-width: 920px;
+	width: 100%;
+	margin: 0 auto;
+}
+.toeh-title{
+	display: block;
+	font-weight: 900;
+	font-size: 56px;
+	line-height: 1;
+	text-transform: uppercase;
+	margin: 0 0 25px 0; 
+}
+
+
+.fl-pagi-cntlr{
+	background: #F8F8F8;
+	padding: 40px 20px 30px;
+	text-align: center;
+}
+.fl-pagi-cntlr ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 15px 10px;
+	margin: 0;
+}
+.fl-pagi-cntlr ul li a,
+.fl-pagi-cntlr ul li span{
+	color: #232531;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border: 2px solid transparent;
+	box-sizing: border-box;
+	border-radius: 8px;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 1;
+	padding-top: 4px;
+}
+
+.fl-pagi-cntlr ul li:hover a,
+.fl-pagi-cntlr ul li span.current{
+	border-color: #F3BA4B;
+}
+
+
+.tweedehands-overview-form-sec{
+	padding-bottom: 95px;
+	padding-top: 270px;
+	background-position: center bottom!important;
+	background-repeat: repeat-x!important;
+}
+
+.tweedehands-overview-form-cntlr .contact-form-wrp{
+	max-width: 904px;
+	width: 100%;
+	float: none;
+	margin: -192px auto 0;
+}
+
+.tweedehands-overview-form-hdr{
+	color: #fff;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.tofh-title{
+	display: block;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+}
+
+.tweedehands-overview-form-hdr p{
+	line-height: 28px;
+}

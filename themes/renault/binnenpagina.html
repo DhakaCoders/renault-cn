@@ -58,6 +58,14 @@
     </defs>
   </symbol>
 
+  <symbol id="right-angle-white-icon-svg" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="15" cy="15" r="14" stroke-width="2"/>
+  <path d="M18.1338 14.5497L12.999 9.41505C12.8802 9.29619 12.7217 9.23071 12.5527 9.23071C12.3836 9.23071 12.2251 9.29619 12.1063 9.41505L11.7282 9.79309C11.4821 10.0394 11.4821 10.4398 11.7282 10.6858L16.04 14.9976L11.7234 19.3141C11.6046 19.433 11.5391 19.5914 11.5391 19.7604C11.5391 19.9295 11.6046 20.0879 11.7234 20.2069L12.1015 20.5848C12.2204 20.7037 12.3788 20.7692 12.5479 20.7692C12.7169 20.7692 12.8754 20.7037 12.9942 20.5848L18.1338 15.4455C18.2528 15.3263 18.3182 15.1671 18.3178 14.9978C18.3182 14.8279 18.2528 14.6688 18.1338 14.5497Z"/>
+  </symbol>
+
+
+
+
 
   
 
@@ -143,6 +151,43 @@
 
   </div>
 </header>
+
+
+<section class="rn-breadcrumbs-sec">
+  <div class="rn-breadcrumbs-sec-bg" style="background: url('assets/images/rn-breadcrumbs-sec-bg.jpg');">
+    <!-- <img src="assets/images/rn-breadcrumbs-sec-bg.jpg"> -->
+  </div>
+  <div class="rn-breadcrumbs-sec-des">
+    <div class="rn-breadcrumbs-sec-des-inr">
+      <h1 class="rn-breadcrumbs-sec-des-inr-title">Binnenpagina</h1>
+      <ul class="reset-list">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Binnenpagina</a></li>
+        <li><a href="#">Binnenpagina</a></li>
+      </ul>
+      <div class="rn-td-brdcm clearfix">
+        <div class="rn-td-brdcm-left">
+          <a href="#">Home</a>
+        </div>
+        <div class="rn-td-brdcm-right">
+          <a href="#">
+            Terug
+            <i>
+              <svg class="rn-td-brdcm-xs-svg" width="5" height="8" viewBox="0 0 5 8" fill="white">
+                <use xlink:href="#rn-td-brdcm-xs-svg"></use>
+              </svg> 
+            </i>
+          </a>
+        </div>
+      </div>
+      <div class="rn-breadcrumbs-sec-icon">
+        <img src="assets/images/rn-breadcrumbs-sec-icon.png">
+      </div>
+    </div>
+  </div>
+  
+</section>
+
 
 
 
@@ -242,18 +287,16 @@
 
           <div class="dft-renault-area">
             <div class="dft-renault-item clearfix">
+              <a class="overlay-link" href=""></a>
               <div class="dft-renault-item-fea-img" style="background: url(assets/images/dfp-img-05.jpg);">
               </div>
               <div class="dft-renault-item-des">
                 <div>
                   <strong class="my-renault-title">My Renault</strong>
-                  <i>
-                    <a href="#"><img src="assets/images/right-angle-white-icon.svg"></a>
-                  </i>
+                  <i class="drif-arrow-icon"></i>
                 </div>
               </div>
             </div>
-            
           </div>
           <div class="dfp-text-module clearfix">
             <p>Dui duis et scelerisque molestie egestas duis ultricies sed. Neque, euismod amet eget tempus. Nibh non amet sit porttitor ullamcorper pharetra. Congue nam urna commodo pretium pellentesque malesuada morbi.</p>
@@ -262,7 +305,7 @@
           <div class="fl-dft-overflow-controller">
             <div class="fl-dft-lftimg-rgtdes clearfix fl-dft-rgtimg-lftdes">
               <div class="fl-dft-lftimg-rgtdes-lft img-div-scale mHc">
-                <div class="fl-dft-lftimg-rgtdes-lft-img-inr img-div" style="background-image: url(assets/images/dfp-img-06.jpg);"></div>
+                <div class="fl-dft-lftimg-rgtdes-lft-img-inr img-div inline-bg" style="background-image: url(assets/images/dfp-img-06.jpg);"></div>
                 <a href="https://youtu.be/9No-FiEInLA" data-fancybox="gallery" class="overlay-link"></a>
                 <i>
                   <svg class="play-icon-white-svg" width="85" height="85" viewBox="0 0 85 85" fill="#ffffff">
@@ -295,7 +338,7 @@
                 </svg> 
               </i>
               Nulla rhoncus purus consequat faucibus amet. Cras tristique commodo sem orci, tortor morbi massa amet. At vel nisi aliquet gravida turpis quis.
-            <span><strong>- Voornaam Acthernaam, Bedrijf</span>
+            <span><strong>- Voornaam Acthernaam, Bedrijf</strong></span>
             </blockquote>
           </div>
           <hr>
@@ -317,7 +360,9 @@
           <div class="">
             <h2>Product items</h2>
           </div>
-          <hr>
+          <div>
+            <hr>
+          </div>
           <div class="dft-latest-news-module">
             <div class="dft-latest-news-module-hdr">
               <h2 class="dft-lnm-title">Laatste nieuws</h2>
@@ -431,19 +476,113 @@
               </table>
             </div>
           </div><!-- end of .dfp-tbl-wrap -->
+          <div class="dft-form-cntlr">
+            <div class="tweedehands-overview-form-cntlr">
+              <div class="contact-form-wrp clearfix">
+                <div class="tweedehands-overview-form-hdr">
+                  <h3 class="tofh-title">Offerte formulier</h3>
+                  <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia. </p>
+                </div>
+                <div class="wpforms-container">
+                  <form class="wpforms-form">
+                    <div class="wpforms-field-container">
+                      
+                      <div class="wpforms-field">
+                        <label class="wpforms-field-label">Voornaam </label>
+                        <input type="text" name="name" placeholder="Voornaam" required>
+                      </div>
+                      <div class="wpforms-field">
+                        <label class="wpforms-field-label">Achternaam</label>
+                        <input type="text" name="name" placeholder="Achternaam" required>
+                      </div>
 
-          
+                      <div class="wpforms-field">
+                        <label class="wpforms-field-label">Telefoon </label>
+                        <input type="text" name="text" placeholder="Telefoon" required>
+                      </div>
 
-          
+                      <div class="wpforms-field">
+                        <label class="wpforms-field-label">E-mailadres</label>
+                        <input type="email" name="email" placeholder="E-mailadres" class="form-control" required>
+                      </div>
 
-          
+                      <div class="wpforms-field wpforms-field-select">
+                        <label class="wpforms-field-label" for="select1">Ik ben geïnteresseerd in:</label>
+                        <select id="select1" name="select1">
+                          <option value="First Choice">Selecteer hier</option>
+                          <option value="Second Choice">Selecteer hier</option>
+                          <option value="Third Choice">Selecteer hier</option>
+                        </select>
+                      </div>
 
+                      <div class="wpforms-field wpforms-field-checkbox">
+                        <label class="wpforms-field-label">Selecteer voertuig:</label>
+                        <ul class="reset-list clearfix">
+                          <li class="wpforms-selected">
+                            <label class="container active">Renault
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="container">Dacia
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                        </ul>
+                        
+                      </div>
+
+                      <div class="wpforms-field wpforms-field-select">
+                        <label class="wpforms-field-label" for="select1">Type:</label>
+                        <select id="select1" name="select1">
+                          <option value="First Choice">Renault Talisman</option>
+                          <option value="Second Choice">Renault Talisman</option>
+                          <option value="Third Choice">Renault Talisman</option>
+                        </select>
+                      </div>
+
+                      <div class="wpforms-field wpforms-field-textarea">
+                        <label class="wpforms-field-label">Bericht</label>
+                        <textarea name="message" placeholder="Bericht"></textarea>
+                      </div>
+                    </div><!-- end of .wpforms-field-container-->
+                    <div class="wpforms-submit-container">
+                      <button type="submit" name="submit" class="wpforms-submit">Offerte aanvragen</button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
         </article>
       </div>
     </div>
   </div>
 </section>
 
+
+
+<section class="footer-top-sec-wrp">
+  <div class="container">
+    <div class="footer-top-wrp has-top-bdr clearfix">
+      <div class="footer-top-lft">
+        <div class="footer-top-lft-dsc">
+          <h2 class="footer-top-lft-dsc-title">Lorem ipsum dolor sit?</h2>
+          <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia.</p>
+        </div>
+      </div>
+      <div class="footer-top-rgt">
+        <div class="footer-top-rgt-btn">
+          <a href="#">Proefrit reserveren</a>
+          <a href="#">Offerte aanvragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -455,23 +594,47 @@
           <div class="ftr-col-main clearfix">
             <div class="ftr-col ftr-col-1">
               <div class="ftr-logo">
-                <a href="#"><img src="assets/images/ftr-logo.png" alt=""></a>
-              </div>
-              <div class="ftr-logo-dsc">
-                <strong>Gebroeders Van Damme N.V.</strong>
-                <span>Passion for life</span>
+                <a href="#">
+                  <img src="assets/images/ftr-logo.png" alt="">
+                  <strong>Gebroeders Van Damme N.V.</strong>
+                  <span>Passion for life</span>
+                </a>
               </div>
               <div class="ftr-socail-icon">
-                <ul class="ulc reset-list clearfix">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <ul class="reset-list clearfix">
+                  <li>
+                    <a href="#">
+                      <i>
+                        <svg class="ftr-facebook-icon-svg" width="12" height="22" viewBox="0 0 12 22" fill="white">
+                          <use xlink:href="#ftr-facebook-icon-svg"></use>
+                        </svg> 
+                      </i>
+                    </a>
+                 </li>
+                  <li>
+                    <a href="#">
+                      <i>
+                        <svg class="ftr-twiter-icon-svg" width="22" height="18" viewBox="0 0 22 18" fill="white">
+                          <use xlink:href="#ftr-twiter-icon-svg"></use>
+                        </svg> 
+                      </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i>
+                        <svg class="ftr-instagram-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="white">
+                          <use xlink:href="#ftr-instagram-icon-svg"></use>
+                        </svg> 
+                      </i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="ftr-col ftr-col-2"> 
               <h6><span>Navigatie</span></h6>
-              <ul class="ulc reset-list clearfix">
+              <ul class="reset-list clearfix">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Verkoop</a></li>
                 <li><a href="#">Tweedehands </a></li>
@@ -481,7 +644,7 @@
             </div>
             <div class="ftr-col ftr-col-3">
               <h6 class="active"><span>Contact Mekaniek</span></h6>
-              <ul class="ulc reset-list clearfix">
+              <ul class="reset-list clearfix">
                 <li>
                   <a href="#" target="_blank">
                     <i>
@@ -516,7 +679,7 @@
             </div>
             <div class="ftr-col ftr-col-4">
               <h6 class="active"><span>Contact Carrosserie</span></h6>
-              <ul class="ulc reset-list clearfix">
+              <ul class="reset-list clearfix">
                 <li>
                   <a href="#" target="_blank">
                     <i>
@@ -563,13 +726,13 @@
               <span>&copy; 2020 Gebroeders Van Damme N.V. . All Rights Reserved.</span>
             </div>
             <div class="ftr-btm-col-2">
-              <ul class="ulc reset-list clearfix">
+              <ul class="reset-list clearfix">
                 <li><a href="#">Sitemap</a></li>
                 <li><a href="#">Cookie policy </a></li>
                 <li><a href="#">Privacy policy</a></li>
               </ul>
             </div>
-            <div class="ftr-btm-col-3 text-right">
+            <div class="ftr-btm-col-3 text-right hide-md">
               <a href="#">webdesign by conversal</a>
             </div>
           </div>
