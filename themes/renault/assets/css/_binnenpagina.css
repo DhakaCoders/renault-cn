@@ -428,6 +428,23 @@ Gallery design
 	margin-bottom: 30px;
 	padding: 0 0 0 10px;
 }
+.dft-renault-item{
+	position: relative;
+}
+.dft-renault-item:hover .dft-renault-item-des i,
+.default-page-con .dft-renault-item:hover .dft-renault-item-des i{
+	right: -5px;
+}
+.dft-renault-item:hover .dft-renault-item-des,
+.default-page-con .dft-renault-item-des{
+	background: #F3BA4B;
+	border-color: #F3BA4B;
+	color: #fff;
+}
+.dft-renault-item:hover .dft-renault-item-des i,
+.default-page-con .dft-renault-item .dft-renault-item-des i{
+	background: url(../images/right-angle-white-icon.svg);
+}
 .dft-renault-item-inr{
 	position: relative;
 	height: 100%;
@@ -471,10 +488,12 @@ Gallery design
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
-}
-.dft-renault-item-des i a{
-	display: inline-block;
-	vertical-align: baseline;
+	width: 30px;
+	height: 30px;
+	background: url(../images/right-angle-black-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
 }
 .my-renault-title{
 	margin: 0 0 0 0;

@@ -376,12 +376,12 @@ if( $('.mainSlider').length ){
     $('.mainSlider').slick({
       dots: false,
       infinite: false,
-      arrows: false, 
+      arrows: true,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      prevArrow: $('.msprev'),
-      nextArrow: $('.msnxt')
+      prevArrow: $('.main-slider-section .msprev'),
+      nextArrow: $('.main-slider-section .msnxt')
     });
 }
 

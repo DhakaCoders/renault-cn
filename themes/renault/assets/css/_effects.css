@@ -5,7 +5,9 @@ All Transitions
 a,input,img,textarea,button,svg,
 nav.main-nav > ul > li > a:before,
 .img-div,
-nav.main-nav > ul > li:not(:last-child):after{
+nav.main-nav > ul > li:not(:last-child):after,
+.dft-renault-item-des i,
+.dft-renault-item-des{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
