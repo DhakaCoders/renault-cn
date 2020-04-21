@@ -663,6 +663,13 @@
 	left: 0;
 	top: -3px;
 }
+.rn-td-brdcm-left a:hover,
+.rn-td-brdcm-right a:hover{
+	color: #ffce00;
+}
+.rn-td-brdcm-right a:hover svg{
+	fill: #ffce00;
+}
 
 .rn-td-slider-des-icon{
 	display: none;
@@ -685,6 +692,12 @@
 	position: absolute;
 	top: -5px;
 	right: 0;
+}
+.rn-td-abour-sec-details-item-left-link a:hover{
+	color: #F3BA4B;
+}
+.rn-td-abour-sec-details-item-left-link a:hover svg{
+	fill: #F3BA4B;
 }
 
 
@@ -1134,6 +1147,10 @@
 	.rn-grid-item-des a{
 		background: #FF9839;
     	color: #fff;
+	}
+	.rn-grid-item-des a:hover{
+		background: transparent;
+		color: #FF9839;
 	}
 	.rn-td-abour-sec-details-item ul li,
 	.rn-td-abour-sec-kenmerken-item ul li{
