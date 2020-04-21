@@ -15,17 +15,19 @@
 }
 
 .rn-breadcrumbs-sec-des{
-	background: #232531;
-	width: 37%;
+	padding-top: 22px;
+	padding-bottom: 22px;
 	position: static;
 }
 
 .rn-breadcrumbs-sec-des-inr{
-	padding-left: 15%;
 	padding-top: 30px;
 	height: 100%;
 	position: relative;
 	padding-bottom: 35px;
+	width: 37%;
+	background: #232531;
+	padding-left: 6%;
 }
 
 
@@ -313,7 +315,7 @@
 	padding-left: 40px;
 	padding-bottom: 20px;
 }
-.rn-td-abour-sec-details-item-left{
+/*.rn-td-abour-sec-details-item-left{
 	float: left;
 	width: 57%;
 }
@@ -328,19 +330,18 @@
 .rn-td-abour-sec-kenmerken-item-right{
 	float: right;
 	width: 46%;
-}
-.rn-td-abour-sec-details-item-left ul,
-.rn-td-abour-sec-details-item-right ul,
-.rn-td-abour-sec-kenmerken-item-left ul,
-.rn-td-abour-sec-kenmerken-item-right ul{
+}*/
+.rn-td-abour-sec-details-item ul,
+.rn-td-abour-sec-kenmerken-item ul{
 	padding-left: 0;
 }
-.rn-td-abour-sec-details-item-left ul li,
-.rn-td-abour-sec-details-item-right ul li,
-.rn-td-abour-sec-kenmerken-item-left ul li,
-.rn-td-abour-sec-kenmerken-item-right ul li{
+.rn-td-abour-sec-details-item ul li,
+.rn-td-abour-sec-kenmerken-item ul li{
+	float: left;
+	width: 50%;
 	padding-bottom: 10px;
 }
+
 
 .rn-td-abour-sec-details-link{
 	padding-left: 40px;
@@ -379,8 +380,7 @@
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
-.rn-td-abour-sec-kenmerken-item-left ul li:before,
-.rn-td-abour-sec-kenmerken-item-right ul li:before{
+.rn-td-abour-sec-kenmerken-item ul li:before{
 	content: "";
     position: absolute;
     left: 0;
