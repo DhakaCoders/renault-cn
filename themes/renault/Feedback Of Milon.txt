@@ -7,7 +7,7 @@ Desktop--->
 	footer top a ai gap tate padding dite hobe. bcoz kono page a top a border ache
 
 	ii) https://www.screencast.com/t/xQbv8kcDTj
-		has-top-bdr amon akta class diye design korte hobe, j page a border ta ache, se page a ai class ta dile jeno border top ta peye jay, r padding top ta age thakei thakbe
+		has-top-bdr amon akta class diye design korte hobe, j page a border ta ache, se page a ai class ta dile jeno border top ta peye jay, r padding top ta age thakei thakbe 
 
 2. https://www.screencast.com/t/Ke2b01wX32u
 	ai icon gulo sprite use koro, bcoz instagram icon ta mileni

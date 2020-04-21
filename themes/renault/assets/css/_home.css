@@ -151,7 +151,7 @@
 }
 
 .slider-features-cntlr{
-	background: #fff;
+	background: rgba(255, 255, 255, 0.93);
 	height: 110px;
 	padding: 10px 50px 10px 55px;
 	display: flex;
@@ -164,6 +164,13 @@
 	font-size: 24px;
 	line-height: 1;
 	padding-bottom: 15px;
+}
+.sfc-title-2{
+	display: block;
+	font-weight: 800;
+	font-size: 44px;
+	line-height: 1;
+	color: #232531;
 }
 .slider-features-icon-cntlr,
 .slide-date-title-area{
@@ -196,8 +203,14 @@
 .msprev{
 	margin-right: 40px;
 }
+.msprev:hover i svg,
+.msnxt:hover i svg{
+	fill: #D8A035!important;
+}
 .main-slider-prv-nxt span{
 	cursor: pointer;
+	display: inline-block;
+	vertical-align: baseline;
 }
 .hm-cat-boxes-sec-cntlr ul{
 	margin: 0 -12px;
@@ -209,10 +222,6 @@
 }
 .hm-cat-boxes-section{
 	padding: 120px 0 120px;
-}
-.hm-cat-boxes-section .dft-renault-area{
-	background: transparent;
-	border: 2px solid #f8f8f8;
 }
 
 

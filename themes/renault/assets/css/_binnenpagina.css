@@ -287,14 +287,13 @@ Gallery design
 
 .dfp-tbl-wrap{
 	padding-top: 30px;
+	margin-bottom: 83px;
 }
 
 .table-dsc{
 	padding: 0;
 	background-color: #fff;
 	border-top: none;
-	border-bottom: 4px solid #F4F4F4;
-	border-right: 4px solid #F4F4F4;
 }
 .table-dsc table{
 	width: 100%;
@@ -342,6 +341,13 @@ Gallery design
 	color: #fff;
 
 }
+.table-dsc table tbody tr td:last-child,
+.table-dsc table thead tr th:last-child{
+	border-right: 4px solid #F4F4F4;
+}
+.table-dsc table thead tr th:last-child{
+	border-color: #F3BA4B;
+}
 .table-dsc table tr th {
 	border: none;
 	color: #fff;
@@ -388,6 +394,12 @@ Gallery design
 .table-dsc table tbody tr:last-child{
 	border-bottom: none;
 }
+.table-dsc table tbody tr:last-child td{
+	border-bottom: 4px solid #F4F4F4;
+}
+.table-dsc table tbody tr:last-child td:first-child{
+	border-bottom: 4px solid #E3B14E;
+}
 
 .table-dsc table tbody tr{
 
@@ -427,6 +439,23 @@ Gallery design
 	color: #fff;
 	margin-bottom: 30px;
 	padding: 0 0 0 10px;
+}
+.dft-renault-item{
+	position: relative;
+}
+.dft-renault-item:hover .dft-renault-item-des i,
+.default-page-con .dft-renault-item:hover .dft-renault-item-des i{
+	right: -5px;
+}
+.dft-renault-item:hover .dft-renault-item-des,
+.default-page-con .dft-renault-item-des{
+	background: #F3BA4B;
+	border-color: #F3BA4B;
+	color: #fff;
+}
+.dft-renault-item:hover .dft-renault-item-des i,
+.default-page-con .dft-renault-item .dft-renault-item-des i{
+	background: url(../images/right-angle-white-icon.svg);
 }
 .dft-renault-item-inr{
 	position: relative;
@@ -471,10 +500,12 @@ Gallery design
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
-}
-.dft-renault-item-des i a{
-	display: inline-block;
-	vertical-align: baseline;
+	width: 30px;
+	height: 30px;
+	background: url(../images/right-angle-black-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
 }
 .my-renault-title{
 	margin: 0 0 0 0;
@@ -507,6 +538,12 @@ Gallery design
 	margin-bottom: 17px!important;
 }
 .dft-latest-news-bx-title a{
+	color: #232531;
+}
+.dft-latest-news-bx-title a:hover{
+	color: #F3BA4B;
+}
+.dft-latest-news-bx-des > a:hover{
 	color: #232531;
 }
 .dft-latest-news-bx-items{
@@ -585,6 +622,10 @@ Gallery design
 
 .dftAboutUsSecSlider .slick-current {
     opacity: 1;
+}
+
+.dft-form-cntlr .tweedehands-overview-form-cntlr .contact-form-wrp{
+	margin: 0;
 }
 
 @media(max-width: 1199px){

@@ -106,7 +106,9 @@ Containers
 .container-sm{
 	max-width: 935px;
 }
-
+.slick-current {
+    opacity: 1!important;
+}
 
 .ulc{
 	margin: 0;
