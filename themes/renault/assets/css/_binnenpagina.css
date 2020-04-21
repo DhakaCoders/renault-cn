@@ -287,14 +287,13 @@ Gallery design
 
 .dfp-tbl-wrap{
 	padding-top: 30px;
+	margin-bottom: 83px;
 }
 
 .table-dsc{
 	padding: 0;
 	background-color: #fff;
 	border-top: none;
-	border-bottom: 4px solid #F4F4F4;
-	border-right: 4px solid #F4F4F4;
 }
 .table-dsc table{
 	width: 100%;
@@ -342,6 +341,13 @@ Gallery design
 	color: #fff;
 
 }
+.table-dsc table tbody tr td:last-child,
+.table-dsc table thead tr th:last-child{
+	border-right: 4px solid #F4F4F4;
+}
+.table-dsc table thead tr th:last-child{
+	border-color: #F3BA4B;
+}
 .table-dsc table tr th {
 	border: none;
 	color: #fff;
@@ -387,6 +393,12 @@ Gallery design
 
 .table-dsc table tbody tr:last-child{
 	border-bottom: none;
+}
+.table-dsc table tbody tr:last-child td{
+	border-bottom: 4px solid #F4F4F4;
+}
+.table-dsc table tbody tr:last-child td:first-child{
+	border-bottom: 4px solid #E3B14E;
 }
 
 .table-dsc table tbody tr{
@@ -528,6 +540,12 @@ Gallery design
 .dft-latest-news-bx-title a{
 	color: #232531;
 }
+.dft-latest-news-bx-title a:hover{
+	color: #F3BA4B;
+}
+.dft-latest-news-bx-des > a:hover{
+	color: #232531;
+}
 .dft-latest-news-bx-items{
 	background: #FFFFFF;
 	box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
@@ -604,6 +622,10 @@ Gallery design
 
 .dftAboutUsSecSlider .slick-current {
     opacity: 1;
+}
+
+.dft-form-cntlr .tweedehands-overview-form-cntlr .contact-form-wrp{
+	margin: 0;
 }
 
 @media(max-width: 1199px){

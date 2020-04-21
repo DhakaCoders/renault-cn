@@ -14,7 +14,8 @@ nav.main-nav > ul > li:not(:last-child):after,
 }
 .overons-post-grid-dsc-inr:hover .overons-post-grid-img,
 .scale,
-.img-div-scale:hover .img-div{
+.img-div-scale:hover .img-div,
+.dft-latest-news-bx-fea-img a:hover img{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
