@@ -4,7 +4,8 @@ All Transitions
 .overons-post-grid-dsc-inr:hover .overons-post-grid-img,
 a,input,img,textarea,button,svg,
 nav.main-nav > ul > li > a:before,
-.img-div{
+.img-div,
+nav.main-nav > ul > li:not(:last-child):after{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
