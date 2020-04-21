@@ -619,14 +619,13 @@ contact-info-sec-wrp
 	    padding: 20px 25px;
 	}
 	.contact-info-dsc-item {
-	    width: 100%;
-	    padding-right: 0;
+	    width: 50%;
 	}
-	.contact-info-dsc-item:nth-child(2){
-		padding-top: 55px;
+	.contact-info-dsc-item:nth-child(2n+1){
+		clear: left;
 	}
 	.contact-info-dsc-item:nth-child(3){
-		padding-top: 20px;
+		padding-top: 40px;
 	}
 	.offer-contact-form-block .contact-form-dsc {
 	    margin-bottom: 0;
@@ -672,6 +671,18 @@ contact-info-sec-wrp
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .VrnCustomField input {
 	    font-size: 14px !important;
 	    line-height: 16px !important;
+	}
+	.contact-info-dsc-item {
+	    width: 100%;
+	}
+	.contact-info-dsc-item:nth-child(2n+1){
+		clear: none;
+	}
+	.contact-info-dsc-item:nth-child(2){
+		padding-top: 55px;
+	}
+	.contact-info-dsc-item:nth-child(3){
+		padding-top: 20px;
 	}
 
 }

@@ -215,7 +215,7 @@ footer-top-sec-wrp
 .footer-top-wrp{
   padding-top: 85px;
 }
-.has-top-bdr{
+.has-top-bdr .footer-top-wrp{
   border-top:4px solid #F4F4F4;
 }
 .footer-top-lft{

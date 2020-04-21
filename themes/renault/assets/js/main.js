@@ -202,20 +202,6 @@ if( $('.rw-blockcode-slider').length ){
       slidesToScroll: 1,
       prevArrow: $('.rwblockcodearrows .leftArrow'),
       nextArrow: $('.rwblockcodearrows .rightArrow'),
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-          }
-        },
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
     });
 }
 
