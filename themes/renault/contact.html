@@ -75,7 +75,7 @@
 
 </head>
 <body>
-<header class="header">
+<header class="header" style="display: none;">
   <div class="header-inr clearfix">
     <div class="hdr-lft">
       <div class="logo">
@@ -123,7 +123,7 @@
   </div>
 </header>
 
-<section class="rn-breadcrumbs-sec">
+<section class="rn-breadcrumbs-sec" style="display: none;">
   <div class="rn-breadcrumbs-sec-bg">
     <img src="assets/images/rn-breadcrumbs-sec-bg.jpg">
   </div>
@@ -252,6 +252,9 @@
                     </a>
                   </li>
                 </ul> 
+                <div class="contact-info-btn">
+                  <a href="#">Route</a>
+                </div>
               </div>
               <div class="contact-info-dsc-item info-dsc-item-mrg">
                 <h6 class="contact-info-item-dsc-title">Showroom</h6>
@@ -291,9 +294,6 @@
                   </li>
                 </ul> 
               </div>
-            </div>
-            <div class="contact-info-btn">
-              <a href="#">Route</a>
             </div>
           </div> 
           <div class="tabs">
@@ -332,6 +332,9 @@
                     </a>
                   </li>
                 </ul> 
+                <div class="contact-info-btn">
+                  <a href="#">Route</a>
+                </div>
               </div>
               <div class="contact-info-dsc-item info-dsc-item-mrg">
                 <h6 class="contact-info-item-dsc-title">Showroom</h6>
@@ -372,9 +375,6 @@
                 </ul> 
               </div>
             </div>
-            <div class="contact-info-btn">
-              <a href="#">Route</a>
-            </div>
           </div> 
         </div>
       </div>
@@ -397,17 +397,41 @@
           <div class="ftr-col-main clearfix">
             <div class="ftr-col ftr-col-1">
               <div class="ftr-logo">
-                <a href="#"><img src="assets/images/ftr-logo.png" alt=""></a>
-              </div>
-              <div class="ftr-logo-dsc">
-                <strong>Gebroeders Van Damme N.V.</strong>
-                <span>Passion for life</span>
+                <a href="#">
+                  <img src="assets/images/ftr-logo.png" alt="">
+                  <strong>Gebroeders Van Damme N.V.</strong>
+                  <span>Passion for life</span>
+                </a>
               </div>
               <div class="ftr-socail-icon">
                 <ul class="reset-list clearfix">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li>
+                    <a href="#">
+                      <i>
+                        <svg class="ftr-facebook-icon-svg" width="12" height="22" viewBox="0 0 12 22" fill="white">
+                          <use xlink:href="#ftr-facebook-icon-svg"></use>
+                        </svg> 
+                      </i>
+                    </a>
+                 </li>
+                  <li>
+                    <a href="#">
+                      <i>
+                        <svg class="ftr-twiter-icon-svg" width="22" height="18" viewBox="0 0 22 18" fill="white">
+                          <use xlink:href="#ftr-twiter-icon-svg"></use>
+                        </svg> 
+                      </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i>
+                        <svg class="ftr-instagram-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="white">
+                          <use xlink:href="#ftr-instagram-icon-svg"></use>
+                        </svg> 
+                      </i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -511,7 +535,7 @@
                 <li><a href="#">Privacy policy</a></li>
               </ul>
             </div>
-            <div class="ftr-btm-col-3 text-right">
+            <div class="ftr-btm-col-3 text-right hide-md">
               <a href="#">webdesign by conversal</a>
             </div>
           </div>

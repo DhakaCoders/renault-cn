@@ -29,8 +29,7 @@
   display: inline-block;
   vertical-align: baseline;
 }
-.ftr-logo a span,
-.ftr-logo a strong{
+.ftr-logo a span{
 	display: inline-block;
 	vertical-align: baseline;
 }
@@ -319,6 +318,21 @@ footer-top-sec-wrp
   .footer-top-rgt-btn a:last-child {
       padding: 20px 28px 16px;
   }
+  .ftr-col-2 {
+      width: 17%;
+  } 
+  .ftr-col-3 {
+      width: 26%;
+  }
+  .ftr-btm-col-1 {
+      width: 43%;
+  }
+  .ftr-btm-col-2 {
+      width: 36%;
+  }
+  .ftr-btm-col-3 {
+      width: 21%;
+  }
 }
 
 @media(max-width: 991px){
@@ -345,6 +359,96 @@ footer-top-sec-wrp
       float: none;
       text-align: center;
   }
+  .ftr-top {
+      padding: 50px 0 20px;
+  }
+  .ftr-col-main {
+      max-width: 450px;
+      width: 100%;
+      margin: auto;
+  }
+  .ftr-col-1 {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 40px;
+  }
+  .ftr-col-main .ftr-col {
+      padding-right: 0;
+      text-align: center;
+      float: none;
+  }
+  .ftr-col-4,
+  .ftr-col-3,
+  .ftr-col-2 {
+      width: 100%;
+  }
+  .ftr-socail-icon{
+      padding-top: 25px;
+      text-align: center;
+  }
+  .ftr-socail-icon ul{
+    display: table !important;
+    margin: 0 auto;
+  }
+  .ftr-col.ftr-col-3 ul li,
+  .ftr-col.ftr-col-4 ul li {
+      padding-left: 0;
+      margin-bottom: 15px;
+  }
+  .ftr-col-3 ul li i,
+  .ftr-col-4 ul li i {
+      position: static;
+      display: block;
+      padding-bottom: 10px;
+  }
+  .ftr-col h6 span {
+      padding-right: 25px;
+  }
+  .ftr-col h6 span::after{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    content: "";
+    background:url(../images/ftr-angle-icon-tp.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 10px;
+    width: 6px;
+    height: 10px;
+    -webkit-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ftr-col h6.active span::after{
+    content: "";
+    background:url(../images/ftr-angle-icon-btm.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 10px;
+  }
+  .ftr-col-4 ul,
+  .ftr-col-3 ul,
+  .ftr-col-2 ul{
+    padding-bottom: 25px;
+    display: none;
+  }
+  .ftr-btm-col-3,
+  .ftr-btm-col-2,
+  .ftr-btm-col-1 {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+  }
+  .ftr-btm-col-1{
+    padding-bottom: 22px;
+  }
+  .ftr-btm-col-2 ul{
+    display: table;
+    margin: 0 auto;
+  }
+  .ftr-btm {
+      padding: 55px 0 60px;
+  }
+
   
 }
 
