@@ -2,6 +2,55 @@
 	padding: 75px 0 20px;
 	text-align: center;
 }
+.tweedehands-overview-filters-tabs ul{
+	text-align: center;
+	padding-bottom: 40px;
+} 
+.tweedehands-overview-filters-tabs ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	text-align: center;
+	padding: 0 25px;
+	position: relative;
+}
+.tweedehands-overview-filters-tabs ul li:not(:last-child):after{
+	content: "";
+	position: absolute;
+	top: 6px;
+	right: -2.5px;
+	width: 5px;
+	height: 5px;
+	background: #ffce00;
+	border-radius: 100% 100%;
+}
+.tweedehands-overview-filters-tabs ul li a{
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #232531;
+	display: inline-block;
+	vertical-align:baseline;
+	padding: 0 0 10px 0;
+	position: relative;
+}
+.tweedehands-overview-filters-tabs ul li a:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 55%;
+	left: 50%;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	height: 3px;
+	background: #F3BA4B;
+	opacity: 0;
+}
+.tweedehands-overview-filters-tabs ul li a:hover:after,
+.tweedehands-overview-filters-tabs ul li.active a:after{
+	opacity: 1;
+}
 .to-entry-hdr-cntlr{
 	max-width: 920px;
 	width: 100%;

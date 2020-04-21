@@ -7,7 +7,8 @@ nav.main-nav > ul > li > a:before,
 .img-div,
 nav.main-nav > ul > li:not(:last-child):after,
 .dft-renault-item-des i,
-.dft-renault-item-des{
+.dft-renault-item-des,
+.tweedehands-overview-filters-tabs ul li a:after{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
