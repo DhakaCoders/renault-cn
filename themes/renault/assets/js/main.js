@@ -410,6 +410,58 @@ if( $('.mainSlider').length ){
 }
 
 
+if( $('.hmVerkoopSlider').length ){
+    $('.hmVerkoopSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: true, 
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+if( $('.fl-tabs').length ){
+  $('div.fl-tabs button').click(function(){
+     $('.hmVerkoopSlider').slick('refresh');
+     
+      var tab_id = $(this).attr('data-tab');
+      $('div.fl-tabs button').removeClass('current');
+      $('.fl-tab-content').removeClass('current');
+
+      $(this).addClass('current');
+      $("#"+tab_id).addClass('current');
+
+  });
+
+
+}
+
 
 
 

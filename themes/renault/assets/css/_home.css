@@ -421,7 +421,7 @@
 }
 .hm-verkoop-filters-tabs{
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 
 .hm-verkoop-filters-tabs button {
@@ -469,6 +469,79 @@
 .hm-verkoop-filters-tabs button.current:after {
     opacity: 1;
 }
+
+.hmVerkoopSlider{
+	margin: 0!important;
+}
+.hmVerkoopSlider .slick-prev,
+.hmVerkoopSlider .slick-next{
+	width: 17px;
+	height: 28px;
+	background-size: 100% auto;
+	cursor: pointer;
+	z-index: 20;
+	opacity: 1;
+}
+.hmVerkoopSlider .slick-prev{
+	left: -50px;
+	background: url(../images/prev-arrow-gray.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+}
+.hmVerkoopSlider .slick-next{
+	right: -50px;
+	background: url(../images/next-arrow-gray.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+}
+.hmVerkoopSlider .slick-prev:before,
+.hmVerkoopSlider .slick-next:before{
+	content: none;
+}
+.hmVerkoopSlider .slick-prev:hover{
+	background: url(../images/prev-arrow-gray-hover.svg);
+}
+.hmVerkoopSlider .slick-next:hover{
+	background: url(../images/next-arrow-gray-hover.svg);
+}
+
+
+.fl-tab-content{
+	display: none;
+}
+.fl-tab-content.current{
+	display: block;
+}
+.fl-pro-more-btn{
+	padding-top: 50px;
+}
+.fl-pro-more-btn a {
+    max-width: 330px;
+    width: 100%;
+    padding: 5px 10px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3BA4B;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-top: 11px;
+    border: 2px solid #F3BA4B;
+}
+.fl-pro-more-btn a:hover{
+	background: transparent;
+	color: #F3BA4B;
+}
+
 @media(max-width: 1499px){
 	
 }
