@@ -542,6 +542,17 @@
 	color: #F3BA4B;
 }
 
+.hmVerkoopSlider .hmVerkoopSlideItem{
+	display: none;
+	width: 33.3333%;
+}
+.hmVerkoopSlider .hmVerkoopSlideItem:first-child{
+	display: block;
+}
+.hmVerkoopSlider.slick-initialized .hmVerkoopSlideItem{
+	display: block;
+}
+
 @media(max-width: 1499px){
 	
 }

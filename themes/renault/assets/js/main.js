@@ -449,7 +449,8 @@ if( $('.hmVerkoopSlider').length ){
 if( $('.fl-tabs').length ){
   $('div.fl-tabs button').click(function(){
      $('.hmVerkoopSlider').slick('refresh');
-     
+     location.reload(true);
+      //$.fn.matchHeight._update();
       var tab_id = $(this).attr('data-tab');
       $('div.fl-tabs button').removeClass('current');
       $('.fl-tab-content').removeClass('current');
