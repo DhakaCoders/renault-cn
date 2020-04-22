@@ -433,6 +433,9 @@ Gallery design
 .dft-about-us-sec-cntlr{
 	margin-bottom: 40px;
 }
+.hm-cat-boxes-sec-cntlr .dft-renault-area{
+	margin-bottom: 0;
+}
 .dft-renault-area{
 	background: #F3BA4B;
 	height: 176px;

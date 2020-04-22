@@ -221,10 +221,25 @@
 	padding: 0 12px 24px;
 }
 .hm-cat-boxes-section{
-	padding: 120px 0 120px;
+	padding: 120px 0 84px;
 }
 
 
+.hm-tweedehands-sec-hdr{
+	margin: 0 auto;
+	max-width: 950px;
+	width: 100%;
+	padding-bottom: 35px;
+	text-align: center;
+}
+.hmts-hdr-title{
+	display: block;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1;
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+}
 
 
 .renault-wieze-sec{
