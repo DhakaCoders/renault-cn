@@ -131,3 +131,90 @@
 .tweedehands-overview-form-hdr p{
 	line-height: 28px;
 }
+.tweedehands-overview-filters-cntlr{
+	margin: 0 -12px;
+}
+.fl-filters-col{
+	float: left;
+	width: 16.6666%;
+	padding: 0 12px 24px;
+}
+
+.fl-filters-col .fl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%!important;
+    min-width: auto!important;
+}
+
+.fl-filters-col .fl-select .bootstrap-select>.dropdown-toggle{
+	background: #FFFFFF;
+	border: 1px solid #E1E1E1;
+	min-height: 56px;
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 21px;
+	border-radius: 4px
+}
+.fl-filters-col .bootstrap-select .dropdown-toggle .filter-option{
+	display: flex;
+	align-items: center;
+}
+
+.fl-filters-col label{
+	display: block;
+	margin: 0 0 7px 0;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+.filters-border{
+	padding-top: 45px;
+	padding-bottom: 16px;
+	border-top: 4px solid #F4F4F4;
+	border-bottom: 4px solid #F4F4F4;
+	margin-bottom: 47px;
+}
+
+.fl-filter-btn a{
+	background: #F3BA4B;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 1;
+	border: 2px solid #F3BA4B;
+	padding: 8px 10px 5px;
+	min-height: 56px;
+}
+.fl-filter-btn a:hover{
+	background: transparent;
+	color: #F3BA4B;
+}
+.fl-filter-btn{
+	margin-top: 22px;
+}
+.tweedehands-overview-products{
+	padding-bottom: 22px;
+}
+.tweedehands-overview-products ul{
+	margin: 0 -12px;
+}
+.tweedehands-overview-products ul li{
+	float: left;
+	width: 25%;
+	padding: 0 0 48px;
+}
+.tweedehands-overview-products ul li .rn-grid-item{
+	width: 100%;
+}
+
+.tweedehands-overview-products .rn-grid-item-hdr{
+	padding-right: 20px;
+}

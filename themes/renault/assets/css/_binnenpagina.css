@@ -630,7 +630,19 @@ Gallery design
 .dft-form-cntlr .tweedehands-overview-form-cntlr .contact-form-wrp{
 	margin: 0;
 }
-
+.dftProItemsSlider{
+	margin: 0 -12px!important;
+}
+.dftProItemsSlider .dftProItemSlide .rn-grid-item{
+	width: 100%;
+	clear: initial!important;
+}
+.dftProItemsSlider .dftProItemSlide .rn-grid-item-title{
+	line-height: 1.3!important;
+}
+.dft-pro-items-cntlr{
+	padding-bottom: 65px;
+}
 @media(max-width: 1199px){
 	#main-content .default-page-con-inner{
 		padding-right: 0;
