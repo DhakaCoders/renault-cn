@@ -776,6 +776,14 @@
 	.main-slide-des-cnter-cntlr p{
 		font-size: 17px;
 	}
+	.hm-tweedehands-section {
+	    padding-bottom: 80px;
+	}
+	.hmvshdr-title,
+	.hmts-hdr-title{
+		font-size: 32px;
+	}
+
 }
 
 @media(max-width: 830px){
@@ -865,6 +873,63 @@
 	.hm-cat-boxes-section{
 		padding-bottom: 40px;
 	}
+	.sm-slider-con-sec-inr h3{
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 26px;
+		line-height: 1;
+		display: block;
+		margin: 0 0 15px 0;
+		text-align: center;
+	}
+	.sm-slider-con-sec-inr{
+		max-width: 350px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 45px;
+	}
+	.sm-slider-con-sec-fea-img{
+		padding-bottom: 25px;
+	}
+	.sm-slider-con-sec-fea-img img{
+		width: 100%;
+	}
+	.slider-features-cntlr{
+		padding: 0 0 0;
+		display: block;
+
+	}
+	.slide-date-title-area{
+		display: block;
+	}
+	.sfc-title{
+		border-bottom: 2px solid #f9f9f9;
+	}
+	.slide-date-title-area strong{
+		width: 100%;
+		height: 64px;
+		justify-content: center;
+	}
+	.slider-features-icon-cntlr{
+		display: block;
+		padding-top: 20px;
+	}
+	.slider-features-icon-cntlr > div{
+		float: left;
+		width: 50%;
+		margin-bottom: 15px;
+	}
+	.rn-grid-sec{
+		margin-bottom: 0!important;
+	}
+	.hmvshdr-title,
+	.hmts-hdr-title{
+		font-size: 30px;
+	}
+	.hm-verkoop-filters-tabs {
+	    padding-bottom: 50px;
+	}
 }
 @media(max-width: 639px){
 	.fl-about-us-item:after{
@@ -909,6 +974,7 @@
 		font-size: 32px;
 	}
 
+
 }
 
 
@@ -940,7 +1006,32 @@
 	.hm-cat-boxes-section{
 		padding-bottom: 20px;
 	}
-	
+	.hmts-hdr-title {
+	    font-size: 26px;
+	}
+	.hm-tweedehands-sec-hdr{
+		padding-bottom: 5px;
+	}
+	.msd-title {
+	    font-size: 31px;
+	}
+	.msd-sub-title {
+	    font-size: 21px;
+	}
+	.main-slide-des-cnter-cntlr p{
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.hmvshdr-title,
+	.hmts-hdr-title{
+		font-size: 26px;
+	}
+	.hm-verkoop-filters-tabs {
+	    padding-bottom: 40px;
+	}
+	.hm-verkoop-section{
+		padding: 50px 0 45px;
+	}
 }
 
 
@@ -969,5 +1060,8 @@
 	.main-slide-btns a{
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.slide-date-title-area strong span{
+		font-size: 16px;
 	}
 }
