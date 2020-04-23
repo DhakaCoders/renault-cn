@@ -350,3 +350,19 @@ ul.dropdown-menu li:before{
 .fl-select .bootstrap-select>.dropdown-toggle{
 	padding-right: 30px;
 }
+
+
+/*slider brk fix*/
+
+.hmVerkoopSlider .hmVerkoopSlideItem,
+.mainSlider .mainSlide-item{
+	display: none;
+}
+.hmVerkoopSlider .hmVerkoopSlideItem:first-child,
+.mainSlider .mainSlide-item:first-child{
+	display: block;
+}
+.hmVerkoopSlider.slick-initialized .hmVerkoopSlideItem,
+.mainSlider.slick-initialized .mainSlide-item{
+	display: block;
+}
