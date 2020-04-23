@@ -216,6 +216,9 @@ nav.main-nav ul.sub-menu li:before {
 nav.main-nav ul.sub-menu li:hover:before {
     height: 100%;
 }
+.xs-popup-menu{
+	display: none;
+}
 
 
 @media(max-width: 1749px){
