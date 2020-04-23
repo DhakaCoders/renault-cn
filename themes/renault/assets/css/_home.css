@@ -550,11 +550,15 @@
 }
 
 @media(max-width: 1499px){
-	
+	.hm-about-us-section {
+	    margin-bottom: 80px;
+	}
 }
 
 @media(max-width: 1399px){
-
+	.hm-about-us-section {
+	    margin-bottom: 70px;
+	}
 }
 
 @media(max-width: 1299px){
@@ -562,8 +566,25 @@
 }
 
 @media(max-width: 1199px){
-	
-
+	.hm-about-us-section {
+	    margin-bottom: 50px;
+	}
+	.fl-about-us-item{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.hmAboutUsSecSlider.slick-slider .slick-dots li{
+		background:  rgba(255, 255, 255, 0.11)!important;
+	}
+	.hmAboutUsSecSlider.slick-slider .slick-dots li.slick-active{
+		background: #F3BA4B!important;
+	}
+	.hmAboutUsSecSlider.slick-slider ul.slick-dots{
+		margin-top: 45px;
+	}
+	.about-us-sec-cntlr{
+		padding-bottom: 20px;
+	}
 }
 
 @media(max-width: 991px){

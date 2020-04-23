@@ -334,14 +334,14 @@ if( $('.hmAboutUsSecSlider').length ){
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
+            dots: true,
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 640,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 1,
           }
         },
         {

@@ -354,15 +354,23 @@ ul.dropdown-menu li:before{
 
 /*slider brk fix*/
 
+.hmAboutUsSecSlider{
+	overflow: hidden;
+}
+
+
 .hmVerkoopSlider .hmVerkoopSlideItem,
-.mainSlider .mainSlide-item{
+.mainSlider .mainSlide-item,
+.hmAboutUsSecSlider .fl-about-us-item{
 	display: none;
 }
 .hmVerkoopSlider .hmVerkoopSlideItem:first-child,
-.mainSlider .mainSlide-item:first-child{
+.mainSlider .mainSlide-item:first-child,
+.hmAboutUsSecSlider .fl-about-us-item:first-child{
 	display: block;
 }
 .hmVerkoopSlider.slick-initialized .hmVerkoopSlideItem,
-.mainSlider.slick-initialized .mainSlide-item{
+.mainSlider.slick-initialized .mainSlide-item,
+.hmAboutUsSecSlider.slick-initialized .fl-about-us-item{
 	display: block;
 }
