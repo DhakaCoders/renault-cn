@@ -369,23 +369,17 @@ if( $('.dftAboutUsSecSlider').length ){
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            dots: true,
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 640,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            dots: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -511,7 +505,7 @@ if (windowWidth <= 991) {
 if( $('.fl-tabs').length ){
   $('div.fl-tabs button').click(function(){
      $('.hmVerkoopSlider').slick('refresh');
-     location.reload(true);
+     //location.reload(true);
       //$.fn.matchHeight._update();
       var tab_id = $(this).attr('data-tab');
       $('div.fl-tabs button').removeClass('current');
