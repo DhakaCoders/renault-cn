@@ -1032,6 +1032,11 @@
 	.hm-verkoop-section{
 		padding: 50px 0 45px;
 	}
+	.hmVerkoopSlider .slick-prev, .hmVerkoopSlider .slick-next{
+		transform: initial;
+		top: auto;
+		bottom: -9px;
+	}
 }
 
 
