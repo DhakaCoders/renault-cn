@@ -452,21 +452,15 @@ if( $('.dftProItemsSlider').length ){
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 640,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:

@@ -239,11 +239,16 @@ form .bootstrap-select .caret{
 	content: none;
 }
 .dropdown-toggle::before{
-	content: "\f107"!important;
-    font-family: 'Font Awesome 5 Free';
+	content: ""!important;
+   /* font-family: 'Font Awesome 5 Free';
     font-weight: 600;
     text-decoration: inherit;
-    color: #1E1E1E;
+    color: #1E1E1E;*/
+    background: url(../images/select-angle-arrow.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 7px;
+    width: 12px;
     font-size: 22px;
     padding-right: 0;
     position: absolute;
@@ -255,7 +260,9 @@ form .bootstrap-select .caret{
     line-height: 15px;
 }
 .bootstrap-select.show .dropdown-toggle::before{
-	content: "\f106"!important;
+	content: ""!important;
+	transform: rotate(180deg);
+	margin-top: -2px;
 }
 
 .btn-light.focus, 

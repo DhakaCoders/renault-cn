@@ -353,7 +353,9 @@
 	padding-top: 42px;
 	padding-bottom: 42px;
 }
-
+.fl-aboutUsSlider{
+	margin-bottom: 0!important;
+}
 .fl-aboutUsSlider .slick-active:last-child .fl-about-us-item:after{
 	content: none;
 }
