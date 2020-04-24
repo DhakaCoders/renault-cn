@@ -18,6 +18,7 @@
 	padding-top: 22px;
 	padding-bottom: 22px;
 	position: static;
+	
 }
 
 .rn-breadcrumbs-sec-des-inr{
@@ -28,6 +29,7 @@
 	width: 37%;
 	background: #232531;
 	padding-left: 6%;
+	z-index: 12;
 }
 
 
@@ -106,6 +108,7 @@
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	right: 36px;
+	z-index: -1;
 }
 
 
@@ -431,6 +434,9 @@
 	-webkit-transition: all 0.5s;
 	-ms-transition: all 0.5s;
 }
+.rn-grid-item-img img{
+	display: none;
+}
 
 .rn-grid-item:hover .rn-grid-item-img{
 	transform: scale(1.1);
@@ -473,23 +479,27 @@
 
 .rn-grid-item-ftr{
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	border-bottom: 1px solid #e1e1e1;
 }
 .rn-grid-item-ftr-race{
 	display: inline-block;
+	padding-right: 30px;
+	margin-bottom: 10px;
 }
 .rn-grid-item-ftr-calender{
 	display: inline-block;
-    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
 }
 .rn-grid-item-ftr-gas-station{
 	display: inline-block;
-    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
 }
 .rn-grid-item-ftr-power{
 	display: inline-block;
-    padding-left: 30px;
+    margin-bottom: 10px;
 }
 .rn-grid-item-ftr-race span,
 .rn-grid-item-ftr-calender span,
@@ -673,7 +683,18 @@
 	fill: #F3BA4B;
 }
 
-
+@media(max-width: 1499px){
+	.rn-td-slider-des {
+	    padding-left: 72px;
+	}
+	.rn-td-slider-des-link a {
+	    margin-right: 30px;
+	}
+	.rn-td-slider-des-link a:first-child {
+		font-size: 14px;
+	    padding: 15px 25px;
+	}
+}
 
 @media(max-width: 1399px){
 	.rn-breadcrumbs-sec-des-inr{
@@ -757,15 +778,6 @@
 	    padding-bottom: 25px;
 	}
 
-	.rn-grid-item-ftr-calender {
-	    padding-left: 9px;
-	}
-	.rn-grid-item-ftr-gas-station {
-	    padding-left: 9px;
-	}
-	.rn-grid-item-ftr-power {
-	    padding-left: 9px;
-	}
 }
 
 @media(max-width: 1199px){
@@ -842,11 +854,13 @@
 		float: left;
 	    width: 50%;
 	    margin-bottom: 10px;
+	    padding-right: 0;
 	}
 	.rn-grid-item-ftr-gas-station,
 	.rn-grid-item-ftr-power {
 		float: left;
 	    width: 50%;
+	    padding-right: 0;
 	}
 	.rn-grid-item-ftr-gas-station{
 		padding-left: 0;
