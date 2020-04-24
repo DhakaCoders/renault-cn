@@ -81,7 +81,7 @@
 .rn-breadcrumbs-sec-des-inr ul li:hover a:before{
 	content: "";
 	position: absolute;
-	left: 0px;
+	left: 5px;
     top: -15px;
 	background: url(../images/menu-hover.png);
 	width: 19px;
@@ -988,6 +988,12 @@
 	}
 	.rn-td-grid-sec-title {
 	    font-size: 30px;
+	}
+	.rn-breadcrumbs-sec-des-inr ul li.active a:before, 
+	.rn-breadcrumbs-sec-des-inr ul li:hover a:before {
+	    top: -10px;
+	    width: 15px;
+	    background-size: 100% auto;
 	}
 
 	
