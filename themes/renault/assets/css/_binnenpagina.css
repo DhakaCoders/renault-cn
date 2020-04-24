@@ -17,7 +17,7 @@
 .default-page-con h4,
 .default-page-con h5{
 	margin-bottom: 20px;
-	line-height: 1;
+	line-height: 1.2;
 }
 .default-page-con h2{
 	margin-bottom: 20px;
@@ -109,7 +109,7 @@ ol li::before {
 .dfp-promo-module-title{
 	text-transform: uppercase;
 	font-weight: 700;
-	margin-bottom: 50px;
+	margin-bottom: 45px;
 	display: block;
 }
 .dftPromoModuleSlider{
@@ -643,6 +643,19 @@ Gallery design
 .dft-pro-items-cntlr{
 	padding-bottom: 65px;
 }
+
+.innerpage-con-wrap .rn-grid-item-des a{
+	background: #F3BA4B;
+	border-color: #F3BA4B;
+	color: #fff;
+}
+.innerpage-con-wrap .rn-grid-item-des a:hover{
+	background: transparent;
+	color: #F3BA4B;
+}
+.innerpage-con-wrap .rn-grid-item-des p{
+	line-height: 1.6;
+}
 @media(max-width: 1199px){
 	#main-content .default-page-con-inner{
 		padding-right: 0;
@@ -662,6 +675,10 @@ Gallery design
 	.dft-renault-item{
 		padding-left: 160px;
 	}
+	.dft-blockquote blockquote {
+	    font-size: 34px;
+	    line-height: 46px;
+	}
 
 }
 
@@ -676,6 +693,18 @@ Gallery design
 	}
 	.my-renault-title{
 		font-size: 20px;
+		padding-right: 40px;
+	}
+	.fl-dft-lftimg-rgtdes-lft i{
+		width: 70px;
+		height: 70px;
+	}
+	.fl-dft-lftimg-rgtdes-lft i svg{
+		width: 100%;
+		height: 100%;
+	}
+	.dft-blockquote{
+		padding-left: 40px;
 		padding-right: 40px;
 	}
 	
@@ -701,7 +730,7 @@ Gallery design
 	    width: 100%;
 	}
 	.fl-dft-lftimg-rgtdes-lft {
-	    min-height: 300px;
+	    height: 350px;
 	}
 	.fl-dft-lftimg-rgtdes-rgt{
 		padding-left: 0;
@@ -723,10 +752,6 @@ Gallery design
 	    padding: 55px 50px 50px 32px;
 	    margin-bottom: 45px;
 	}
-	.dft-blockquote blockquote{
-		font-size: 25px;
-		line-height: 35px;
-	}
 	.fl-dft-lftimg-rgtdes.fl-dft-rgtimg-lftdes .fl-dft-lftimg-rgtdes-rgt{
 		padding-right: 0;
 	}
@@ -735,7 +760,24 @@ Gallery design
 		margin-left: auto;
 		margin-right: auto;
 	}
-
+	.dft-blockquote blockquote{
+		padding-left: 0;
+		padding-top: 103px;
+	}
+	.dft-blockquote{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.dft-blockquote blockquote {
+	    font-size: 32px;
+	    line-height: 40px;
+	}
+	.dft-lnm-title{
+		font-size: 32px!important;
+	}
+	.dft-latest-news-module-hdr{
+		text-align: center;
+	}
 }
 
 
@@ -762,7 +804,7 @@ Gallery design
 		padding-left: 0;
 	}
 	.fl-dft-lftimg-rgtdes-lft {
-	    min-height: 240px;
+	    height: 328px;
 	}
 	.dft2grdImgConSlider .slick-prev, 
 	.dft2grdImgConSlider .slick-next{
@@ -789,20 +831,6 @@ Gallery design
 	.dft2grdImgConSlider .slick-next:before{
 		content: none;
 	}
-	.dft-blockquote blockquote{
-		text-align: center;
-		font-size: 20px;
-		line-height: 30px
-	}
-	.dft-blockquote blockquote:before{
-		left: 50%;
-		transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-	}
-	.dft-blockquote{
-		padding: 45px 0 40px
-	}
 	.default-page-con{
 		padding-bottom: 50px;
 	}
@@ -827,11 +855,6 @@ Gallery design
 	.dft-question-mark-slide-item {
 	    padding: 0;
 	}
-	.dft-blockquote blockquote{
-		padding-left: 28px;
-		padding-right: 28px;
-		padding-top: 65px;
-	}
 	.default-page-con h1, .default-page-con h2, .default-page-con h3, .default-page-con h4, .default-page-con h5 {
 	    margin-bottom: 20px;
 	}
@@ -851,6 +874,7 @@ Gallery design
 	.dft-renault-item-des i{
 		width: 20px;
 		height: 20px;
+		background-size: 100% auto!important;
 	}
 	.dft-renault-item-des i svg{
 		width: 100%;
@@ -859,17 +883,53 @@ Gallery design
 	.my-renault-title{
 		padding-right: 30px;
 	}
+	.fl-dft-lftimg-rgtdes-lft i {
+	    width: 64px;
+	    height: 64px;
+	}
+	.dft-blockquote{
+		padding-top: 40px;
+		padding-bottom: 45px;
+	}
+	
+	.dft-lnm-title {
+	    font-size: 26px!important;
+	}
+
 }
 
 
 @media(max-width: 479px){
-	
+	.dft-blockquote blockquote {
+	    font-size: 30px;
+	    line-height: 38px;
+	}
 	
 }
 
 
 
 @media(max-width: 359px){
-
+	.fl-dft-lftimg-rgtdes-lft {
+	    height: 300px;
+	}
+	.dft-blockquote blockquote {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	.dft-blockquote blockquote span{
+		font-size: 16px;
+	}
+	.dft-blockquote blockquote i{
+		width: 70px;
+		height: 70px;
+	}
+	.dft-blockquote blockquote i svg{
+		width: 100%;
+		height: 100%;
+	}
+	.dft-blockquote blockquote {
+	    padding-top: 85px;
+	}
 }
 
