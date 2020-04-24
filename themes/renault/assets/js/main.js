@@ -189,6 +189,8 @@ if(windowWidth <= 991){
 
 
 
+
+
 if( $('.rw-blockcode-slider').length ){
     $('.rw-blockcode-slider').slick({
       pauseOnHover: false,

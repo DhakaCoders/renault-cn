@@ -66,17 +66,19 @@ overons-two-grid-sec-wrp
 .overons-two-grid-rgt-img img{
 	display: none;
 }
-.overons-two-grid-lft{
-	float: left;
-	width: 53%;
-	position: relative;
-	z-index: 1;
-	padding-top: 200px;
+.overons-two-grid-lft {
+    float: left;
+    width: 53%;
+    position: relative;
+    z-index: 1;
+    padding-top: 200px;
+    margin-left: -40px;
 }
 .overons-two-grid-lft-dsc {
     padding-top: 130px;
-    padding-right: 145px;
+    padding-right: 105px;
     background: #fff;
+    padding-left: 40px;
 }
 .overons-two-grid-lft-dsc-title {
     font-size: 56px;
@@ -284,6 +286,10 @@ rw-blockcode-slider-sec-wrp
 	    padding-top: 50px;
 	    padding-right: 70px;
 	}
+	.overons-two-grid-lft-dsc-title {
+	    font-size: 49px;
+	    line-height: 60px;
+	}
 
 
 }
@@ -304,7 +310,7 @@ rw-blockcode-slider-sec-wrp
 
 @media(max-width: 1199px){
 	.overons-two-grid-sec-wrp span {
-	    top: 54px;
+	    top: 55px;
 	}
 	.overons-two-grid-lft {
 	    padding-top: 110px;
@@ -335,6 +341,12 @@ rw-blockcode-slider-sec-wrp
 	    font-size: 34px;
 	    line-height: 44px;
 	}
+	.overons-renault-wieze-sec .renault-wieze-sec-des a:last-child {
+	    width: 195px;
+	}
+	.overons-renault-wieze-sec {
+	    padding-top: 90px;
+	}
 }
 
 @media(max-width: 991px){
@@ -343,13 +355,14 @@ rw-blockcode-slider-sec-wrp
 	    margin-bottom: 40px;
 	}
 	.overons-two-grid-lft-dsc-title {
-	    font-size: 48px;
-	    line-height:60px;
+	    font-size: 46px;
+	    line-height:58px;
 	}
 	.overons-two-grid-lft {
 	    padding-top: 60px;
 	    width: 100%;
 	    display: block;
+	    margin-left: 0;
 	}
 	.overons-two-grid-rgt {
 	    width: 100%;
@@ -359,6 +372,7 @@ rw-blockcode-slider-sec-wrp
 	.overons-two-grid-lft-dsc {
 	    padding-top: 0;
 	    padding-right: 0;
+	    padding-left: 0;
 	}
 	.overons-two-grid-sec-wrp span {
 	    display: none;
@@ -417,6 +431,14 @@ rw-blockcode-slider-sec-wrp
 	    font-size: 30px;
 	    line-height: 40px;
 	}
+	.overons-renault-wieze-sec {
+	    padding-top: 70px;
+	}
+}
+@media(max-width: 639px){
+	.rw-blockcode-slider-sec-wrp {
+	    margin-bottom: 20px;
+	}
 }
 
 @media(max-width: 575px){
@@ -452,13 +474,24 @@ rw-blockcode-slider-sec-wrp
 	    padding-left: 30px;
 	    padding-right: 30px;
 	}
+	.overons-post-grid-dsc-inr{
+		max-width: 350px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.overons-renault-wieze-sec .renault-wieze-sec-des a:last-child {
+	    width: 100%;
+	    max-width: 328px;
+	    margin-top: 20px;
+	    margin-left: 0;
+	}
 
 }
 
 @media(max-width: 479px){
 	.overons-two-grid-lft-dsc-title {
-	    font-size: 38px;
-	    line-height:48px;
+	    font-size: 37px;
+	    line-height:47px;
 	}
 	.overons-post-grid-head-title {
 	    font-size: 26px;

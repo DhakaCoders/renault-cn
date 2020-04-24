@@ -254,6 +254,7 @@ footer-top-sec-wrp
   text-decoration: none;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 800;
   color: #fff;
   background: #F3BA4B;
   border-radius: 8px;
@@ -305,10 +306,10 @@ footer-top-sec-wrp
       line-height: 35px;
   }
   .footer-top-rgt-btn a {
-      padding: 22px 22px 17px;
+      padding: 22px 20px 17px;
   }
   .footer-top-rgt-btn a:last-child {
-      padding: 20px 28px 16px;
+      padding: 20px 23px 16px;
   }
   .ftr-col-2 {
       width: 17%;
@@ -394,28 +395,33 @@ footer-top-sec-wrp
       display: block;
       padding-bottom: 10px;
   }
+  .ftr-btm-col-3.text-right {
+      text-align: center !important;
+      padding-left: 0;
+      padding-top: 28px;
+  }
   .ftr-col h6 span {
       padding-right: 25px;
   }
   .ftr-col h6 span::after{
     position: absolute;
     right: 0;
-    top: 2px;
+    top: 5px;
     content: "";
-    background:url(../images/ftr-angle-icon-tp.svg);
+    background:url(../images/ftr-angle-icon-btm.svg);
     background-repeat: no-repeat;
-    background-size: 6px 10px;
-    width: 6px;
-    height: 10px;
+    background-size: 10px 6px;
+    width: 10px;
+    height: 6px;
     -webkit-transition: all .5s ease;
     -ms-transition: all .5s ease;
     transition: all .5s ease;
   }
   .ftr-col h6.active span::after{
     content: "";
-    background:url(../images/ftr-angle-icon-btm.svg);
+    background:url(../images/ftr-angle-icon-tp.svg);
     background-repeat: no-repeat;
-    background-size: 6px 10px;
+    background-size: 10px 6px;
   }
   .ftr-col-4 ul,
   .ftr-col-3 ul,
