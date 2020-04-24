@@ -85,3 +85,58 @@ Desktop--->
 	back button ar jquery code ta daw aikhane
 
 
+
+
+
+Responsive----------------->
+
+1. https://prnt.sc/s58p3s  
+ 	hover korle dot a lege jasche
+
+2. https://www.screencast.com/t/bez8BIZDdu
+ 	border color mileni, r back button ar arrow ta r aktu niche nambe maybe
+
+
+3. https://www.screencast.com/t/MuySQMnUD
+	ai gap ta xs a komanor dorkar nai, khub kacha kachi hoye jay button ar , desktop a ja ache tai thak
+
+4. https://www.screencast.com/t/Wd3PZyrL
+	ai button ar code xs ar jonno valo hoyni, amon koro-->
+	ai code ta purotai koro 575px a 
+	https://www.screencast.com/t/0OTz5bF16cY5
+
+5. https://www.screencast.com/t/srXRbWdBw
+	nicher neme geche, float left and width badhe manage koro, 
+	display-inline: block diye,   
+	r jokhon 50% kore discho tokhon float left use koro
+
+	https://www.screencast.com/t/g1QeOPA6aRti
+	3 ta item ao use hote pare
+
+
+6. https://prnt.sc/s5bhxx
+	text and img ar z-index problem ache, img ta text ar upore uthe geche
+
+
+7. https://www.screencast.com/t/Ewzxe50Iev6u
+	i) margin-bottom diye rakhte hobe age thakei jodi niche neme jay, tahole jeno lege na jay,
+	ii) padding-left na diye padding-right daw
+
+
+8. https://www.screencast.com/t/HiNy6eh3OW
+	img div ar vitore akta img tag niye rakhe daw, kaje lagle show kora jabe
+
+
+9. https://www.screencast.com/t/qn1vFhhD
+	ai media te lege geche 
+
+
+
+	
+
+
+
+
+
+
+
