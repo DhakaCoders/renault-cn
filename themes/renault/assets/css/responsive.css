@@ -29,7 +29,7 @@
 	.show-md{
 		display: block!important;
 	}
-	h1,.dfp-promo-module-title{
+	h1,.dfp-promo-module-title,.toeh-title{
 		font-size: 52px;
 	}
 	h2{
@@ -55,7 +55,7 @@
 	.show-sm{
 		display: block!important;
 	}
-	h1,.dfp-promo-module-title{
+	h1,.dfp-promo-module-title,.toeh-title{
 		font-size: 50px;
 	}
 	h2{
@@ -96,7 +96,7 @@
 	.show-xs{
 		display: block!important;
 	}
-	h1,.dfp-promo-module-title{
+	h1,.dfp-promo-module-title,.toeh-title{
 		font-size: 36px;
 	}
 	h2{
@@ -142,7 +142,9 @@
 	h5{
 		font-size: 18px;
 	}
-		
+	.toeh-title{
+		font-size: 26px;
+	}
 
 }
 

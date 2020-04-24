@@ -514,6 +514,11 @@ if (windowWidth <= 767) {
 
 
 
+$('.sm-filter-btn').on('click', function(){
+  $('.tweedehands-overview-filters-cntlr').slideToggle(300);
+});
+
+
 
 if( $('.fl-tabs').length ){
   $('div.fl-tabs button').click(function(){
