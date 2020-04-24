@@ -120,7 +120,7 @@ Desktop--->
 
 
 Responsive---------->
-
+ fix nai
 
 
 
@@ -159,6 +159,23 @@ Desktop--->
 	h3 daw
 
 
+Responsive---------->
+
+1. https://www.screencast.com/t/z49neN10X
+	479px a ai partukur responsive ta , 'Mo Tweedehands Overview' xs ai page ta dekhe koro
+	fontt-size and gap gulo
+
+2. https://www.screencast.com/t/RoQ1l8e7
+	heading break hoye jasche, 1199px a ai code ta koro ->>https://www.screencast.com/t/682xLiJiUpy
+	then 991 px a amon vabe size ta komaba jate 768 projonto akline a thake , atar sathe sathe bakigulor o font-size ratio anujayi komate hobe, nahole khrap dekhabe
+
+
+
+
+
+
+
+
 ---------------------------
 Over Ons
 ----------------------------
@@ -182,4 +199,26 @@ Desktop--->
 
 6. https://www.screencast.com/t/ohraY2he6ey
 	hover a black color daw, ai color ta ki ai site a ache?
+
+
+Responsive---------->
+
+1. https://www.screencast.com/t/oNnmz8mE 
+  	boro window te ai white bg ta left a full-width hobe 
+
+2. https://www.screencast.com/t/rS6x8Bo0
+	i) atar font-size upor thake amon vabe komate aso, jate 1200px pojonto 2 line ai thake, 3 line a jeno na hoy. amader target amon j , desktop ar look ta 1200px pojonto niye jaoa, na niye jaite parle to kichu korar nai, but amra jodi pari to same look tai rakhar try korbo always 
+
+
+3. https://www.screencast.com/t/InfHwh2fmKHl
+	ai media te , akta max-width diye center a rakho , 350px dite paro
+
+
+4. https://www.screencast.com/t/gOIhWEgtu
+	lege geche
+
+
+5. ai page j common section gulo pest korehco segulo responsive or desktop dekho thik thak ache, kina
+	then ami check korbo pore
+
 	
