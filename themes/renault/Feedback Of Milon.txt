@@ -28,6 +28,26 @@ Desktop--->
 	ata text soho logo daw, xs a r akta new logo hobe
 
 
+
+Responsive---------->
+
+1. https://www.screencast.com/t/U8Y8I8XxhPwn
+	ata ulta hoyeche, width 10px and height 6px hobe
+
+2. https://www.screencast.com/t/4cdhurMCggNl
+	upor thake click kore kore jokhon seser ta click kore ber korlam, tokhon uporer 2 tar arrow gulo uprei uthe ache, height hoye gele nicher dike thakbe arrow 
+
+3. https://www.screencast.com/t/Yk07sdDjTz
+	991px media te 'webdesign by conversal' text ta haray geche
+
+4. https://www.screencast.com/t/Xr4q1gvv
+	atar font-weight 800 hobe desktop ai, then tane dekhte hobe j responsive thik ache kina
+
+
+
+
+
+
 ---------------------------
 Contact
 ----------------------------
@@ -53,6 +73,31 @@ Desktop--->
 
 7. https://www.screencast.com/t/S4rV28ULZ
 	multi place hobe
+
+
+
+Responsive---------->
+1. https://www.screencast.com/t/bFoXBarqLqH
+	1599px a ai img height ata daw
+
+	992px pojonto ai img tar height amon vabe komate hobe, jate kore ai text ta kata na pore, at branding text
+	https://www.screencast.com/t/CJHGpxVns
+
+2. https://www.screencast.com/t/gnPqjHpzW
+	ai media te ai code ta koro
+
+3. https://www.screencast.com/t/j5TK6aizrht
+	i) 767px a font-size 17px daw,
+	ii) 575px a font-size 16px hobe
+
+4. https://www.screencast.com/t/OXW9X8tZast9
+	768px pojonto 3 tai rakho, then 767px a 100% kore daw
+
+
+5. https://www.screencast.com/t/5dJOI5LP
+	text ta brk hoye geche, 575px a left and right padding ta off koro
+
+
 
 
 
