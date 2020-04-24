@@ -1,6 +1,9 @@
 .main-slider-section{
 	position: relative;
 }
+.mainSlider{
+	overflow: hidden;
+}
 .mainSlide-item-inr{
 	height: 790px;
 	position: relative;
@@ -120,7 +123,12 @@
 	border: 2px solid #F3BA4B;
 	border-radius: 8px;
 }
-
+.main-slide-btns .msb-2 a:hover{
+	background: #F3BA4B;
+}
+.main-slide-btns .msb-1 a:hover{
+	background: transparent;
+}
 .slider-features{
 	position: relative;
 	left: 0
@@ -543,54 +551,522 @@
 }
 
 .hmVerkoopSlider .hmVerkoopSlideItem{
-	display: none;
 	width: 33.3333%;
 }
-.hmVerkoopSlider .hmVerkoopSlideItem:first-child{
-	display: block;
+
+
+@media(max-width: 1849px){
+	.main-slide-des-cnter-cntlr{
+		padding: 20px 65px 20px 70px;
+	}
 }
-.hmVerkoopSlider.slick-initialized .hmVerkoopSlideItem{
-	display: block;
+@media(max-width: 1799px){
+	.main-slide-des-cnter-cntlr{
+		padding: 20px 45px 20px 40px;
+	}
+}
+@media(max-width: 1699px){
+	.msd-title{
+		font-size: 52px;
+	}
+	.msd-sub-title{
+		font-size: 32px;
+	}
 }
 
+
+@media(max-width: 1599px){
+	.main-slider-prv-nxt{
+		left: 66%;
+	}
+}
+
+
 @media(max-width: 1499px){
-	
+	.hm-about-us-section {
+	    margin-bottom: 80px;
+	}
+	.rwsd-title{
+		font-size: 49px;
+	}
+	.rwsd-sub-title{
+		font-size: 31px;
+	}
+	.msd-title {
+	    font-size: 47px;
+	    padding-bottom: 15px;
+	}
+	.msd-sub-title {
+	    font-size: 27px;
+	}
+	.main-slider-prv-nxt{
+		left: 66%;
+	}
 }
 
 @media(max-width: 1399px){
-
+	.hm-about-us-section {
+	    margin-bottom: 70px;
+	}
+	.msd-title{
+		font-size: 41px;
+	}
+	.msd-sub-title {
+	    font-size: 25px;
+	}
+	.main-slider-prv-nxt{
+		left: 69%;
+	}
 }
 
-@media(max-width: 1299px){
+@media(max-width: 1339px){
+	.hmVerkoopSlider .slick-prev{
+		left: 0;
+	}
+	.hmVerkoopSlider .slick-next{
+		right: 0;
+	}
+}
 
+
+@media(max-width: 1299px){
+	.main-slider-prv-nxt {
+	    left: auto;
+	    right: 20px;
+	}
 }
 
 @media(max-width: 1199px){
-	
-
+	.hm-about-us-section {
+	    margin-bottom: 50px;
+	}
+	.fl-about-us-item{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.hmAboutUsSecSlider.slick-slider .slick-dots li{
+		background:  rgba(255, 255, 255, 0.11)!important;
+	}
+	.hmAboutUsSecSlider.slick-slider .slick-dots li.slick-active{
+		background: #F3BA4B!important;
+	}
+	.hmAboutUsSecSlider.slick-slider ul.slick-dots{
+		margin-top: 45px;
+	}
+	.about-us-sec-cntlr{
+		padding-bottom: 20px;
+	}
+	.renault-wieze-sec-fea-img-cntlr span{
+		width: 180px;
+		height: 180px;
+		right: -45px;
+    	bottom: -40px;
+	}
+	.renault-wieze-sec-des{
+		padding-right: 0;
+	}
+	.rwsd-title {
+	    font-size: 40px;
+	    margin-bottom: 15px;
+	}
+	.rwsd-sub-title {
+	    font-size: 27px;
+	    padding-bottom: 30px;
+	}
+	.renault-wieze-sec-des p{
+		margin-bottom: 22px;
+	}
+	.renault-wieze-sec-fea-img-cntlr{
+		width: 50%;
+	}
+	.renault-wieze-sec-des{
+		width: 50%;
+		padding-left: 90px;
+	}
+	.renault-wieze-sec-fea-img-cntlr span{
+		border-width: 7px;
+		width: 150px;
+    	height: 150px;
+    	right: -35px;
+    	bottom: -31px;
+	}
+	.renault-wieze-sec-fea-img-cntlr{
+		height: 600px;
+	}
+	.hm-verkoop-section{
+		padding: 70px 0 80px
+	}
+	.main-slide-des-cnter-cntlr{
+		width: 43%;
+	}
+	.slider-features{
+		left: 43%;
+	}
+	.mainSlide-item-inr{
+		height: 670px;
+	}
+	.hm-cat-boxes-section {
+	    padding: 80px 0 64px;
+	}
 }
 
 @media(max-width: 991px){
-	
+	.hmAboutUsSecSlider .slick-active + .slick-active .fl-about-us-item:after{
+		content: none;
+	}
+	.renault-wieze-sec-cntlr{
+		display: block;
+	}
+	.renault-wieze-sec-fea-img-cntlr{
+		max-width: 670px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 100px;
+	}
+	.renault-wieze-sec-des{
+		width: 100%;
+		padding-left: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.renault-wieze-sec{
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.main-slide-des-cnter-cntlr {
+	    width: 45%;
+	}
+	.slider-features{
+		left: 45%;
+	}
+	.slider-features-cntlr{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.sfc-title{
+		font-size: 20px;
+	}
+	.slider-features-icon-cntlr > div:not(:last-child) {
+	    padding-right: 20px;
+	}
+	.slide-date-title-area strong{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.sfc-title-2{
+		font-size: 36px;
+	}
+	.main-slide-des-cnter-cntlr{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.msd-title {
+	    font-size: 32px;
+	}
+	.msd-sub-title {
+	    font-size: 22px;
+	}
+	.main-slide-btns{
+		display: block;
+	}
+	.msb-1{
+		margin-bottom: 15px;
+	}
+	.main-slide-des-cnter-cntlr p{
+		font-size: 17px;
+	}
+	.hm-tweedehands-section {
+	    padding-bottom: 80px;
+	}
+	.hmvshdr-title,
+	.hmts-hdr-title{
+		font-size: 32px;
+	}
 
-	
+}
+
+@media(max-width: 830px){
+	.renault-wieze-sec-fea-img-cntlr{
+		max-width: 600px;
+		margin-bottom: 80px;
+	}
 }
 
 @media(max-width: 767px){
+	.renault-wieze-sec-fea-img-cntlr{
+		max-width: 450px;
+		height: 450px;
+	}
+	.renault-wieze-sec-fea-img-cntlr span{
+		right: -20px;
+		bottom: -20px;
+	}
+	.main-slide-fea-img,
+	.slider-features{
+		display: none;
+	}
+	.main-slide-des-cnter-cntlr{
+		width: 100%;
+		text-align: center;
+		border: none;
+	}
+	.msd-title:before{
+		content: none;
+	}
+	.main-slide-btns{
+		display: flex;
+		justify-content: center;
+	}
+	.msb-1 {
+	    margin-bottom: 0;
+	}
+	.main-slide-des-cnter-cntlr p{
+		max-width: 500px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.main-slider-prv-nxt{
+		display: none;
+	}
+	.main-slide-des{
+		position: relative;
+	}
+	.msd-title{
+		padding-top: 0;
+	}
+	.mainSlide-item-inr{
+		height: auto;
+	}
+	.main-slide-des-cnter-cntlr{
+		padding: 105px 20px 140px;
+	}
+	.black-traingle{
+		top: 47%;
+	}
+	.hm-cat-boxes-sec-cntlr ul{
+		margin: 0;
+	}
+	.hm-cat-boxes-sec-cntlr ul li{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.hm-cat-boxes-section{
+		padding-top: 0;
+		margin-top: -50px;
+		position: relative;
+		z-index: 30;
+	}
+	.black-traingle{
+		max-width: 300px;
+	}
+	.dft-renault-item-des{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.hm-tweedehands-sec-hdr{
+		padding-top: 50px;
+		border-top: 2px solid #f0f0f0;
+	}
+	.hm-cat-boxes-section{
+		padding-bottom: 40px;
+	}
+	.sm-slider-con-sec-inr h3{
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 26px;
+		line-height: 1;
+		display: block;
+		margin: 0 0 15px 0;
+		text-align: center;
+	}
+	.sm-slider-con-sec-inr{
+		max-width: 350px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 45px;
+	}
+	.sm-slider-con-sec-fea-img{
+		padding-bottom: 25px;
+	}
+	.sm-slider-con-sec-fea-img img{
+		width: 100%;
+	}
+	.slider-features-cntlr{
+		padding: 0 0 0;
+		display: block;
+
+	}
+	.slide-date-title-area{
+		display: block;
+	}
+	.sfc-title{
+		border-bottom: 2px solid #f9f9f9;
+	}
+	.slide-date-title-area strong{
+		width: 100%;
+		height: 64px;
+		justify-content: center;
+	}
+	.slider-features-icon-cntlr{
+		display: block;
+		padding-top: 20px;
+	}
+	.slider-features-icon-cntlr > div{
+		float: left;
+		width: 50%;
+		margin-bottom: 15px;
+	}
+	.rn-grid-sec{
+		margin-bottom: 0!important;
+	}
+	.hmvshdr-title,
+	.hmts-hdr-title{
+		font-size: 30px;
+	}
+	.hm-verkoop-filters-tabs {
+	    padding-bottom: 50px;
+	}
+}
+@media(max-width: 639px){
+	.fl-about-us-item:after{
+		content: none!important;
+	}
+	.hm-about-us-section{
+		position: relative;
+	}
+	.hm-about-us-section:after{
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		width: 120px;
+		height: 65px;
+		background: #C4C4C4; 
+	}
+	.home .footer-top-wrp{
+		padding-top: 20px;
+	}
+	.hmAboutUsSecSlider{
+		margin-bottom: 0!important;
+	}
+	.about-us-sec-cntlr{
+		padding-bottom: 25px;
+	}
+	.hmAboutUsSecSlider.slick-slider ul.slick-dots{
+		padding-top: 20px!important;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		list-style: initial;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 30px;
+		margin-right: 20px;
+		width: auto;
+		height: auto;
+	}
+	.hmts-hdr-title{
+		font-size: 32px;
+	}
+
 
 }
+
 
 @media(max-width: 575px){
-	
-
+	.renault-wieze-sec-fea-img-cntlr span{
+		border-right: none;
+		border-width: 10px;
+		bottom: -50px;
+	}
+	.renault-wieze-sec-fea-img-cntlr{
+		max-width: 100%;
+		margin-bottom: 90px;
+	}
+	.rwsd-title {
+	    font-size: 36px;
+	    margin-bottom: 10px;
+	}
+	.rwsd-sub-title {
+	    font-size: 30px;
+	    padding-bottom: 20px;
+	}
+	.renault-wieze-sec-des p{
+		margin-bottom: 30px;
+	}
+	.main-slide-btns a{
+		width: 160px;
+		height: 48px;
+	}
+	.hm-cat-boxes-section{
+		padding-bottom: 20px;
+	}
+	.hmts-hdr-title {
+	    font-size: 26px;
+	}
+	.hm-tweedehands-sec-hdr{
+		padding-bottom: 5px;
+	}
+	.msd-title {
+	    font-size: 31px;
+	}
+	.msd-sub-title {
+	    font-size: 21px;
+	}
+	.main-slide-des-cnter-cntlr p{
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.hmvshdr-title,
+	.hmts-hdr-title{
+		font-size: 26px;
+	}
+	.hm-verkoop-filters-tabs {
+	    padding-bottom: 40px;
+	}
+	.hm-verkoop-section{
+		padding: 50px 0 45px;
+	}
+	.hmVerkoopSlider .slick-prev, .hmVerkoopSlider .slick-next{
+		transform: initial;
+		top: auto;
+		bottom: -9px;
+	}
 }
 
-@media(max-width: 479px){
 
+@media(max-width: 479px){
+	.renault-wieze-sec-fea-img-cntlr{
+		height: 317px;
+	}
 		
 
 }
 
 @media(max-width: 359px){
-
+	.rwsd-title{
+		font-size: 30px;
+	}
+	.rwsd-sub-title{
+		font-size: 26px;
+	}
+	.main-slide-btns{
+		display: block;
+	}
+	.msb-1{
+		padding-right: 0;
+		padding-bottom: 15px;
+	}
+	.main-slide-btns a{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.slide-date-title-area strong span{
+		font-size: 16px;
+	}
 }

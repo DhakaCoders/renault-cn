@@ -334,21 +334,22 @@ if( $('.hmAboutUsSecSlider').length ){
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
+            dots: true,
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 640,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 1,
+            dots: true,
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            dots: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -369,23 +370,17 @@ if( $('.dftAboutUsSecSlider').length ){
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            dots: true,
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 640,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            dots: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -422,21 +417,20 @@ if( $('.hmVerkoopSlider').length ){
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 640,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            dots: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -482,12 +476,55 @@ if( $('.dftProItemsSlider').length ){
     });
 }
 
+if (windowWidth <= 991) {
+  $('.hdr-humberger').on('click', function(e){
+    $('.main-nav-cntlr').addClass('opacity-1');
+    $('.bdoverlay').addClass('active');
+    $('body').addClass('active-scroll-off');
+    //$(this).addClass('active-collapse');
+  });
+  $('.closebtn').on('click', function(e){
+    $('.bdoverlay').removeClass('active');
+    $('.main-nav-cntlr').removeClass('opacity-1');
+    $('body').removeClass('active-scroll-off');
+    $('.line-icon').removeClass('active-collapse');
+  });
+  
+  $('.main-nav-cntlr li.menu-item-has-children > a').on('click', function(e){
+    e.preventDefault();
+    //$('li.menu-item-has-children .sub-menu').slideUp(300);
+    $(this).toggleClass('sub-menu-active');
+    //$(this).next().slideDown(300);
+    $(this).next().slideToggle(300);
+
+  });
+}
+
+if (windowWidth <= 767) {
+  $('.nav-opener').on('click', function(){
+    $('.xs-popup-menu').fadeIn(500);
+    $('.xs-popup-menu').addClass('add-cls-show');
+  });
+  $('.xs-menu-close-btn-controller').on('click', function(){
+    $('.xs-popup-menu').fadeOut(500);
+    $('.xs-popup-menu').removeClass('add-cls-show');
+  });
+
+  $('.xs-main-nav > ul > li.menu-item-has-children > a').on('click', function(e){
+    e.preventDefault();
+    $(this).next().slideToggle(500);
+    $(this).toggleClass('sub-menu-expend');
+  });
+
+}
+
+
 
 
 if( $('.fl-tabs').length ){
   $('div.fl-tabs button').click(function(){
      $('.hmVerkoopSlider').slick('refresh');
-     location.reload(true);
+     //location.reload(true);
       //$.fn.matchHeight._update();
       var tab_id = $(this).attr('data-tab');
       $('div.fl-tabs button').removeClass('current');
@@ -497,8 +534,6 @@ if( $('.fl-tabs').length ){
       $("#"+tab_id).addClass('current');
 
   });
-
-
 }
 
 
