@@ -537,7 +537,7 @@ Gallery design
 	display: block;
 	font-weight: 800!important;
 	font-size: 20px!important;
-	line-height: 1!important;
+	line-height: 1.2!important;
 	margin-bottom: 17px!important;
 }
 .dft-latest-news-bx-title a{
@@ -548,6 +548,9 @@ Gallery design
 }
 .dft-latest-news-bx-des > a:hover{
 	color: #232531;
+}
+.dft-latest-news-bx-des p{
+	margin-bottom: 20px;
 }
 .dft-latest-news-bx-items{
 	background: #FFFFFF;
@@ -778,13 +781,22 @@ Gallery design
 	.dft-latest-news-module-hdr{
 		text-align: center;
 	}
+	.dft-latest-news-bx-items{
+		padding: 30px 20px 30px 20px;
+	}
+	.dft-latest-news-bx-des{
+		padding-left: 30px;
+	}
 }
 
 
 
 @media(max-width: 639px){
-
+	.dft-pro-items-cntlr{
+		padding-bottom: 45px;
+	}
 }
+
 
 
 
@@ -797,6 +809,15 @@ Gallery design
 	.gallery-item {
 	    padding: 0 5px;
 	    margin-bottom: 10px;
+	}
+	.gallery.gallery-columns-4 .gallery-item{
+		width: 33.3333%;
+	}
+	.gallery.gallery-columns-4 .gallery-item:nth-child(4n+1){
+		clear: initial;
+	}
+	.gallery.gallery-columns-4 .gallery-item:nth-child(3n+1){
+		clear: left;
 	}
 	.default-page-con ol,
 	.default-page-con ul,
@@ -848,6 +869,15 @@ Gallery design
 	    padding: 2px 0 14px 35px;
 	    line-height: 22px;
 	}
+	.table-dsc table thead tr th:first-child, 
+	.table-dsc table tbody tr td:first-child {
+	    padding-left: 20px;
+	    padding-right: 20px;
+	    width: 76px;
+	}
+	.dfp-tbl-wrap{
+		margin-bottom: 45px;
+	}
 	.dft-question-mark-slider{
 		border-bottom: 2px solid #EEEEEE;
 		margin: 0 0 30px!important;
@@ -894,6 +924,16 @@ Gallery design
 	
 	.dft-lnm-title {
 	    font-size: 26px!important;
+	}
+	.dft-latest-news-bx{
+		display: block;
+	}
+	.dft-latest-news-bx-des{
+		padding-left: 0;
+	}
+	.dft-latest-news-bx-items{
+		padding-top: 20px;
+		padding-bottom: 10px;
 	}
 
 }
