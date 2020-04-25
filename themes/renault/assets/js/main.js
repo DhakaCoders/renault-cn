@@ -278,6 +278,36 @@ if( $('.rn-td-slider-inr').length ){
       asNavFor: '.rn-td-slider-inr',
       focusOnSelect: true,
       centerMode: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 5,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 4,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 3,
+            dots: true
+          }
+        }
+      ]
       
     });
 }
