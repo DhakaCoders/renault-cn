@@ -788,6 +788,9 @@
 	.hmts-hdr-title{
 		font-size: 32px;
 	}
+	.hm-tweedehands-sec-products .slick-slider ul.slick-dots{
+		margin-top: 20px;
+	}
 
 }
 
@@ -934,6 +937,12 @@
 	}
 	.hm-verkoop-filters-tabs {
 	    padding-bottom: 50px;
+	}
+	.hm-tweedehands-section{
+		padding-bottom: 48px;
+	}
+	.hm-tweedehands-sec-products .slick-slider ul.slick-dots {
+	    margin-top: 5px;
 	}
 }
 @media(max-width: 639px){
