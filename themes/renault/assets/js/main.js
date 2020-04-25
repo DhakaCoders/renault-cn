@@ -204,6 +204,16 @@ if( $('.rw-blockcode-slider').length ){
       slidesToScroll: 1,
       prevArrow: $('.rwblockcodearrows .leftArrow'),
       nextArrow: $('.rwblockcodearrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+      ]
     });
 }
 

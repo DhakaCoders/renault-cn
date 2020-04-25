@@ -462,10 +462,17 @@ footer-top-sec-wrp
   .footer-top-wrp {
       padding-left: 40px;
       padding-right: 40px;
+      padding-top: 50px;
   }
   .footer-top-lft-dsc-title {
       font-size: 28px;
       line-height: 30px;
+  }
+  .footer-top-rgt-btn a {
+      padding: 22px 18px 17px;
+  }
+  .footer-top-rgt-btn a:last-child {
+      padding: 20px 20px 16px;
   }
 }
 

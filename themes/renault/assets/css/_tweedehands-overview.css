@@ -260,6 +260,9 @@
 	.tweedehands-overview-products ul li:nth-child(3n+1){
 		clear: left;
 	}
+	.tofh-title {
+	    font-size: 34px;
+	}
 
 }
 
@@ -285,6 +288,9 @@
 	}
 	.tweedehands-overview-form-cntlr .contact-form-wrp{
 		margin-top: 0;
+	}
+	.tofh-title {
+	    font-size: 32px;
 	}
 
 	
@@ -320,6 +326,9 @@
 	}
 	.filters-border{
 		margin-bottom: 0;
+	}
+	.tofh-title {
+	    font-size: 30px;
 	}
 
 }
@@ -380,6 +389,10 @@
 	.tweedehands-overview-products{
 		padding-bottom: 10px;
 	}
+	.tofh-title {
+	    font-size: 26px;
+	    margin-bottom: 12px;
+	}
 }
 
 @media(max-width: 479px){
@@ -393,9 +406,14 @@
 		padding-left: 12px;
 		padding-right: 12px;
 	}
+	.tofh-title {
+	    font-size: 22px;
+	}
 
 }
 
 @media(max-width: 359px){
-
+	.tofh-title {
+	    font-size: 20px;
+	}
 }

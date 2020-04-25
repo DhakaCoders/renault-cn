@@ -286,6 +286,7 @@ vrk-two-part-sec-wrp
 	padding: 17px 44px 14px;
 	text-transform: uppercase;
 	margin-top: 15px;
+	font-weight: 800;
 }
 .vrk-product-grid-btm-sec-wrp .vrk-product-grid-inr {
     padding-bottom: 40px;
@@ -433,6 +434,16 @@ vrk-two-part-sec-wrp
 	.vrk-two-part-img img{
 		display: block;
 	}
+	.vrk-product-grid-head{
+		font-size: 17px;
+		line-height: 26px;
+	}
+	.vrk-product-grid-item {
+	    max-width: 380px;
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }
 
 @media(max-width: 575px){
@@ -445,6 +456,10 @@ vrk-two-part-sec-wrp
 	    top: 20px;
 	    width: 85px;
 	    height: 88px;
+	}
+	.vrk-product-grid-head{
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 
@@ -463,6 +478,25 @@ vrk-two-part-sec-wrp
 	.vrk-tabs-menu li {
 	    font-size: 16px;
 	    line-height: 18px;
+	}
+	.vrk-two-part-rgt-dsc a {
+	    padding: 17px 30px 14px;
+	}
+	.vrk-two-part-rgt-title-2 {
+	    font-size: 26px;
+	    line-height: 30px;
+	}
+	.vrk-two-part-rgt-title-1 {
+	    font-size: 24px;
+	    line-height: 28px;
+	}
+	.vrk-two-part-rgt-dsc span {
+	    font-size: 18px;
+	    line-height: 24px;
+	}
+	.vrk-two-part-rgt-dsc p {
+	    font-size: 16px;
+	    line-height: 25px;
 	}
 
 
