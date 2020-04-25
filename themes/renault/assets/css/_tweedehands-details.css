@@ -1311,5 +1311,6 @@
 	.rn-td-slider-des-item-inr strong {
 		padding-right: 0;
 		word-break: break-all;
+		max-width: 160px;
 	}
 }
