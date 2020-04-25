@@ -751,6 +751,7 @@
 	}
 	.sfc-title{
 		font-size: 20px;
+		line-height: 1.2;
 	}
 	.slider-features-icon-cntlr > div:not(:last-child) {
 	    padding-right: 20px;
@@ -1086,5 +1087,8 @@
 	}
 	.slide-date-title-area strong span{
 		font-size: 16px;
+	}
+	.fl-pro-more-btn a{
+		font-size: 15px;
 	}
 }
