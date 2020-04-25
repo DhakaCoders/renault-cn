@@ -278,6 +278,7 @@ if( $('.rn-td-slider-inr').length ){
       asNavFor: '.rn-td-slider-inr',
       focusOnSelect: true,
       centerMode: true,
+      
     });
 }
 
@@ -293,7 +294,8 @@ if( $('.rn-grid-sec').length ){
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
+            dots: true
           }
         },
         {
