@@ -131,8 +131,67 @@ Responsive----------------->
 	ai media te lege geche 
 
 
+10. https://www.screencast.com/t/TbVtks5q
+	bar bar coding keno korecho? akta common class daw then code korlei to hoye jasche,
+	class ar name dite paro 'rn-grd-item-feature',
 
-	
+
+11. https://www.screencast.com/t/Z7WcEbErRi
+	1199px a ai gap ta kom kore, button ar font-size barao onek choto hoye geche
+
+
+12. https://www.screencast.com/t/nGH2nqQiwJc
+	767px right pase gap hoye ache, desktop thakei img ar width 100% diye rakho
+
+	https://www.screencast.com/t/aScys91g7B4
+	uporer media teo same problem hosche 
+
+13. https://www.screencast.com/t/2AQroOgy
+	991px top gap ta off kore daw
+
+
+14. https://www.screencast.com/t/NbLqFB9TvzLq
+	992px a slide item 4 ta daw
+	768px a 5 ta
+	640px a 4 ta
+	480px a 3 ta
+
+
+15. https://www.screencast.com/t/ty8uV6VRGBW
+	1199px a ai button ar jonno ai code gulo koro
+
+	then ai button ar jonno ai code gulo koro--> 
+	https://www.screencast.com/t/WXg3YnjoJ
+
+
+16. https://www.screencast.com/t/skq2w1WAqWk6 
+
+	xs design a dekho ai title ta brk hote parbe, but right ar ta na, manage koro
+
+17. https://www.screencast.com/t/1FgjrFU7OHG
+	li te float use korecho, but ul a clearfix koi?
+	r li te clear left lagbe (2n+1)
+
+
+18. https://www.screencast.com/t/Hcyy4X3YGcr
+	lege geche design a lagano nai
+
+
+19. https://www.screencast.com/t/8sUautur
+	desktop thake padding-right diye rakho lege jasche,
+
+20. https://www.screencast.com/t/Cb7yBkMImMvt
+	1199px a ai code gulo koro, mane grd 2 ta full width and max-width diye center rakho
+
+
+
+21. https://www.screencast.com/t/uWrQkxO21Jq1
+	992px px a 2 ta item kore daw and dots true hobe
+
+22. https://www.screencast.com/t/HMFGqk1HdgN
+	jokhon dots asteche tokhon ai gap ta barao
+
+
 
 
 
