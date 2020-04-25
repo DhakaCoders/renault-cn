@@ -193,6 +193,36 @@ Responsive----------------->
 
 
 
+23. https://www.screencast.com/t/M3hQjai43tfD
+	ata full width 1199px a korte hobe . 1200 px pojonto 2 ta grd pase pasi rakhar try koro
+
+
+24. https://www.screencast.com/t/miTAkPp9d8
+	atate hover korle #232531 ai color ta daw
+
+25. https://www.screencast.com/t/eROj43xBzv3R
+	991px a atar line-height ata daw
+
+
+26. https://www.screencast.com/t/qD87vdw95T
+	439px a atar font-size 26px hobe desing a joto ache
+
+
+27. https://www.screencast.com/t/o3AAIMS1yF
+	575px ai gap ta figma ar moto 59px hobe
+
+
+28. https://www.screencast.com/t/NWSPjNIDg
+	ai icon tate transition lagbe 
+
+
+
+29. https://www.screencast.com/t/JIbZGG5m
+	i) font-size and line-height lagbena aikhane,
+	ii) width besi hoye geche, icon ar joto width ta daw
+	iii) hover korle orange color daw
+
+
 
 
 

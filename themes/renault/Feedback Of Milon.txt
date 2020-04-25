@@ -45,6 +45,17 @@ Responsive---------->
 
 
 
+New---->
+1. https://www.screencast.com/t/fejmU9iBWU
+	ai top gap ta kom hoye geche, mobile design a joto ache toto dite hobe,
+	border sara and border soho gap ta manage korte hobe, sob page a
+
+
+2. https://www.screencast.com/t/VXay3mhaO
+	lege geche
+
+
+
 
 
 
@@ -171,6 +182,29 @@ Responsive---------->
 
 
 
+New--->
+
+1. https://www.screencast.com/t/rlRUVjbdY
+	575px a ata font-size koi 16px  dicho? amon akta part ache mobile design a khuje dekho
+
+
+
+2. https://www.screencast.com/t/m27Cs1zCUn
+	atar font-weight 800 hobe, ata desktop fix, then responsive tane dekhte hobe thik thak ache kina
+
+3. https://www.screencast.com/t/g8udmKm2px
+	padding-left and right komay ak line a rakho text ta
+
+
+4. i)  https://www.screencast.com/t/qovAxh6F3Y
+	439px ai title ar jonno ai code ta koro , bocoz text ta akline a rakha jay
+	ii) atar font-size komanor sathe baki text gulor size ration anujayi komate hobe, jemon ta valo lage
+
+
+5. https://www.screencast.com/t/driehgifiSvk
+	767px a akta max-width diye center a rakho, left square box te onek left a sore geche
+
+
 
 
 
@@ -222,3 +256,20 @@ Responsive---------->
 	then ami check korbo pore
 
 	
+
+
+New----->
+
+1. https://www.screencast.com/t/lV0lthBEc
+	ai sider tar padding tumi alada class niye kore rakhle to home thake pabena,
+	home page a jomon kore responsive ta update korechi temon kore koro.
+
+2. https://www.screencast.com/t/ZCAblZtEaQ2
+	ai media te ai code ta koro, ai title ar jonno
+
+
+3. https://www.screencast.com/t/bU2COprF
+	i) 767px a ai arrow 2 ta niche daw
+	ii) r dots ta on korte hobe
+
+	atar moto home page a ache ----> https://www.screencast.com/t/AsyCSg9Q
