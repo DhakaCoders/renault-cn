@@ -22,6 +22,7 @@ if( !function_exists('cbv_theme_setup') ){
 			add_theme_support('category-thumbnails');
 		}
         add_image_size( 'bloggrid', 130, 130, true );
+        add_image_size( 'contactimg', 468, 570, true );
 
 
 		
@@ -38,7 +39,9 @@ if( !function_exists('cbv_theme_setup') ){
 		) );
 
 		register_nav_menus( array(
-          'cbv_main_menu' => __( 'Main Menu', THEME_NAME )
+          'cbv_main_menu' => __( 'Main Menu', THEME_NAME ),
+          'cbv_fta_menu' => __( 'Footer Menu', THEME_NAME ),
+          'cbv_copyright_menu' => __( 'Copyright Menu', THEME_NAME ),
 		) );
 
 	}

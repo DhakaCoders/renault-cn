@@ -85,3 +85,43 @@ function tn_custom_excerpt_length( $length ) {
 return 50;
 }
 add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+
+
+function cbv_table( $table){
+  if ( ! empty ( $table ) ) {
+    echo '<div class="dfp-tbl-wrap">
+    <div class="table-dsc" data-aos="fade-up" data-aos-delay="200">
+    <table>';
+    if ( ! empty( $table['caption'] ) ) {
+      echo '<caption>' . $table['caption'] . '</caption>';
+    }
+    if ( ! empty( $table['header'] ) ) {
+      echo "<thead class='dfp-thead'>";
+      echo '<tr>';
+      echo '<th><span>#</span></th>';
+      foreach ( $table['header'] as $th ) {
+        echo '<th><span>';
+        echo $th['c'];
+        echo '</span></th>';
+      }
+      echo '</tr>';
+      echo '</thead>';
+    }
+    echo '<tbody>';
+    $i = 1;
+    foreach ( $table['body'] as $tr ) {
+      echo '<tr>';
+      echo '<td><span>'.$i.'.</span></td>';
+      foreach ( $tr as $td ) {
+        echo '<td><span class="mHc">';
+        echo $td['c'];
+        echo '</span></td>';
+      }
+      echo '</tr>';
+      $i++;
+    }
+    echo '</tbody>';
+    echo '</table></div>';
+    echo '</div>';
+  }  
+}
