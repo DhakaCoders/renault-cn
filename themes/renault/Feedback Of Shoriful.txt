@@ -223,6 +223,21 @@ Responsive----------------->
 	iii) hover korle orange color daw
 
 
+30. https://www.screencast.com/t/vbjytWbqxouS
+	atar dots true hobena bcoz img guloi pagi hisabe kaj korteche
+
+31. https://www.screencast.com/t/ngUKldThPRj
+	arrow gulo sob somoy center a thakena
+	ata desktop ai fix koro,
+	i) positon relative daw
+	ii) https://www.screencast.com/t/GH7FG0JsbdL
+		top thake 50% daw
+	iii) left thake 24px and right thake 24px daw, then niche r ai arrow ar r responsive lagbena auto manage hoye jabe dekho
+	
+
+32. https://www.screencast.com/t/mGjhPmT4wAqJ
+	991px ai grd 2 ta width same rakho, choto boro hoiche
+
 
 
 
