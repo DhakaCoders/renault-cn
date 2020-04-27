@@ -24,6 +24,8 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'bloggrid', 130, 130, true );
         add_image_size( 'pbloggrid', 264, 264, true );
         add_image_size( 'contactimg', 468, 570, true );
+        add_image_size( 'overons1', 526, 650, true );
+        add_image_size( 'overons2', 918, 760, true );
 
 
 		

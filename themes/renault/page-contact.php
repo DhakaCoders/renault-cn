@@ -3,8 +3,7 @@
 	Template Name: Contact
 */
 get_header();
-while ( have_posts() ) :
-  the_post();
+
 $thisID = get_the_ID();
 $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
 $gmap = get_field('google_maps', $thisID);
@@ -26,15 +25,13 @@ get_template_part('templates/page', 'banner');
           <div class="contact-form-wrp clearfix">
             <span class="contact-bdr"></span>
             <div class="contact-form-dsc">
-			<?php 
+			      <?php 
 	            if(!empty($contact['titel'])) printf('<h2 class="contact-form-dsc-title">%s</h2>', $contact['titel']);
 	            if(!empty($contact['beschrijving'])) echo wpautop( $contact['beschrijving'], true );
           	?>
             </div>
             <div class="wpforms-container">
-            	<?php 
-                    if( !empty( $contact['form_shortcode'] ) ) echo do_shortcode($contact['form_shortcode']); 
-                ?>
+            	<?php if( !empty( $contact['form_shortcode'] ) ) echo do_shortcode($contact['form_shortcode']); ?>
             </div>
           </div>
         </div>
@@ -276,7 +273,4 @@ $cnaverkoop = $mekaniek['cnaverkoop']['showroom'];
   <div data-homeurl="<?php echo THEME_URI; ?>" id="googlemap" data-latitude="<?php echo $google_map['lat']; ?>" data-longitude="<?php echo $google_map['lng']; ?>"></div>
 </section>
 <?php endif; ?>
-<?php 
-endwhile; 
-get_footer(); 
-?>
+<?php get_footer(); ?>

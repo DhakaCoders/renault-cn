@@ -93,9 +93,11 @@ while ( have_posts() ) :
               echo "</div></div>";
               endif; wp_reset_postdata();
             }elseif( get_row_layout() == 'quote' ){
-              $fc_diensten = get_sub_field('fc_quote');
-              $naam = get_sub_field('naam');
-              $positie = get_sub_field('positie');
+              $quoteID = get_sub_field('fc_quote');
+              if( !empty($quoteID) ): 
+              $fc_diensten = get_field('beschrijving', $quoteID);
+              $naam = get_field('naam', $quoteID);
+              $positie = get_field('positie', $quoteID);
               echo "<div class='dft-blockquote'>";
               echo '<blockquote>';
               echo '<i>
@@ -107,16 +109,29 @@ while ( have_posts() ) :
               printf('<span><strong>-%s, %s</strong></span>', $naam, $positie);
               echo '</blockquote>';
               echo "</div><hr>";
-            }elseif( get_row_layout() == 'promo' ){
-              $fc_title = get_sub_field('fc_title');
-              $fc_beschrijving = get_sub_field('fc_beschrijving');
-              $fc_knop = get_sub_field('fc_knop');
-              $achtergrond = get_sub_field('achtergrond');
-              echo "<div class='dft-bnr-con' style='background-image: url({$achtergrond});'>";
-              printf('<h3>%s</h3>', $fc_title);
-              echo wpautop( $beschrijving );
-              printf('<a target="%s" href="%s">%s</a>', $fc_knop['target'], $fc_knop['url'], $fc_knop['title']);
-              echo "</div>";
+              endif; 
+            }elseif( get_row_layout() == 'usps' ){
+               if( have_rows('fc_alle_usps') ):
+                echo '<div class="dft-about-us-sec-cntlr">
+                <div class="about-us-sec-cntlr">
+                  <div class="fl-aboutUsSlider dftAboutUsSecSlider">';
+                    while( have_rows('fc_alle_usps') ) : the_row();
+                      $icon = get_sub_field('icon');
+                      $titel = get_sub_field('titel');
+                      $beschrijving = get_sub_field('beschrijving');
+
+                    echo '<div class="fl-about-us-item mHc">';
+                    if( !empty($icon) ): 
+                      echo '<span class="about-us-item-icon mHc1">';
+                        echo '<img src="'.$icon.'" alt="'.cbv_get_image_alt( $icon ).'">';
+                      echo '</span>';
+                      endif;
+                    if( !empty($titel) ) printf('<h4 class="aui-title mHc2">%s</h4>', $titel);
+                    if( !empty($beschrijving) ) echo wpautop( $beschrijving );
+                    echo '</div>';
+                    endwhile;
+              echo '</div></div></div>';
+              endif;
             }elseif( get_row_layout() == 'table' ){
               $fc_table = get_sub_field('fc_table');
               cbv_table($fc_table);
@@ -203,6 +218,30 @@ while ( have_posts() ) :
     </div>
 <?php } ?>
 </section>
+<?php 
+$showhide_offerte_formulier = get_field('showhide_offerte_formulier', 'options');
+$offertef = get_field('offerte_formulier', 'options');
+if( $showhide_offerte_formulier ):
+?>
+<section class="dft-form-wrapp">
+  <div class="dft-form-cntlr">
+    <div class="tweedehands-overview-form-cntlr">
+      <div class="contact-form-wrp clearfix">
+        <div class="tweedehands-overview-form-hdr">
+          <?php 
+            if(!empty($offertef['titel'])) printf('<h3 class="tofh-title">%s</h3>', $offertef['titel']);
+            if(!empty($offertef['beschrijving'])) echo wpautop( $offertef['beschrijving'], true );
+          ?>
+        </div>
+        <div class="wpforms-container">
+        <?php if( !empty( $offertef['form_shortcode'] ) ) echo do_shortcode($offertef['form_shortcode']); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php get_template_part('templates/section', 'offerte'); ?>
 <?php 
 endwhile; 
 get_footer(); 

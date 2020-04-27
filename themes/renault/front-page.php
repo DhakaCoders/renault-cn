@@ -672,102 +672,75 @@
 
 
 
-
+<?php
+  $showhide_intro2 = get_field('showhide_intro2', HOMEID);
+  $introsec2 = get_field('introsec2', HOMEID);
+  if( $showhide_intro2 ):
+?>
 <section class="renault-wieze-sec">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="renault-wieze-sec-cntlr">
             <div class="renault-wieze-sec-fea-img-cntlr">
+              <?php if(!empty($introsec2['afbeelding'])): ?>
               <span></span>
-              <div class="renault-wieze-sec-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/renault-wieze-sec-fea-img.jpg);">
+              <div class="renault-wieze-sec-fea-img" style="background: url(<?php echo cbv_get_image_src($introsec2['afbeelding'], 'overons1'); ?>);">
                 
               </div>
+              <?php endif; ?>
             </div>
             <div class="renault-wieze-sec-des">
-              <h2 class="rwsd-title">Renault Wieze</h2>
-              <span class="rwsd-sub-title">Passion for life.</span>
-              <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia.</p>
-              <p>Aenean dignissim nec eros a luctus. Nulla varius sapien mauris, ac mattis sapien accumsan sit amet. Morbi consectetur risus turpis, sed aliquet leo accumsan in. Vivamus et convallis libero. Vivamus sit amet aliquet mi. Etiam turpis ipsum, venenatis sit amet turpis vitae, tristique molestie odio. </p>
-              <a href="#">Over Ons</a>
+              <?php 
+                if(!empty($introsec2['titel'])) printf('<h2 class="rwsd-title">%s</h2>', $introsec2['titel']);
+                if(!empty($introsec2['subtitel'])) printf('<span class="rwsd-sub-title">%s</span>', $introsec2['subtitel']);
+                if(!empty($introsec2['beschrijving'])) echo wpautop( $introsec2['beschrijving'], true );
+
+                $link_8 = $introsec2['knop'];
+                if( is_array( $link_8 ) &&  !empty( $link_8['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $link_8['url'], $link_8['target'], $link_8['title']); 
+                }
+              ?>
             </div>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
-
-
+<?php endif; ?>
+<?php
+  $hshowhide_usp = get_field('showhide_usp', HOMEID);
+  $uspssec = get_field('uspssec', HOMEID);
+  $husps = $uspssec['alle_usps'];
+  if( $hshowhide_usp ):
+?>
 <section class="hm-about-us-section">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="about-us-sec-cntlr">
+            <?php if( $husps ){ ?>
             <div class="fl-aboutUsSlider hmAboutUsSecSlider">
+              <?php foreach( $husps as $husp ): ?>
               <div class="fl-about-us-item mHc">
+                <?php if( !empty($husp['icon']) ): ?>
                 <span class="about-us-item-icon mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/about-us-img-01-hand-shake.svg">
+                  <img src="<?php echo $husp['icon']; ?>" alt="<?php echo cbv_get_image_alt( $husp['icon'] ); ?>">
                 </span>
-                <h4 class="aui-title mHc2">Duidelijke afspraken</h4>
-                <p>Duis efficitur gravida sem a semper.</p>
+              <?php endif; ?>
+                <?php
+                if( !empty($husp['titel']) ) printf('<h4 class="aui-title mHc2">%s</h4>', $husp['titel']);
+                  if( !empty($husp['beschrijving']) ) echo wpautop( $husp['beschrijving'] );
+                ?>
               </div>
-              <div class="fl-about-us-item mHc">
-                <span class="about-us-item-icon mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/about-us-img-02-investor.svg">
-                </span>
-                <h4 class="aui-title mHc2">Professioneel</h4>
-                <p>Duis efficitur gravida sem a semper.</p>
-              </div>
-              <div class="fl-about-us-item mHc">
-                <span class="about-us-item-icon mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/about-us-img-03-medal.svg">
-                </span>
-                <h4 class="aui-title mHc2">Duidelijke afspraken</h4>
-                <p>Duis efficitur gravida sem a semper.</p>
-              </div>
-
+              <?php endforeach; ?>
             </div>
+            <?php } ?>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
-
-<section class="main-content">
-  <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-        </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
-  </div>    
-</section>
-
-
-<section class="footer-top-sec-wrp hm-footer-xs-prd">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="footer-top-wrp clearfix">
-          <div class="footer-top-lft">
-            <div class="footer-top-lft-dsc">
-              <h2 class="footer-top-lft-dsc-title">Lorem ipsum dolor sit?</h2>
-              <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia.</p>
-            </div>
-          </div>
-          <div class="footer-top-rgt">
-            <div class="footer-top-rgt-btn">
-              <a href="#">Proefrit reserveren</a>
-              <a href="#">Offerte aanvragen</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php endif; ?>
+<?php get_template_part('templates/section', 'offerte'); ?>
 <?php get_footer(); ?>

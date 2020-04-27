@@ -2,191 +2,174 @@
 /*
   Template Name: Overons
 */
-get_header(); 
+get_header();
+$thisID = get_the_ID();
+get_template_part('templates/page', 'banner');
+$showhide_intro = get_field('showhide_intro', $thisID);
+$introsec = get_field('introsec', $thisID);
+if( $showhide_intro ):
 ?>
-<section class="rn-breadcrumbs-sec">
-  <div class="rn-breadcrumbs-sec-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/rn-breadcrumbs-sec-bg.jpg');">
-    
-  </div>
-  <div class="rn-breadcrumbs-sec-des">
-    <div class="rn-breadcrumbs-sec-des-inr">
-      <h1 class="rn-breadcrumbs-sec-des-inr-title">Over Ons</h1>
-      <ul class="reset-list">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Binnenpagina</a></li>
-        <li><a href="#">Binnenpagina</a></li>
-      </ul>
-      <div class="rn-td-brdcm clearfix">
-        <div class="rn-td-brdcm-left">
-          <a href="#">Home</a>
-        </div>
-        <div class="rn-td-brdcm-right">
-          <a href="#">
-            Terug
-            <i>
-              <svg class="rn-td-brdcm-xs-svg" width="5" height="8" viewBox="0 0 5 8" fill="white">
-                <use xlink:href="#rn-td-brdcm-xs-svg"></use>
-              </svg> 
-            </i>
-          </a>
-        </div>
-      </div>
-      <div class="rn-breadcrumbs-sec-icon">
-        <img src="<?php echo THEME_URI; ?>/assets/images/rn-breadcrumbs-sec-icon.png">
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-
 <section class="renault-wieze-sec overons-renault-wieze-sec">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="renault-wieze-sec-cntlr">
             <div class="renault-wieze-sec-fea-img-cntlr">
+              <?php if(!empty($introsec['afbeelding'])): ?>
               <span></span>
-              <div class="renault-wieze-sec-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/renault-wieze-sec-fea-img.jpg);">
+              <div class="renault-wieze-sec-fea-img" style="background: url(<?php echo cbv_get_image_src($introsec['afbeelding'], 'overons1'); ?>);">
                 
               </div>
+              <?php endif; ?>
             </div>
             <div class="renault-wieze-sec-des">
-              <h2 class="rwsd-title">Renault Wieze</h2>
-              <span class="rwsd-sub-title">Passion for life.</span>
-              <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia.</p>
-              <p>Aenean dignissim nec eros a luctus. Nulla varius sapien mauris, ac mattis sapien accumsan sit amet. Morbi consectetur risus turpis, sed aliquet leo accumsan in. Vivamus et convallis libero. Vivamus sit amet aliquet mi. Etiam turpis ipsum, venenatis sit amet turpis vitae, tristique molestie odio. </p>
-              <a href="#">Verkoop</a>
-              <a href="#">Tweedehands</a>
+              <?php 
+                if(!empty($introsec['titel'])) printf('<h2 class="rwsd-title">%s</h2>', $introsec['titel']);
+                if(!empty($introsec['subtitel'])) printf('<span class="rwsd-sub-title">%s</span>', $introsec['subtitel']);
+                if(!empty($introsec['beschrijving'])) echo wpautop( $introsec['beschrijving'], true );
+
+                $link_1 = $introsec['knop_1'];
+                $link_2 = $introsec['knop_2'];
+                if( is_array( $link_1 ) &&  !empty( $link_1['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $link_1['url'], $link_1['target'], $link_1['title']); 
+                }
+                if( is_array( $link_2 ) &&  !empty( $link_2['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $link_2['url'], $link_2['target'], $link_2['title']); 
+                }
+              ?>
             </div>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
-
+<?php endif; ?>
+<?php
+  $hshowhide_usp = get_field('showhide_usp', $thisID);
+  $uspssec = get_field('uspssec', $thisID);
+  $husps = $uspssec['alle_usps'];
+  if( $hshowhide_usp ):
+?>
 <section class="hm-about-us-section overons-about-us-section">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="about-us-sec-cntlr">
+            <?php if( $husps ){ ?>
             <div class="fl-aboutUsSlider hmAboutUsSecSlider">
+              <?php foreach( $husps as $husp ): ?>
               <div class="fl-about-us-item mHc">
+                <?php if( !empty($husp['icon']) ): ?>
                 <span class="about-us-item-icon mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/about-us-img-01-hand-shake.svg">
+                  <img src="<?php echo $husp['icon']; ?>" alt="<?php echo cbv_get_image_alt( $husp['icon'] ); ?>">
                 </span>
-                <h4 class="aui-title mHc2">Duidelijke afspraken</h4>
-                <p>Duis efficitur gravida sem a semper.</p>
+                <?php endif; 
+                  if( !empty($husp['titel']) ) printf('<h4 class="aui-title mHc2">%s</h4>', $husp['titel']);
+                  if( !empty($husp['beschrijving']) ) echo wpautop( $husp['beschrijving'] );
+                ?>
               </div>
-              <div class="fl-about-us-item mHc">
-                <span class="about-us-item-icon mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/about-us-img-02-investor.svg">
-                </span>
-                <h4 class="aui-title mHc2">Professioneel</h4>
-                <p>Duis efficitur gravida sem a semper.</p>
-              </div>
-              <div class="fl-about-us-item mHc">
-                <span class="about-us-item-icon mHc1">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/about-us-img-03-medal.svg">
-                </span>
-                <h4 class="aui-title mHc2">Hoge klantentevredenheid</h4>
-                <p>Duis efficitur gravida sem a semper.</p>
-              </div>
+              <?php endforeach; ?>
 
             </div>
+            <?php } ?>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
-
+<?php endif; ?>
+<?php 
+$showhide_intro2 = get_field('showhide_intro2', $thisID);
+$introsec2 = get_field('introsec2', $thisID);
+if( $showhide_intro2 ):
+?>
 <section class="overons-two-grid-sec-wrp">
   <span></span>
   <div class="overons-two-grid-rgt">
-    <div class="overons-two-grid-rgt-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/overons-two-grid-rgt-img.png);">
-      <img src="<?php echo THEME_URI; ?>/assets/images/overons-two-grid-rgt-img.png">
+    <?php if(!empty($introsec2['afbeelding'])): ?>
+    <div class="overons-two-grid-rgt-img" style="background:url(<?php echo cbv_get_image_src($introsec2['afbeelding'], 'overons2'); ?>);">
+      <?php echo cbv_get_image_tag($introsec2['afbeelding'], 'overons2'); ?>
     </div>
+    <?php endif; ?>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="overons-two-grid-lft">
           <div class="overons-two-grid-lft-dsc">
-            <h3 class="overons-two-grid-lft-dsc-title">Mauris neque enim eu proin Libero.</h3>
-            <p>Fusce ultrices laoreet risus purus. Luctus scelerisque integer non eget sed. A donec eget mi quisque ut nulla hendrerit. Facilisis orci gravida donec id convallis sed imperdiet commodo. Maecenas nisi nulla euismod turpis faucibus quam quam et. Ullamcorper ut ac eget aenean erat vitae accumsan. Nec vestibulum malesuada nunc natoque nunc, faucibus viverra tempus amet.</p>
-
-            <p>Quis posuere sociis justo rhoncus luctus tortor ac. Ornare dignissim in donec tellus. Nulla purus sed cursus ultricies vitae scelerisque aliquet quis non. Morbi urna risus porttitor integer turpis viverra viverra a. </p>
+            <?php 
+              if(!empty($introsec2['titel'])) printf('<h3 class="overons-two-grid-lft-dsc-title">%s</h3>', $introsec2['titel']);
+              if(!empty($introsec2['beschrijving'])) echo wpautop( $introsec2['beschrijving'], true );
+            ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
+<?php endif; ?>
+<?php
+  $showhide_who = get_field('showhide_who', $thisID);
+  $whoarewe = get_field('whoarewe', $thisID);
+  $profiles = $whoarewe['whoareprofiles'];
+  if( $showhide_who ):
+?>
 <section class="overons-post-grid-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="overons-post-grid-wrp">
           <div class="overons-post-grid-head">
-            <h4 class="overons-post-grid-head-title">Wie zijn wij</h4>
-            <p>Tristique dictumst mattis egestas rhoncus. Nunc nec, risus urna arcu gravida aliquet ut enim. Justo, eu tincidunt nam eu maecenas tellus justo, urna magna. Viverra id at ut nullam. </p>
+            <?php 
+              if(!empty($whoarewe['titel'])) printf('<h4 class="overons-post-grid-head-title">%s</h4>', $whoarewe['titel']);
+              if(!empty($whoarewe['beschrijving'])) echo wpautop( $whoarewe['beschrijving'], true );
+            ?>
           </div>
+          <?php if( $profiles ): ?>
           <div class="overons-post-grid-dsc-wrp">
             <ul class="clearfix reset-list">
+              <?php foreach( $profiles as $profile ): ?>
               <li>
                 <div class="overons-post-grid-dsc-inr">
                   <div class="overons-post-grid-img-cntlr">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="overons-post-grid-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/overons-post-grid-img-1.png);">
+                  <?php if( !empty($profile['knop']) ): ?>
+                    <a href="<?php echo $profile['knop']; ?>" class="overlay-link"></a>
+                  <?php endif; ?>
+                  <?php if(!empty($profile['afbeelding'])): ?>
+                    <div class="overons-post-grid-img" style="background:url(<?php echo cbv_get_image_src($profile['afbeelding']); ?>);">
                     </div>
+                  <?php endif; ?>
                   </div>
                   <div class="overons-post-grid-dsc mHc">
-                    <h4 class="overons-post-grid-dsc-title mHc1"><a href="#">Voornaam Achternaam</a></h4>
-                    <span>Functie</span>
-                    <p class="mHc2">Donec urna, etiam felis enim ut. Diam volutpat aliquam enim consequat sit ullamcorper leo sed. </p>
+                    <?php 
+                    if( !empty($profile['knop']) ){
+                      if(!empty($profile['naam'])) printf('<h4 class="overons-post-grid-dsc-title mHc1"><a href="%s">%s</a></h4>', $profile['knop'], $profile['naam']);
+                    } else {
+                      if(!empty($profile['naam'])) printf('<h4 class="overons-post-grid-dsc-title mHc1">%s</h4>', $profile['naam']);
+                    }
+                    if(!empty($profile['aanwijzing'])) printf('<span>%s</span>', $profile['aanwijzing']);
+                    if(!empty($profile['beschrijving'])) printf('<p class="mHc2">%s</p>', $profile['beschrijving']);
+                    ?>
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="overons-post-grid-dsc-inr">
-                  <div class="overons-post-grid-img-cntlr">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="overons-post-grid-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/overons-post-grid-img-2.png);">
-                    </div>
-                  </div>
-                  <div class="overons-post-grid-dsc mHc">
-                    <h4 class="overons-post-grid-dsc-title mHc1"><a href="#">Voornaam Achternaam</a></h4>
-                    <span>Functie</span>
-                    <p class="mHc2">Donec urna, etiam felis enim ut. Diam volutpat aliquam enim consequat sit ullamcorper leo sed. </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="overons-post-grid-dsc-inr">
-                  <div class="overons-post-grid-img-cntlr">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="overons-post-grid-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/overons-post-grid-img-3.png);">
-                    </div>
-                  </div>
-                  <div class="overons-post-grid-dsc mHc">
-                    <h4 class="overons-post-grid-dsc-title mHc1"><a href="#">Voornaam Achternaam</a></h4>
-                    <span>Functie</span>
-                    <p class="mHc2">Donec urna, etiam felis enim ut. Diam volutpat aliquam enim consequat sit ullamcorper leo sed. </p>
-                  </div>
-                </div>
-              </li>
+              <?php endforeach; ?>
             </ul>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<?php endif; ?>
+<?php
+$Query = new WP_Query(array(
+  'post_type' => 'testimonial',
+  'posts_per_page'=> -1,
+));
+if( $Query->have_posts() ){
+?>
 <section class="rw-blockcode-slider-sec-wrp">
   <div class="container">
     <div class="row">
@@ -209,6 +192,12 @@ get_header();
             </span>
           </div>
           <div class="rw-blockcode-slider">
+            <?php 
+              while($Query->have_posts()): $Query->the_post(); 
+              $fc_diensten = get_field('beschrijving', get_the_ID());
+              $naam = get_field('naam', get_the_ID());
+              $positie = get_field('positie', get_the_ID());
+            ?>
             <div class="rw-blockcode-slide-item">
               <div class="rw-blockcode-slide-item-dsc">
                 <i>
@@ -216,59 +205,18 @@ get_header();
                     <use xlink:href="#blockquote-icon-svg"></use>
                   </svg> 
                 </i>
-                <blockquote>Phasellus duis in non risus. A lacus, donec massa sodales amet. Aliquet accumsan arcu consequat, fermentum libero habitasse. Scelerisque lectus massa lectus laoreet pretium quis cursus. Donec ut felis eget nibh.</blockquote>
-                <strong class="rw-blockcode-title">- Voornaam Acthernaam, Bedrijf</strong>
+                <?php 
+                  printf('<blockquote>%s</blockquote>', $fc_diensten);
+                  printf('<strong class="rw-blockcode-title">-%s, %s</strong>', $naam, $positie);
+                ?>
               </div>
             </div>
-            <div class="rw-blockcode-slide-item">
-              <div class="rw-blockcode-slide-item-dsc">
-                <i>
-                  <svg class="blockquote-icon-svg" width="88" height="89" viewBox="0 0 88 89" fill="#fff">
-                    <use xlink:href="#blockquote-icon-svg"></use>
-                  </svg> 
-                </i>
-                <blockquote>Phasellus duis in non risus. A lacus, donec massa sodales amet. Aliquet accumsan arcu consequat, fermentum libero habitasse. Scelerisque lectus massa lectus laoreet pretium quis cursus. Donec ut felis eget nibh.</blockquote>
-                <strong class="rw-blockcode-title">- Voornaam Acthernaam, Bedrijf</strong>
-              </div>
-            </div>
-            <div class="rw-blockcode-slide-item">
-              <div class="rw-blockcode-slide-item-dsc">
-                <i>
-                  <svg class="blockquote-icon-svg" width="88" height="89" viewBox="0 0 88 89" fill="#fff">
-                    <use xlink:href="#blockquote-icon-svg"></use>
-                  </svg> 
-                </i>
-                <blockquote>Phasellus duis in non risus. A lacus, donec massa sodales amet. Aliquet accumsan arcu consequat, fermentum libero habitasse. Scelerisque lectus massa lectus laoreet pretium quis cursus. Donec ut felis eget nibh.</blockquote>
-                <strong class="rw-blockcode-title">- Voornaam Acthernaam, Bedrijf</strong>
-              </div>
-            </div>
+          <?php endwhile; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-<section class="footer-top-sec-wrp">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="footer-top-wrp clearfix">
-          <div class="footer-top-lft">
-            <div class="footer-top-lft-dsc">
-              <h2 class="footer-top-lft-dsc-title">Lorem ipsum dolor sit?</h2>
-              <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia.</p>
-            </div>
-          </div>
-          <div class="footer-top-rgt">
-            <div class="footer-top-rgt-btn">
-              <a href="#">Proefrit reserveren</a>
-              <a href="#">Offerte aanvragen</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php wp_reset_postdata(); } ?>
+<?php get_template_part('templates/section', 'offerte'); ?>
 <?php get_footer(); ?>
