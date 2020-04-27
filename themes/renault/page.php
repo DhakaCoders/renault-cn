@@ -98,10 +98,15 @@ while ( have_posts() ) :
               $positie = get_sub_field('positie');
               echo "<div class='dft-blockquote'>";
               echo '<blockquote>';
+              echo '<i>
+                <svg class="blockquote-orange-icon-svg" width="88" height="88" viewBox="0 0 88 88" fill="#F3BA4B">
+                  <use xlink:href="#blockquote-orange-icon-svg"></use>
+                </svg> 
+              </i>';
               printf('%s', $fc_diensten);
-              printf('<span><strong>-%s,</strong> %s</span>', $naam, $positie);
+              printf('<span><strong>-%s, %s</strong></span>', $naam, $positie);
               echo '</blockquote>';
-              echo "</div>";
+              echo "</div><hr>";
             }elseif( get_row_layout() == 'promo' ){
               $fc_title = get_sub_field('fc_title');
               $fc_beschrijving = get_sub_field('fc_beschrijving');
