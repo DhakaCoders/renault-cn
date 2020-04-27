@@ -230,12 +230,26 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php
+$spacialArry = array(".", "/", "+", " ");$replaceArray = ''; 
+$cmek = get_field('cmekaniek', 'options');
+$cshow_telefoon = $cmek['telephone'];
+$ctelefoon = trim(str_replace($spacialArry, $replaceArray, $cshow_telefoon));
+
+$logoObj = get_field('logo_header', 'options');
+if( is_array($logoObj) ){
+  $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+}else{
+  $logo_tag = '';
+}?>
 <div class="bdoverlay"></div>
 <header class="header">
   <div class="header-inr clearfix">
     <div class="hdr-lft">
       <div class="logo">
-        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+          <?php echo $logo_tag; ?>
+        </a>
       </div>
     </div>
     <div class="hdr-rgt">
@@ -255,34 +269,29 @@
                 <span></span>
                 <span></span>
               </div>
-              <ul class="clearfix reset-list">
-                <li class="current-menu-item"><a href="#">Home</a></li>
-                <li><a href="#">Verkoop</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#">Tweedehands</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Sub menu item 1</a></li>
-                    <li><a href="#">Sub menu item 2</a></li>
-                    <li><a href="#">Sub menu item 3</a></li>
-                    <li><a href="#">Sub menu item 4</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Verhuur</a></li>
-                <li><a href="#">Carrosserie</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+              <?php 
+                $mainnavOptions = array( 
+                    'theme_location' => 'cbv_main_menu', 
+                    'menu_class' => 'clearfix reset-list',
+                    'container' => 'mainnav',
+                    'container_class' => 'mainnav'
+                  );
+                wp_nav_menu( $mainnavOptions );
+              ?>
             </nav>
             <div class="hdr-topquick-contact">
+              <?php if( !empty($ctelefoon) ): ?>
               <div class="hdr-tel">
-                <a href="#">
+                <a href="tel:<?php echo $ctelefoon; ?>">
                   <i>
                     <svg class="hdr-tel-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="#F3BA4B">
                       <use xlink:href="#hdr-tel-icon-svg"></use>
                     </svg> 
                   </i>
-                  <span>053/77.52.30</span>
+                  <span><?php echo $cshow_telefoon; ?></span>
                 </a>
               </div>
+              <?php endif; ?>
               <div class="request-quote-btn">
                 <a href="#">Offerte aanvragen</a>
               </div>

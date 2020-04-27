@@ -1,3 +1,32 @@
+<?php 
+  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $cmek = get_field('cmekaniek', 'options');
+  $ccar = get_field('ccarrosserie', 'options');
+  $cgmapsurl = $cmek['google_maps'];
+
+  $caddress = $cmek['address'];
+  $cemailadres = $cmek['emailaddress'];
+  $cshow_telefoon = $cmek['telephone'];
+  $ctelefoon = trim(str_replace($spacialArry, $replaceArray, $cshow_telefoon));
+
+  $craddress = $ccar['address'];
+  $crgmapsurl = $ccar['google_maps'];
+  $cremailadres = $ccar['emailaddress'];
+  $crshow_telefoon = $ccar['telephone'];
+  $crtelefoon = trim(str_replace($spacialArry, $replaceArray, $crshow_telefoon));
+  $cgmaplink = !empty($cgmapsurl)?$cgmapsurl: 'javascript:void()';
+  $crgmaplink = !empty($crgmapsurl)?$crgmapsurl: 'javascript:void()';
+
+  $lfooter = get_field('lfooter', 'options');
+  $logoObj = $lfooter['ftlogo'];
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+  $copyright_text = get_field('copyright_text', 'options');
+  $smedias = get_field('sociale_media', 'options');
+?>
 <footer class="footer-wrp">
   <div class="ftr-top">
     <div class="container">
@@ -6,122 +35,118 @@
           <div class="ftr-col-main clearfix">
             <div class="ftr-col ftr-col-1">
               <div class="ftr-logo">
-                <a href="#">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/ftr-logo.png" alt="">
-                  <strong>Gebroeders Van Damme N.V.</strong>
-                  <span>Passion for life</span>
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                  <?php if( !empty($lfooter['title']) ) printf('<strong>%s</strong>', $lfooter['title']); ?>
+                  <?php if( !empty($lfooter['subtitel']) ) printf('<span>%s</span>', $lfooter['subtitel']); ?>
                 </a>
               </div>
               <div class="ftr-socail-icon">
+              <?php if(!empty($smedias)):  ?>
                 <ul class="reset-list clearfix">
+                  <?php foreach($smedias as $smedia): ?>
                   <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-facebook-icon-svg" width="12" height="22" viewBox="0 0 12 22" fill="white">
-                          <use xlink:href="#ftr-facebook-icon-svg"></use>
-                        </svg> 
-                      </i>
+                    <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                      <?php echo $smedia['icon']; ?>
                     </a>
                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-twiter-icon-svg" width="22" height="18" viewBox="0 0 22 18" fill="white">
-                          <use xlink:href="#ftr-twiter-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-instagram-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="white">
-                          <use xlink:href="#ftr-instagram-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
+               <?php endforeach; ?>
                 </ul>
+              <?php endif; ?>
               </div>
             </div>
             <div class="ftr-col ftr-col-2"> 
-              <h6 class="active"><span>Navigatie</span></h6>
-              <ul class="reset-list clearfix">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Verkoop</a></li>
-                <li><a href="#">Tweedehands </a></li>
-                <li><a href="#">Verhuur</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+              <?php 
+                _e( '<h6 class="active"><span>Navigatie</span></h6>', THEME_NAME ); 
+                $fmenuOptionsa = array( 
+                    'theme_location' => 'cbv_fta_menu', 
+                    'menu_class' => 'reset-list clearfix',
+                    'container' => 'nav',
+                    'container_class' => 'nav'
+                  );
+                wp_nav_menu( $fmenuOptionsa ); 
+              ?>
             </div>
             <div class="ftr-col ftr-col-3">
-              <h6><span>Contact Mekaniek</span></h6>
+              <?php _e( '<h6><span>Contact Mekaniek</span></h6>', THEME_NAME ); ?>
               <ul class="reset-list clearfix">
+                <?php if( !empty($caddress) ): ?>
                 <li>
-                  <a href="#" target="_blank">
+                  <a href="<?php echo $cgmaplink; ?>" target="_blank">
                     <i>
                       <svg class="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" fill="white">
                         <use xlink:href="#ftr-map-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>Nieuwstraat 68 <br> 9280 Wieze <br> Oost-Vlaanderen</span>
+                    <span><?php echo $caddress; ?></span>
                   </a>
                 </li>
+                <?php endif; ?>
+                <?php if( !empty($ctelefoon) ): ?>
                 <li>
-                  <a href="tel:053/77.52.30">
+                  <a href="tel:<?php echo $ctelefoon; ?>">
                     <i>
                       <svg class="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="white">
                         <use xlink:href="#ftr-cell-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>053/77.52.30</span>
+                    <span><?php echo $cshow_telefoon; ?></span>
                   </a>
                 </li>
+                <?php endif; ?>
+                <?php if( !empty($cemailadres) ): ?>
                 <li>
-                  <a href="mailto:afspraak@renaultwieze.be">
+                  <a href="mailto:<?php echo $cemailadres; ?>">
                     <i>
                       <svg class="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="white">
                         <use xlink:href="#ftr-mail-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>afspraak@renaultwieze.be</span>
+                    <span><?php echo $cemailadres; ?></span>
                   </a>
                 </li>
+                <?php endif; ?>
               </ul>               
             </div>
             <div class="ftr-col ftr-col-4">
-              <h6><span>Contact Carrosserie</span></h6>
+              <?php _e( '<h6><span>Contact Carrosserie</span></h6>', THEME_NAME ); ?>
               <ul class="reset-list clearfix">
+                <?php if( !empty($craddress) ): ?>
                 <li>
-                  <a href="#" target="_blank">
+                  <a href="<?php echo $crgmaplink; ?>" target="_blank">
                     <i>
                       <svg class="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" fill="white">
                         <use xlink:href="#ftr-map-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>Vriezenrot 2 <br> 9200 Dendermonde <br>Oost-Vlaanderen</span>
+                    <span><?php echo $craddress; ?></span>
                   </a>
                 </li>
+                <?php endif; ?>
+                <?php if( !empty($crtelefoon) ): ?>
                 <li>
-                  <a href="tel:052/21.52.30">
+                  <a href="tel:<?php echo $crtelefoon; ?>">
                     <i>
                       <svg class="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="white">
                         <use xlink:href="#ftr-cell-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>052/21.52.30</span>
+                    <span><?php echo $crshow_telefoon; ?></span>
                   </a>
                 </li>
+                <?php endif; ?>
+                <?php if( !empty($cremailadres) ): ?>
                 <li>
-                  <a href="mailto:info@renaultwieze.be">
+                  <a href="mailto:<?php echo $cremailadres; ?>">
                     <i>
                       <svg class="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="white">
                         <use xlink:href="#ftr-mail-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>info@renaultwieze.be</span>
+                    <span><?php echo $cremailadres; ?></span>
                   </a>
                 </li>
+                <?php endif; ?>
               </ul>              
             </div>
           </div>
@@ -135,14 +160,18 @@
         <div class="col-12">
           <div class="ftr-btm-innr clearfix">
             <div class="ftr-btm-col-1">
-              <span>&copy; 2020 Gebroeders Van Damme N.V. . All Rights Reserved.</span>
+              <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>  
             </div>
             <div class="ftr-btm-col-2">
-              <ul class="reset-list clearfix">
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Cookie policy </a></li>
-                <li><a href="#">Privacy policy</a></li>
-              </ul>
+              <?php 
+                $ftmenuOptions = array( 
+                    'theme_location' => 'cbv_copyright_menu', 
+                    'menu_class' => 'reset-list clearfix',
+                    'container' => 'copynav',
+                    'container_class' => 'copynav'
+                  );
+                wp_nav_menu( $ftmenuOptions ); 
+              ?>
             </div>
             <div class="ftr-btm-col-3 text-right">
               <a href="#">webdesign by conversal</a>
@@ -178,64 +207,39 @@
     <div class="xs-popup-menu-innr" style="position: relative;">
        <div class="xs-logo">
           <div class="ftr-logo">
-            <a href="#">
-              <img src="<?php echo THEME_URI; ?>/assets/images/ftr-logo.png" alt="">
-              <strong>Gebroeders Van Damme N.V.</strong>
-              <span>Passion for life</span>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+              <?php echo $logo_tag; ?>
+              <?php if( !empty($lfooter['title']) ) printf('<strong>%s</strong>', $lfooter['title']); ?>
+              <?php if( !empty($lfooter['subtitel']) ) printf('<span>%s</span>', $lfooter['subtitel']); ?>
             </a>
           </div>
        </div>
         <nav class="xs-main-nav">
-          <ul class="clearfix reset-list">
-            <li class="current-menu-item"><a href="#">Home</a></li>
-            <li><a href="#">Verkoop</a></li>
-            <li class="menu-item-has-children">
-              <a href="#">Tweedehands</a>
-              <ul class="sub-menu">
-                <li><a href="#">Sub menu item 1</a></li>
-                <li><a href="#">Sub menu item 2</a></li>
-                <li><a href="#">Sub menu item 3</a></li>
-                <li><a href="#">Sub menu item 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Verhuur</a></li>
-            <li><a href="#">Carrosserie</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <?php 
+            $mainnavOptions = array( 
+                'theme_location' => 'cbv_main_menu', 
+                'menu_class' => 'clearfix reset-list',
+                'container' => 'mainnav',
+                'container_class' => 'mainnav'
+              );
+            wp_nav_menu( $mainnavOptions );
+          ?>
         </nav>
         <div class="xs-menu-info">
           <a href="#">Offerte aanvragen</a>
         </div>
         <div class="pop-up-ftr-socail-icons">
-          <ul class="reset-list clearfix">
-            <li>
-              <a href="#">
-                <i>
-                  <svg class="ftr-facebook-icon-svg" width="12" height="22" viewBox="0 0 12 22" fill="white">
-                    <use xlink:href="#ftr-facebook-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-           </li>
-            <li>
-              <a href="#">
-                <i>
-                  <svg class="ftr-twiter-icon-svg" width="22" height="18" viewBox="0 0 22 18" fill="white">
-                    <use xlink:href="#ftr-twiter-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>
-                  <svg class="ftr-instagram-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="white">
-                    <use xlink:href="#ftr-instagram-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-            </li>
-          </ul>
+         <?php if(!empty($smedias)):  ?>
+            <ul class="reset-list clearfix">
+              <?php foreach($smedias as $smedia): ?>
+              <li>
+                <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                  <?php echo $smedia['icon']; ?>
+                </a>
+             </li>
+           <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
         </div>
         <div class="xs-menu-close-btn-controller">
            <div class="fl-close-btn">

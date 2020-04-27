@@ -1,21 +1,23 @@
+<?php
+$thisID = get_the_ID();
+$pageTitle = get_the_title($thisID);
+$standaardbanner = get_field('pagebanner', $thisID);
+if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/rn-breadcrumbs-sec-bg.jpg';
+?>
 <section class="rn-breadcrumbs-sec">
-  <div class="rn-breadcrumbs-sec-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/rn-breadcrumbs-sec-bg.jpg');">
+  <div class="rn-breadcrumbs-sec-bg" style="background: url('<?php echo $standaardbanner; ?>');">
     
   </div>
   <div class="rn-breadcrumbs-sec-des">
     <div class="rn-breadcrumbs-sec-des-inr">
-      <h1 class="rn-breadcrumbs-sec-des-inr-title">Binnenpagina</h1>
-      <ul class="reset-list">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Binnenpagina</a></li>
-        <li><a href="#">Binnenpagina</a></li>
-      </ul>
+      <h1 class="rn-breadcrumbs-sec-des-inr-title"><?php echo $pageTitle; ?></h1>
+      <?php cbv_breadcrumbs(); ?>
       <div class="rn-td-brdcm clearfix">
         <div class="rn-td-brdcm-left">
-          <a href="#">Home</a>
+          <a href="<?php echo esc_url( home_url() ); ?>">Home</a>
         </div>
         <div class="rn-td-brdcm-right">
-          <a href="#">
+          <a href="javascript:history.back()">
             Terug
             <i>
               <svg class="rn-td-brdcm-xs-svg" width="5" height="8" viewBox="0 0 5 8" fill="white">

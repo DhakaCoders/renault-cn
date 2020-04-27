@@ -7,10 +7,6 @@ while ( have_posts() ) :
   the_post();
 $thisID = get_the_ID();
 $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
-$e_mailadres = get_field('emailaddress', 'options');
-$show_telefoon = get_field('telephone', 'options');
-$telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
-
 $gmap = get_field('google_maps', $thisID);
 $contact = get_field('contacteer_ons', $thisID);
 $google_map = $gmap['maps'];
@@ -36,45 +32,9 @@ get_template_part('templates/page', 'banner');
           	?>
             </div>
             <div class="wpforms-container">
-              <form class="wpforms-form">
-                
-                <div class="wpforms-field-container">
-                  
-                  <div class="wpforms-field VrnCustomField">
-                    <label class="wpforms-field-label">Voornaam </label>
-                    <input type="text" name="name" placeholder="Mathias" required>
-                  </div>
-                  <div class="wpforms-field VrnCustomField">
-                    <label class="wpforms-field-label">Achternaam</label>
-                    <input type="text" name="name" placeholder="Her |" required>
-                  </div>
-
-                  <div class="wpforms-field">
-                    <label class="wpforms-field-label">Telefoon </label>
-                    <input type="tel" name="text" placeholder="Telefoon" required>
-                  </div>
-
-                  <div class="wpforms-field wpforms-has-error">
-                    <label class="wpforms-field-label">E-mailadres</label>
-                    <input type="email" name="email" placeholder="mathias2conversalbe" class="form-control" required>
-                    <label class="wpforms-error">x incorrecte email</label>
-                  </div>
-
-                  <div class="wpforms-field subjectField">
-                    <label class="wpforms-field-label">onderwerpen</label>
-                    <input type="subject" name="text" placeholder="Onderwerpen" required>
-                  </div>
-
-                  <div class="wpforms-field wpforms-field-textarea">
-                    <label class="wpforms-field-label">Bericht</label>
-                    <textarea name="message" placeholder="Bericht"></textarea>
-                  </div>
-                </div><!-- end of .wpforms-field-container-->
-                <div class="wpforms-submit-container">
-                  <button type="submit" name="submit" class="wpforms-submit">VeRZENDEN</button>
-                </div>
-
-              </form>
+            	<?php 
+                    if( !empty( $contact['form_shortcode'] ) ) echo do_shortcode($contact['form_shortcode']); 
+                ?>
             </div>
           </div>
         </div>
@@ -82,7 +42,31 @@ get_template_part('templates/page', 'banner');
     </div>
   </div>    
 </section>
+<?php 
+$cmek = get_field('cmekaniek', 'options');
+$ccar = get_field('ccarrosserie', 'options');
+$cgmapsurl = $cmek['google_maps'];
 
+$caddress = $cmek['address'];
+$cemailadres = $cmek['emailaddress'];
+$cshow_telefoon = $cmek['telephone'];
+$ctelefoon = trim(str_replace($spacialArry, $replaceArray, $cshow_telefoon));
+
+$craddress = $ccar['address'];
+$crgmapsurl = $ccar['google_maps'];
+$cremailadres = $ccar['emailaddress'];
+$crshow_telefoon = $ccar['telephone'];
+$crtelefoon = trim(str_replace($spacialArry, $replaceArray, $crshow_telefoon));
+$cgmaplink = !empty($cgmapsurl)?$cgmapsurl: 'javascript:void()';
+$crgmaplink = !empty($crgmapsurl)?$crgmapsurl: 'javascript:void()';
+
+$mekaniek = get_field('contacgroup', $thisID);
+$mshowrooms = $mekaniek['mshowrooms']['showroom'];
+$mnaverkoop = $mekaniek['mnaverkoop']['showroom'];
+
+$cshowrooms = $mekaniek['cshowrooms']['showroom'];
+$cnaverkoop = $mekaniek['cnaverkoop']['showroom'];
+?>
 <section class="contact-info-sec-wrp">
   <div class="container">
     <div class="row">
@@ -97,160 +81,187 @@ get_template_part('templates/page', 'banner');
           <div class="tabs">
             <div class="contact-info-dsc-wrp clearfix">
               <div class="contact-info-dsc-item">
-                <h6 class="contact-info-item-dsc-title">Contact Mekaniek</h6>
+                <?php _e( '<h6 class="contact-info-item-dsc-title">Contact Mekaniek</h6>', THEME_NAME ); ?>
                 <ul class="ulc reset-list clearfix">
-                  <li>
-                    <a href="#" target="_blank">
+                <?php if( !empty($caddress) ): ?>
+                 <li>
+                    <a href="<?php echo $cgmaplink; ?>" target="_blank">
                       <i>
                         <svg class="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" fill="#232531">
                           <use xlink:href="#ftr-map-icon-svg"></use>
                         </svg> 
                       </i>
-                      <span>Nieuwstraat 68 <br> 9280 Wieze <br> Oost-Vlaanderen</span>
+                      <span><?php echo $caddress; ?></span>
                     </a>
-                  </li>
-                  <li>
-                    <a href="tel:053/77.52.30">
+                </li>
+              	<?php endif; ?>
+              	<?php if( !empty($ctelefoon) ): ?>
+                <li>
+                    <a href="tel:<?php echo $ctelefoon; ?>">
                       <i>
                         <svg class="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="#232531">
                           <use xlink:href="#ftr-cell-icon-svg"></use>
                         </svg> 
                       </i>
-                      <span>053/77.52.30</span>
+                      <span><?php echo $cshow_telefoon; ?></span>
                     </a>
-                  </li>
-                  <li>
-                    <a href="mailto:afspraak@renaultwieze.be">
+                </li>
+                <?php endif; ?>
+                <?php if( !empty($cemailadres) ): ?>
+                <li>
+                    <a href="mailto:<?php echo $cemailadres; ?>">
                       <i>
                         <svg class="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="#232531">
                           <use xlink:href="#ftr-mail-icon-svg"></use>
                         </svg> 
                       </i>
-                      <span>afspraak@renaultwieze.be</span>
+                      <span><?php echo $cemailadres; ?></span>
                     </a>
-                  </li>
+                </li>
+                <?php endif; ?>
                 </ul> 
                 <div class="contact-info-btn">
-                  <a href="#">Route</a>
+                  <a href="<?php echo $cgmaplink; ?>">Route</a>
                 </div>
               </div>
               <div class="contact-info-dsc-item info-dsc-item-mrg">
                 <h6 class="contact-info-item-dsc-title">Showroom</h6>
+                <?php if( $mshowrooms ): ?>
                 <ul class="reset-list clearfix">
+                  <?php $i = 1; foreach( $mshowrooms as $mshowroom ): ?>
                   <li>
+                  	<?php if( $i==1 ): ?>
                     <i>
                       <svg class="contact-time-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="#232531">
                         <use xlink:href="#contact-time-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>Ma-Do : 8u - 2u & 13u-18u30</span>
+                	<?php endif; ?>
+                    <?php 
+                    $mlabel = ''; if( !empty($mshowroom['label']) ) $mlabel =  $mshowroom['label'].': ';
+                    if( !empty($mshowroom['listitem']) ) printf('<span>%s%s</span>', $mlabel, $mshowroom['listitem']);
+
+                    ?>
                   </li>
-                  <li>
-                    <span>Vrij :  8u - 12u  & 13u-18u30</span>
-                  </li>
-                  <li>
-                    <span>Zat : 9u - 17u</span>
-                  </li>
+              	  <?php $i++; endforeach; ?>
                 </ul> 
+            	<?php endif; ?>
               </div>
               <div class="contact-info-dsc-item info-dsc-item-mrg">
                 <h6 class="contact-info-item-dsc-title">Naverkoop</h6>
+                <?php if( $mnaverkoop ): ?>
                 <ul class="reset-list clearfix">
+                  <?php $i = 1; foreach( $mnaverkoop as $mnaverk ): ?>
                   <li>
+                  	<?php if( $i==1 ): ?>
                     <i>
                       <svg class="contact-time-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="#232531">
                         <use xlink:href="#contact-time-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>Ma-Do : 8u - 12u  & 13u-18u</span>
+                	<?php endif; ?>
+                    <?php 
+	                    $nlabel = ''; if( !empty($mnaverk['label']) ) $nlabel =  $mnaverk['label'].': ';
+	                    if( !empty($mnaverk['listitem']) ) printf('<span>%s%s</span>', $nlabel, $mnaverk['listitem']);
+                    ?>
                   </li>
-                  <li>
-                    <span>Vrij :  8u - 12u  & 13u-17u</span>
-                  </li>
-                  <li>
-                    <span>Zat : 9u - 13u</span>
-                  </li>
+              	  <?php $i++; endforeach; ?>
                 </ul> 
+            	<?php endif; ?>
               </div>
             </div>
           </div> 
           <div class="tabs">
             <div class="contact-info-dsc-wrp clearfix">
               <div class="contact-info-dsc-item">
-                <h6 class="contact-info-item-dsc-title">Contact Mekaniek</h6>
-                <ul class="reset-list clearfix">
-                  <li>
-                    <a href="#" target="_blank">
+                <?php _e( '<h6 class="contact-info-item-dsc-title">Contact Carrosserie</h6>', THEME_NAME ); ?>
+                <ul class="ulc reset-list clearfix">
+                <?php if( !empty($craddress) ): ?>
+                 <li>
+                    <a href="<?php echo $crgmaplink; ?>" target="_blank">
                       <i>
                         <svg class="ftr-map-icon-svg" width="16" height="22" viewBox="0 0 16 22" fill="#232531">
                           <use xlink:href="#ftr-map-icon-svg"></use>
                         </svg> 
                       </i>
-                      <span>Nieuwstraat 68 <br> 9280 Wieze <br> Oost-Vlaanderen</span>
+                      <span><?php echo $craddress; ?></span>
                     </a>
-                  </li>
-                  <li>
-                    <a href="tel:053/77.52.30">
+                </li>
+              	<?php endif; ?>
+              	<?php if( !empty($crtelefoon) ): ?>
+                <li>
+                    <a href="tel:<?php echo $crtelefoon; ?>">
                       <i>
                         <svg class="ftr-cell-icon-svg" width="14" height="25" viewBox="0 0 14 25" fill="#232531">
                           <use xlink:href="#ftr-cell-icon-svg"></use>
                         </svg> 
                       </i>
-                      <span>053/77.52.30</span>
+                      <span><?php echo $crshow_telefoon; ?></span>
                     </a>
-                  </li>
-                  <li>
-                    <a href="mailto:afspraak@renaultwieze.be">
+                </li>
+                <?php endif; ?>
+                <?php if( !empty($cremailadres) ): ?>
+                <li>
+                    <a href="mailto:<?php echo $cremailadres; ?>">
                       <i>
                         <svg class="ftr-mail-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="#232531">
                           <use xlink:href="#ftr-mail-icon-svg"></use>
                         </svg> 
                       </i>
-                      <span>afspraak@renaultwieze.be</span>
+                      <span><?php echo $cremailadres; ?></span>
                     </a>
-                  </li>
+                </li>
+                <?php endif; ?>
                 </ul> 
                 <div class="contact-info-btn">
-                  <a href="#">Route</a>
+                  <a href="<?php echo $crgmaplink; ?>">Route</a>
                 </div>
               </div>
               <div class="contact-info-dsc-item info-dsc-item-mrg">
                 <h6 class="contact-info-item-dsc-title">Showroom</h6>
+                <?php if( $cshowrooms ): ?>
                 <ul class="reset-list clearfix">
+                  <?php $i = 1; foreach( $cshowrooms as $cshowroom ): ?>
                   <li>
+                  	<?php if( $i==1 ): ?>
                     <i>
                       <svg class="contact-time-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="#232531">
                         <use xlink:href="#contact-time-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>Ma-Do : 8u - 2u & 13u-18u30</span>
+                	<?php endif; ?>
+                    <?php 
+                    $clabel = ''; if( !empty($cshowroom['label']) ) $clabel =  $cshowroom['label'].': ';
+                    if( !empty($mshowroom['listitem']) ) printf('<span>%s%s</span>', $clabel, $cshowroom['listitem']);
+
+                    ?>
                   </li>
-                  <li>
-                    <span>Vrij :  8u - 12u  & 13u-18u30</span>
-                  </li>
-                  <li>
-                    <span>Zat : 9u - 17u</span>
-                  </li>
+              	  <?php $i++; endforeach; ?>
                 </ul> 
+            	<?php endif; ?>
               </div>
               <div class="contact-info-dsc-item info-dsc-item-mrg">
                 <h6 class="contact-info-item-dsc-title">Naverkoop</h6>
+                <?php if( $cnaverkoop ): ?>
                 <ul class="reset-list clearfix">
+                  <?php $i = 1; foreach( $cnaverkoop as $cnaverk ): ?>
                   <li>
+                  	<?php if( $i==1 ): ?>
                     <i>
                       <svg class="contact-time-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="#232531">
                         <use xlink:href="#contact-time-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>Ma-Do : 8u - 12u  & 13u-18u</span>
+                	<?php endif; ?>
+                    <?php 
+                    $cnlabel = ''; if( !empty($cnaverk['label']) ) $cnlabel =  $cnaverk['label'].': ';
+                    if( !empty($cnaverk['listitem']) ) printf('<span>%s%s</span>', $cnlabel, $cnaverk['listitem']);
+
+                    ?>
                   </li>
-                  <li>
-                    <span>Vrij :  8u - 12u  & 13u-17u</span>
-                  </li>
-                  <li>
-                    <span>Zat : 9u - 13u</span>
-                  </li>
+              	  <?php $i++; endforeach; ?>
                 </ul> 
+            	<?php endif; ?>
               </div>
             </div>
           </div> 

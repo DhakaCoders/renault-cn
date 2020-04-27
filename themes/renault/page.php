@@ -117,37 +117,51 @@ while ( have_posts() ) :
               cbv_table($fc_table);
             }elseif( get_row_layout() == 'nieuws' ){
               $fc_product = get_sub_field('fc_nieuws');
+              $ns_titel = get_sub_field('ns_titel');
+              $ns_teksteditor = get_sub_field('ns_teksteditor');
               $memQuery = new WP_Query(array(
                 'post_type' => 'post',
                 'posts_per_page'=> -1,
                 'post__in' => $fc_product
               ));
               if( $memQuery->have_posts() ):
-                echo '<div class="dft-blog-slider-cntlr"><div class="dft-blog-slider dft-slider-pagi">';
+                echo '<div class="dft-latest-news-module">';
+                if( !empty($ns_titel) OR !empty($ns_teksteditor) ): 
+                echo '<div class="dft-latest-news-module-hdr">';
+                  if( !empty($ns_titel) ) printf('<h2 class="dft-lnm-title">%s</h2>', $ns_titel);
+                  if( !empty( $ns_titel ) ) echo wpautop( $ns_teksteditor );
+                  echo '</div>';
+                endif;
+                  
                         while($memQuery->have_posts()): $memQuery->the_post();
                         $gridImage = get_post_thumbnail_id(get_the_ID());
                         if(!empty($gridImage)){
-                          $pimgScr = cbv_get_image_src($gridImage, 'bloggrid');
+                          $pimgtag = cbv_get_image_tag($gridImage, 'pbloggrid');
                         }else{
-                          $pimgScr = '';
+                          $pimgtag = '<img src="'.THEME_URI.'/assets/images/df264.png" alt="'.get_the_title().'">';
                         }  
-                        echo '<div class="dft-blog-item">';
-                        echo '<div class="dft-blog-item-inr"><div class="dft-blog-item-fea-img-cntlr">
-                          <a class="overlay-link" href="'.get_the_permalink().'"></a>';
-                        echo '<div class="dft-blog-item-fea-img" style="background-image: url('.$pimgScr.');"></div></div>';
-                        echo '<div class="dft-blog-item-des mHc">';
-                        echo '<div class="dft-blog-item-des-date"><strong>'.get_the_date('d').'</strong>';
-                        echo '<span>'.get_the_date('M').'</span>';
+                        echo '<div class="dft-latest-news-bx-wrap">
+                        <div class="dft-latest-news-bx-items">
+                          <div class="dft-latest-news-bx-item">
+                          <div class="dft-latest-news-bx clearfix">';
+
+                        echo '<div class="dft-latest-news-bx-fea-img">
+                              <a href="'.get_the_permalink().'">'.$pimgtag.'</a>
+                            </div>';
+                        echo '<div class="dft-latest-news-bx-des">
+                          <span>'.get_the_date('m.d.Y').'</span>
+                          <h4 class="dft-latest-news-bx-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4>
+                          '.wpautop( get_the_excerpt(), true ).'
+                          <a href="'.get_the_permalink().'">Lees meer</a>
+                        </div>';
+
                         echo '</div>';
-                        printf('<h3 class="dft-blog-item-title"><a href="%s">%s</a></h3>', get_the_permalink(), get_the_title());
-                        echo wpautop( get_the_excerpt(), true );;
-                        echo '<a href="'.get_the_permalink().'">Lees Meer</a>';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
                     endwhile;
 
-                echo '</div></div> <div class="dft-2grd-img-content-separetor"></div>';
+                echo '</div>';
               endif; wp_reset_postdata();
             }elseif( get_row_layout() == 'horizontal_rule' ){
               $fc_horizontal_rule = get_sub_field('fc_horizontal_rule');
