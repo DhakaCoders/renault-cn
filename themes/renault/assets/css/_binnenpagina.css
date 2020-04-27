@@ -3,10 +3,12 @@
 	position: relative;
 }
 .default-page-con {
-	padding-bottom: 80px;
+	padding-bottom: 0px;
 	padding-top: 72px;
 }
-
+.dft-form-wrapp {
+    padding-bottom: 82px;
+}
 .fl-dft-overflow-controller {
 	overflow: hidden;
 }

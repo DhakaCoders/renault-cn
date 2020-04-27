@@ -224,17 +224,23 @@ $offertef = get_field('offerte_formulier', 'options');
 if( $showhide_offerte_formulier ):
 ?>
 <section class="dft-form-wrapp">
-  <div class="dft-form-cntlr">
-    <div class="tweedehands-overview-form-cntlr">
-      <div class="contact-form-wrp clearfix">
-        <div class="tweedehands-overview-form-hdr">
-          <?php 
-            if(!empty($offertef['titel'])) printf('<h3 class="tofh-title">%s</h3>', $offertef['titel']);
-            if(!empty($offertef['beschrijving'])) echo wpautop( $offertef['beschrijving'], true );
-          ?>
-        </div>
-        <div class="wpforms-container">
-        <?php if( !empty( $offertef['form_shortcode'] ) ) echo do_shortcode($offertef['form_shortcode']); ?>
+ <div class="container-sm">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="dft-form-cntlr">
+          <div class="tweedehands-overview-form-cntlr">
+            <div class="contact-form-wrp clearfix">
+              <div class="tweedehands-overview-form-hdr">
+                <?php 
+                  if(!empty($offertef['titel'])) printf('<h3 class="tofh-title">%s</h3>', $offertef['titel']);
+                  if(!empty($offertef['beschrijving'])) echo wpautop( $offertef['beschrijving'], true );
+                ?>
+              </div>
+              <div class="wpforms-container">
+              <?php if( !empty( $offertef['form_shortcode'] ) ) echo do_shortcode($offertef['form_shortcode']); ?>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
