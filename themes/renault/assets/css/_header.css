@@ -694,15 +694,22 @@ nav.main-nav ul.sub-menu li:hover:before {
 
 	.xs-popup-menu{
 	    display: none;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    right: 0;
+		overflow-y: scroll;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 	    z-index: 100;
 	    background: #232531;
 	    padding: 20px 0 0 0;
 	    text-align: center;
 	    color: #fff;
+
+	}
+	.xs-popup-menu-innr{
+		overflow-y: scroll;
 	}
 	.xs-logo{
 		padding-bottom: 32px;
