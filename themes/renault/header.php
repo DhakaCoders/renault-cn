@@ -293,7 +293,7 @@ if( is_array($logoObj) ){
               </div>
               <?php endif; ?>
               <div class="request-quote-btn">
-                <a href="#">Offerte aanvragen</a>
+                <a href="<?php echo esc_url( home_url('offerte-aanvragen') );?>">Offerte aanvragen</a>
               </div>
             </div>
           </div>

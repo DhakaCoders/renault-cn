@@ -1,11 +1,7 @@
-<?php get_header(); ?>
-<section class="page-banner">
-  <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/page-banner.jpg);">
-    </div>
-  </div>
-</section>
-
+<?php 
+get_header(); 
+get_template_part('templates/page', 'banner');
+?>
 <section class="main-content page-404-wrp error-404-wrap">
     <div class="container">
         <div class="row">

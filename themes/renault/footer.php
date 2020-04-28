@@ -226,7 +226,7 @@
           ?>
         </nav>
         <div class="xs-menu-info">
-          <a href="#">Offerte aanvragen</a>
+          <a href="<?php echo esc_url( home_url('offerte-aanvragen') );?>">Offerte aanvragen</a>
         </div>
         <div class="pop-up-ftr-socail-icons">
          <?php if(!empty($smedias)):  ?>
