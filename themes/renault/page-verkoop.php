@@ -6,6 +6,8 @@ get_header();
 
 $thisID = get_the_ID();
 get_template_part('templates/page', 'banner');
+$showhide_intro = get_field('showhide_intro', $thisID);
+$introsec = get_field('introsec', $thisID);
 ?>
 
 <section class="vrk-product-grid-sec-wrp">
@@ -14,8 +16,10 @@ get_template_part('templates/page', 'banner');
       <div class="col-sm-12">
         <div class="vrk-product-grid-wrp">
           <div class="vrk-product-grid-head">
-            <h2 class="vrk-product-grid-head-title">Verkoop</h2>
-            <p>Tristique dictumst mattis egestas rhoncus. Nunc nec, risus urna arcu gravida aliquet ut enim. Justo, eu tincidunt nam eu maecenas tellus justo, urna magna. Viverra id at ut nullam. </p>
+            <?php 
+              if(!empty($introsec['titel'])) printf('<h2 class="vrk-product-grid-head-title">%s</h2>', $introsec['titel']);
+              if(!empty($introsec['beschrijving'])) echo wpautop( $introsec['beschrijving'], true );
+            ?>
           </div>
           <div class="vrk-product-grid-tabs-wrp clearfix">
             <div class="vrk-product-grid-tabs">
