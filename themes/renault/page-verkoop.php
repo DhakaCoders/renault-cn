@@ -283,12 +283,18 @@ $introsec = get_field('introsec', $thisID);
   </div>
 </section>
 
-
+<?php 
+  $showhide_intro2 = get_field('showhide_intro2', $thisID);
+  $introsec2 = get_field('introsec2', $thisID);
+  if( $showhide_intro2 ):
+?>
 <section class="vrk-two-part-sec-wrp">
   <div class="vrk-two-part-lft">
-    <div class="vrk-two-part-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/vrk-two-part-img.png);">
-      <img src="<?php echo THEME_URI; ?>/assets/images/vrk-two-part-img.png">
+    <?php if(!empty($introsec2['afbeelding'])): ?>
+    <div class="vrk-two-part-img" style="background: url(<?php echo cbv_get_image_src($introsec2['afbeelding'], 'verkoopintro2'); ?>);">
+      <?php echo cbv_get_image_tag($introsec2['afbeelding'], 'verkoopintro2'); ?>
     </div>
+    <?php endif; ?>
   </div>
   <div class="container">
     <div class="row">
@@ -296,12 +302,16 @@ $introsec = get_field('introsec', $thisID);
         <div class="vrk-two-part-rgt-wrp clearfix">
           <div class="vrk-two-part-rgt">
             <div class="vrk-two-part-rgt-dsc">
-              <strong class="vrk-two-part-rgt-title-1">Nieuw</strong>
-              <h3 class="vrk-two-part-rgt-title-2">Renault Captur</h3>
-              <span>Jusqu’à 8.000 € d’avantages sur nos <br> véhicules de stock.</span>
-
-              <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet <br> lorem. Proin efficitur ultricies dolor ac lacinia. </p>
-              <a href="#">Offerte aanvragen</a>
+              <?php 
+                if(!empty($introsec2['toptitel'])) printf('<strong class="vrk-two-part-rgt-title-1">%s</strong>', $introsec2['toptitel']);
+                if(!empty($introsec2['titel'])) printf('<h3 class="vrk-two-part-rgt-title-2">%s</h3>', $introsec2['titel']);
+                if(!empty($introsec2['subtitel'])) printf('<span>%s</span>', $introsec2['subtitel']);
+                if(!empty($introsec2['beschrijving'])) echo wpautop( $introsec2['beschrijving'], true );
+                $link_1 = $introsec2['knop'];
+                if( is_array( $link_1 ) &&  !empty( $link_1['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $link_1['url'], $link_1['target'], $link_1['title']); 
+                }
+              ?>
             </div>
           </div>
         </div>
@@ -309,7 +319,7 @@ $introsec = get_field('introsec', $thisID);
     </div>
   </div>
 </section>
-
+<?php endif; ?>
 
 <section class="vrk-product-grid-btm-sec-wrp">
   <div class="container">

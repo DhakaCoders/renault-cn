@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php 
+
+get_header(); 
+  $slidersec = get_field('slidersec', HOMEID);
+  $hslides = $slidersec['slides'];
+  if($hslides):
+?>
 <section class="main-slider-section">
   <div class="main-slider-prv-nxt">
     <span class="msprev">
@@ -17,67 +23,101 @@
     </span>
   </div>
   <div class="main-slider mainSlider">
+    <?php
+      foreach( $hslides as $hslide ): 
+    ?>
     <div class="mainSlide-item">
       <div class="clearfix mainSlide-item-inr">
-        <div class="main-slide-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-slide-img-01.jpg);">
+        <?php if( !empty($hslide['afbeelding']) ): ?>
+        <div class="main-slide-fea-img" style="background: url(<?php echo cbv_get_image_src($hslide['afbeelding'], 'homeslide'); ?>);">
         </div>
+        <?php endif; ?>
         <div class="main-slide-des">
           <div class="main-slide-des-inr clearfix">
             <div class="main-slide-des-cnter-cntlr">
               <i class="black-traingle"><img src="<?php echo THEME_URI; ?>/assets/images/black-traingle.png"></i>
               <div>
-                <strong class="msd-title">Passion for Life</strong>
-                <span class="msd-sub-title">Adventure is waiting for you.</span>
-                <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia. </p>
+              <?php
+              if( $hslide['layout_type'] == 2 ){
+                $dslide = $hslide['layout_two'];
+                if( !empty($dslide['titel']) ) printf('<strong class="msd-title">%s</strong>', $dslide['titel']);
+                if( !empty($dslide['subtitel']) ) printf('<span class="msd-sub-title">%s</span>', $dslide['subtitel']);
+                if( !empty($dslide['beschrijving']) ) echo wpautop( $dslide['beschrijving'] );
+              } else {
+                $dslide = $hslide['layout_one'];
+                if( !empty($dslide['titel']) ) printf('<strong class="msd-title">%s</strong>', $dslide['titel']);
+                if( !empty($dslide['subtitel']) ) printf('<span class="msd-sub-title">%s</span>', $dslide['subtitel']);
+                if( !empty($dslide['beschrijving']) ) echo wpautop( $dslide['beschrijving'] );
+              }
+              ?>
                 <div class="main-slide-btns">
-                  <div class="msb-1">
-                    <a href="#">Verkoop</a>
-                  </div>
-                  <div class="msb-2">
-                    <a href="#">Tweedehands</a>
-                  </div>
+                <?php 
+                  $knop1 = $hslide['knop_1'];
+                  $knop2 = $hslide['knop_2'];
+                  if( is_array( $knop1 ) &&  !empty( $knop1['url'] ) ){
+                      printf('<div class="msb-1"><a href="%s" target="%s">%s</a></div>', $knop1['url'], $knop1['target'], $knop1['title']); 
+                  }
+                  if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
+                      printf('<div class="msb-2"><a href="%s" target="%s">%s</a></div>', $knop2['url'], $knop2['target'], $knop2['title']); 
+                  } 
+                ?>
                 </div>
               </div>
             </div>
             <div class="slider-features">
               <div class="slider-features-cntlr">
+                <?php 
+                if( $hslide['layout_type'] == 2 ): 
+                  $spslide = $hslide['layout_two']['specificaties'];
+                ?>
+                  <?php if( !empty($spslide['titel']) ) printf('<div><strong class="sfc-title-2">%s</strong></div>', $spslide['titel']); ?>
+                <?php 
+                  else:  
+                  $spslide = $hslide['layout_one']['specificaties'];
+                ?>
                 <div>
-                  <strong class="sfc-title">Renault Talisman Blue dCi 150 S-Edition</strong>
+                  <?php if( !empty($spslide['titel']) ) printf('<strong class="sfc-title">%s</strong>', $spslide['titel']); ?>
                   <div class="slider-features-icon-cntlr">
+                    <?php if( !empty($spslide['fuel_type']) ): ?>
                     <div>
                       <i>
                         <svg class="s-fea-icon-01-svg" width="20" height="20" viewBox="0 0 20 20" fill="#232531">
                           <use xlink:href="#s-fea-icon-01-svg"></use>
                         </svg> 
                       </i>
-                      <span>Diesel</span>
+                      <span><?php echo $spslide['fuel_type']; ?></span>
                     </div>
+                  <?php endif; if( !empty($spslide['edisplacement']) ): ?>
                     <div>
                       <i>
                         <svg class="s-fea-icon-02-svg" width="20" height="20" viewBox="0 0 20 20" fill="#232531">
                           <use xlink:href="#s-fea-icon-02-svg"></use>
                         </svg> 
                       </i>
-                      <span>1749 cm3</span>
+                      <span><?php echo $spslide['edisplacement']; ?> cm3</span>
                     </div>
+                    <?php endif; if( !empty($spslide['bhp']) ): ?>
                     <div>
                       <i>
                         <svg class="s-fea-icon-03-svg" width="20" height="20" viewBox="0 0 20 20" fill="#232531">
                           <use xlink:href="#s-fea-icon-03-svg"></use>
                         </svg> 
                       </i>
-                      <span>148 bhp</span>
+                      <span><?php echo $spslide['bhp']; ?> bhp</span>
                     </div>
+                    <?php endif; if( !empty($spslide['fwd']) ): ?>
                     <div>
                       <i>
                         <svg class="s-fea-icon-04-svg" width="20" height="20" viewBox="0 0 20 20" fill="#232531">
                           <use xlink:href="#s-fea-icon-04-svg"></use>
                         </svg> 
                       </i>
-                      <span>FWD</span>
+                      <span><?php echo $spslide['fwd']; ?></span>
                     </div>
+                  <?php endif;?>
                   </div>
                 </div>
+                <?php endif; ?>
               </div>
               <div class="slide-date-title-area">
                 <strong>
@@ -94,48 +134,10 @@
         </div>
       </div>
     </div>
-    <div class="mainSlide-item">
-      <div class="clearfix mainSlide-item-inr">
-        <div class="main-slide-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-slide-img-01.jpg);">
-        </div>
-        <div class="main-slide-des">
-          <div class="main-slide-des-inr clearfix">
-            <div class="main-slide-des-cnter-cntlr">
-              <i class="black-traingle"><img src="<?php echo THEME_URI; ?>/assets/images/black-traingle.png"></i>
-              <div>
-                <strong class="msd-title">Passion for Life</strong>
-                <span class="msd-sub-title">Adventure is waiting for you.</span>
-                <p>Nam nulla lacus, euismod sit amet mollis sed, efficitur sit amet lorem. Proin efficitur ultricies dolor ac lacinia. </p>
-                <div class="main-slide-btns">
-                  <div class="msb-1">
-                    <a href="#">Verkoop</a>
-                  </div>
-                  <div class="msb-2">
-                    <a href="#">Tweedehands</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider-features">
-              <div class="slider-features-cntlr">
-                <div>
-                  <strong class="sfc-title-2">Nieuwe Renault Clio</strong>
-                </div>
-              </div>
-              <div class="slide-date-title-area">
-                <strong>
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/white-calender-icon.svg"></i>
-                  <span>Proefrit reserveren</span>
-                </strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>    
 </section>
-
+<?php endif; ?>
 
 <section class="hm-cat-boxes-section">
  <div class="container">

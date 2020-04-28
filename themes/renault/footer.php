@@ -196,9 +196,15 @@
         <strong>MENU</strong>
     </div>
     <div class="xs-ftr-tel">
-      <a href="#">
+      <?php if( !empty($ctelefoon) ): ?>
+      <a href="tel:<?php echo $ctelefoon; ?>">
         <img src="<?php echo THEME_URI; ?>/assets/images/xs-ftr-tel.png">
       </a>
+      <?php else: ?>
+        <a href="tel:<?php echo $crtelefoon; ?>">
+          <img src="<?php echo THEME_URI; ?>/assets/images/xs-ftr-tel.png">
+        </a>
+      <?php endif; ?>
     </div>
    </div>
   </div>

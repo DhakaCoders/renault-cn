@@ -26,6 +26,8 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'contactimg', 468, 570, true );
         add_image_size( 'overons1', 526, 650, true );
         add_image_size( 'overons2', 918, 760, true );
+        add_image_size( 'homeslide', 904, 790, true );
+        add_image_size( 'verkoopintro2', 823, 725, true );
 
 
 		
