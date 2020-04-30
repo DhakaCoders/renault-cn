@@ -197,7 +197,8 @@ span.contact-bdr{
 	position: relative;
 }
 
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -428,11 +429,13 @@ contact-info-sec-wrp
  Input type checkbox Css
 -------------------------
 */
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio{
 	width: 100%;
 	margin-bottom: 10px;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox label.wpforms-field-label{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox label.wpforms-field-label,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio label.wpforms-field-label{
 	display: inline-block;
 	vertical-align: baseline;
 	margin-bottom: 20px;
@@ -442,12 +445,14 @@ contact-info-sec-wrp
 	color: #fff;
 	text-transform: uppercase;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul{
 	width: 100%;
 	float: left;
 	padding-right: 10px;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li {
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li{
     padding: 0 !important;
     margin: 0 !important;
     margin-bottom: 8px !important;
@@ -455,14 +460,17 @@ contact-info-sec-wrp
     width: 50% !important;
     position: relative;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li:before{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li:before,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li:before{
 	content: none;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li.wpforms-selected input[type="checkbox"]{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li.wpforms-selected input[type="checkbox"],
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li.wpforms-selected input[type="radio"]{
 	border: 2px solid #293377;
 	color: #F3BA4B;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li input[type="checkbox"]{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li input[type="checkbox"],
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li input[type="radio"]{
 	width: 0;
 	height: 0;
 	margin: 0;
@@ -473,7 +481,8 @@ contact-info-sec-wrp
 	bottom: 0;
 	opacity: 0;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label {
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li label{
     font-size: 18px;
     line-height: 32px;
     font-weight: 600;
@@ -482,7 +491,8 @@ contact-info-sec-wrp
     padding-left: 35px;
     text-transform: capitalize;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label:before {
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label:before,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li label:before{
     content: "";
     position: absolute;
     width: 24px;
@@ -493,10 +503,12 @@ contact-info-sec-wrp
     top: 2px;
     border-radius: 50px;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label:after{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li label:after,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li label:after{
 	display: block;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li.wpforms-selected label:after {
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox ul li.wpforms-selected label:after,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio ul li.wpforms-selected label:after{
     left: 5px;
     top: 7px;
     width: 14px;
