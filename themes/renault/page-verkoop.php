@@ -1,7 +1,7 @@
 <?php 
-/*
-	Template Name: Verkoop
-*/
+  /*
+  	Template Name: Verkoop
+  */
 get_header();
 
 $thisID = get_the_ID();
@@ -21,261 +21,107 @@ $introsec = get_field('introsec', $thisID);
               if(!empty($introsec['beschrijving'])) echo wpautop( $introsec['beschrijving'], true );
             ?>
           </div>
+          <?php 
+            $taxonomies = get_terms( array(
+                'taxonomy' => 'verkoop_cat',
+                'hide_empty' => false
+            ) );
+          ?>
           <div class="vrk-product-grid-tabs-wrp clearfix">
             <div class="vrk-product-grid-tabs">
               <ul class="reset-list clearfix vrk-tabs-menu">
-                <li><a href="#">Renault</a></li>
-                <li><a href="#">Dacia</a></li>
+              <?php if ( !empty($taxonomies) ) : ?>
+              <?php 
+              foreach( $taxonomies as $taxonomie ) {
+              ?>
+                <li><a href="<?php echo esc_url( get_term_link( $taxonomie ) ); ?>"><?php echo $taxonomie->name; ?></a></li>
+              <?php } ?>
+              <?php endif; ?>
               </ul>
             </div>
+		<?php 
+	        $verkoop_query = new WP_Query(array( 
+	          'post_type'=> 'verkoops',
+	          'post_status' => 'publish',
+	          'posts_per_page' => 6,
+	          'orderby' => 'date',
+	          'order'=> 'desc'
+	          ) 
+	        );
+	        $notIDs = array();
+	    ?>
+      	<?php if($verkoop_query->have_posts()): ?>
             <div class="tabs">
               <div class="vrk-product-grid-inr clearfix">
-                <div class="vrk-product-grid">
+                <?php 
+	              $cat_slug = '';
+	              while($verkoop_query->have_posts()): $verkoop_query->the_post();
+	                $vknop = get_field('knop', get_the_ID()); 
+	                $beschrijving = get_field('beschrijving', get_the_ID()); 
+	                $afbeelding = get_field('afbeelding', get_the_ID()); 
+	                $post_terms = get_the_terms( get_the_ID(), 'verkoop_cat' );
+	                if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
+	                  foreach ( $post_terms as $post_term ) {
+	                    $cat_slug = $post_term->slug;
+	                  }
+	                }
+
+	                $notIDs []=  get_the_ID();
+	            ?>
+	            <div class="vrk-product-grid">
                   <div class="vrk-product-grid-item">
                     <div class="vrk-product-grid-img-cntlr">
                       <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-1.png"></a>
+                      <?php if( !empty($vknop) ): ?>
+                      <a href="<?php echo $vknop; ?>">
+                        <?php if( !empty($afbeelding) ){ ?>
+                          <?php echo cbv_get_image_tag($afbeelding); ?>
+                        <?php } ?>
+                      </a>
+                      <?php else: ?>
+                        <?php if( !empty($afbeelding) ){ ?>
+                          <?php echo cbv_get_image_tag($afbeelding); ?>
+                        <?php } ?>
+                      <?php endif; ?>
                       </div>
                     </div>
                     <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Megane</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
+                        <h3 class="vrk-product-grid-dsc-title mHc1">
+	                      <?php if( !empty($vknop) ): ?>
+	                      <a href="<?php echo $vknop; ?>"><?php the_title(); ?></a>
+	                      <?php else: ?>
+	                        <?php the_title(); ?>
+	                      <?php endif; ?>
+                        </h3>
+	                    <?php if( !empty($beschrijving) ) printf('<p class="mHc2">%s</p>', $beschrijving); ?>
+	                    <?php if( !empty($vknop) ): ?>
+	                    <a href="<?php echo $vknop; ?>">
+	                      <i>
+	                        <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
+	                          <use xlink:href="#vrk-product-grid-angle-svg"></use>
+	                        </svg> 
+	                      </i>
+	                    </a>
+	                    <?php else: ?>
+	                    <a>
+	                      <i>
+	                        <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
+	                          <use xlink:href="#vrk-product-grid-angle-svg"></use>
+	                        </svg> 
+	                      </i>
+	                    </a>
+	                    <?php endif; ?>
                     </div>
                   </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-2.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Talisman</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
                   </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-3.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Koleos</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-4.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Grand Scenic</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-5.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Clio</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-6.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Kadjar</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                  <?php endwhile; ?>
+                
               </div>
             </div>
-            <div class="tabs">
-              <div class="vrk-product-grid-inr clearfix">
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-1.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Megane</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-2.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Talisman</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-3.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Koleos</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-4.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Grand Scenic</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-5.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Clio</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="vrk-product-grid">
-                  <div class="vrk-product-grid-item">
-                    <div class="vrk-product-grid-img-cntlr">
-                      <div class="vrk-product-grid-img">
-                        <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-6.png"></a>
-                      </div>
-                    </div>
-                    <div class="vrk-product-grid-dsc mHc">
-                      <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Kadjar</a></h3>
-                      <p class="mHc2">De family car, nieuwe generatie</p>
-                      <a>
-                        <i>
-                          <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                            <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php 
+		       endif;  
+		       wp_reset_postdata();
+		    ?>
           </div>
         </div>
       </div>
@@ -320,136 +166,91 @@ $introsec = get_field('introsec', $thisID);
   </div>
 </section>
 <?php endif; ?>
-
+<?php 
+$verkoop1_query = new WP_Query(array( 
+  'post_type'=> 'verkoops',
+  'post_status' => 'publish',
+  'posts_per_page' => -1,
+  'orderby' => 'date',
+  'order'=> 'desc',
+  'post__not_in' => $notIDs
+  ) 
+);
+?>
+<?php if($verkoop1_query->have_posts()): ?>
 <section class="vrk-product-grid-btm-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-         <div class="vrk-product-grid-inr clearfix">
-          <div class="vrk-product-grid">
-            <div class="vrk-product-grid-item">
-              <div class="vrk-product-grid-img-cntlr">
-                <div class="vrk-product-grid-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-1.png"></a>
-                </div>
-              </div>
-              <div class="vrk-product-grid-dsc mHc">
-                <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Megane</a></h3>
-                <p class="mHc2">De family car, nieuwe generatie</p>
-                <a>
-                  <i>
-                    <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                      <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="vrk-product-grid">
-            <div class="vrk-product-grid-item">
-              <div class="vrk-product-grid-img-cntlr">
-                <div class="vrk-product-grid-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-2.png"></a>
-                </div>
-              </div>
-              <div class="vrk-product-grid-dsc mHc">
-                <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Talisman</a></h3>
-                <p class="mHc2">De family car, nieuwe generatie</p>
-                <a>
-                  <i>
-                    <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                      <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="vrk-product-grid">
-            <div class="vrk-product-grid-item">
-              <div class="vrk-product-grid-img-cntlr">
-                <div class="vrk-product-grid-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-3.png"></a>
-                </div>
-              </div>
-              <div class="vrk-product-grid-dsc mHc">
-                <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Koleos</a></h3>
-                <p class="mHc2">De family car, nieuwe generatie</p>
-                <a>
-                  <i>
-                    <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                      <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="vrk-product-grid">
-            <div class="vrk-product-grid-item">
-              <div class="vrk-product-grid-img-cntlr">
-                <div class="vrk-product-grid-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-4.png"></a>
-                </div>
-              </div>
-              <div class="vrk-product-grid-dsc mHc">
-                <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Grand Scenic</a></h3>
-                <p class="mHc2">De family car, nieuwe generatie</p>
-                <a>
-                  <i>
-                    <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                      <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="vrk-product-grid">
-            <div class="vrk-product-grid-item">
-              <div class="vrk-product-grid-img-cntlr">
-                <div class="vrk-product-grid-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-5.png"></a>
-                </div>
-              </div>
-              <div class="vrk-product-grid-dsc mHc">
-                <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Clio</a></h3>
-                <p class="mHc2">De family car, nieuwe generatie</p>
-                <a>
-                  <i>
-                    <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                      <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="vrk-product-grid">
-            <div class="vrk-product-grid-item">
-              <div class="vrk-product-grid-img-cntlr">
-                <div class="vrk-product-grid-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/vrk-product-grid-img-6.png"></a>
-                </div>
-              </div>
-              <div class="vrk-product-grid-dsc mHc">
-                <h3 class="vrk-product-grid-dsc-title mHc1"><a href="#">Renault Kadjar</a></h3>
-                <p class="mHc2">De family car, nieuwe generatie</p>
-                <a>
-                  <i>
-                    <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
-                      <use xlink:href="#vrk-product-grid-angle-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="vrk-product-grid-inr clearfix">
+			<?php 
+	          $cat_slug = '';
+	          while($verkoop1_query->have_posts()): $verkoop1_query->the_post();
+	            $vknop = get_field('knop', get_the_ID()); 
+	            $beschrijving = get_field('beschrijving', get_the_ID()); 
+	            $afbeelding = get_field('afbeelding', get_the_ID()); 
+	            $post_terms = get_the_terms( get_the_ID(), 'verkoop_cat' );
+	            if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
+	              foreach ( $post_terms as $post_term ) {
+	                $cat_slug = $post_term->slug;
+	              }
+	            }
+	        ?>
+			<div class="vrk-product-grid">
+				<div class="vrk-product-grid-item">
+					<div class="vrk-product-grid-img-cntlr">
+					  <div class="vrk-product-grid-img">
+					  <?php if( !empty($vknop) ): ?>
+					  <a href="<?php echo $vknop; ?>">
+					    <?php if( !empty($afbeelding) ){ ?>
+					      <?php echo cbv_get_image_tag($afbeelding); ?>
+					    <?php } ?>
+					  </a>
+					  <?php else: ?>
+					    <?php if( !empty($afbeelding) ){ ?>
+					      <?php echo cbv_get_image_tag($afbeelding); ?>
+					    <?php } ?>
+					  <?php endif; ?>
+					  </div>
+					</div>
+					<div class="vrk-product-grid-dsc mHc">
+					    <h3 class="vrk-product-grid-dsc-title mHc1">
+					      <?php if( !empty($vknop) ): ?>
+					      <a href="<?php echo $vknop; ?>"><?php the_title(); ?></a>
+					      <?php else: ?>
+					        <?php the_title(); ?>
+					      <?php endif; ?>
+					    </h3>
+					    <?php if( !empty($beschrijving) ) printf('<p class="mHc2">%s</p>', $beschrijving); ?>
+					    <?php if( !empty($vknop) ): ?>
+					    <a href="<?php echo $vknop; ?>">
+					      <i>
+					        <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
+					          <use xlink:href="#vrk-product-grid-angle-svg"></use>
+					        </svg> 
+					      </i>
+					    </a>
+					    <?php else: ?>
+					    <a>
+					      <i>
+					        <svg class="vrk-product-grid-angle-svg" width="6" height="10" viewBox="0 0 6 10" fill="#CBCBCB">
+					          <use xlink:href="#vrk-product-grid-angle-svg"></use>
+					        </svg> 
+					      </i>
+					    </a>
+					    <?php endif; ?>
+					</div>
+				</div>
+			</div>
+            <?php endwhile; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php 
+   endif;  
+   wp_reset_postdata();
+?>
 <?php get_template_part('templates/section', 'offerte'); ?>
 <?php get_footer(); ?>
