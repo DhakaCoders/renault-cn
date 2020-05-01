@@ -51,7 +51,7 @@ $introsec = get_field('introsec', $thisID);
 	        $notIDs = array();
 	    ?>
       	<?php if($verkoop_query->have_posts()): ?>
-            <div class="tabs">
+            <div class="tabs-wrapp">
               <div class="vrk-product-grid-inr clearfix">
                 <?php 
 	              $cat_slug = '';

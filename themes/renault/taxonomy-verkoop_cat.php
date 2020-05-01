@@ -37,26 +37,26 @@ $introsec = get_field('introsec', $thisID);
               <?php endif; ?>
               </ul>
             </div>
-    <?php 
-          $verkoop_query = new WP_Query(array( 
-            'post_type'=> 'verkoops',
-            'post_status' => 'publish',
-            'posts_per_page' => 3,
-            'orderby' => 'date',
-            'order'=> 'desc',
-            'tax_query' => array(
-            array(
-                'taxonomy' => 'verkoop_cat',
-                'field'    => 'term_id',
-                'terms'    => $ccat->term_id
+          <?php 
+            $verkoop_query = new WP_Query(array( 
+              'post_type'=> 'verkoops',
+              'post_status' => 'publish',
+              'posts_per_page' => 3,
+              'orderby' => 'date',
+              'order'=> 'desc',
+              'tax_query' => array(
+              array(
+                  'taxonomy' => 'verkoop_cat',
+                  'field'    => 'term_id',
+                  'terms'    => $ccat->term_id
+              ),
             ),
-          ),
-          ) 
-          );
-          $notIDs = array();
-      ?>
+            ) 
+            );
+            $notIDs = array();
+          ?>
         <?php if($verkoop_query->have_posts()): ?>
-            <div class="tabs">
+            <div class="tabs-wrapp">
               <div class="vrk-product-grid-inr clearfix">
                 <?php 
                 $cat_slug = '';
